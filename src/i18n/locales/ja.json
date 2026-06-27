@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "title": "佐藤 翔太",
+    "description": "Three.jsを使った佐藤 翔太のポートフォリオです。"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "loading": {
+    "eyebrow": "PORTFOLIO / 2026",
+    "name": "Shota Sato",
+    "tagline": "Systems, interfaces, and quiet motion for a sharper web experience.",
+    "audioLabel": "Audio",
+    "audioTitle": "Enter with sound?",
+    "audioDesc": "BGMを再生する場合は ON、静かに見る場合は OFF を選択してください。",
+    "on": "ON",
+    "off": "OFF",
+    "welcome": "Welcome to my portfolio."
+  },
+  "home": {
+    "greeting": "Portfolio",
+    "name": "Shota Sato",
+    "role": "システムエンジニア · System Engineer",
+    "intro": "診療放射線技師からエンジニアへ転身。バックエンドやクラウドインフラの構築・運用を軸に、堅実なシステム開発に従事しています。",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch",
+    "location": "Japan",
+    "experience": "4 years (Medical) · 3+ years (Engineering)"
+  },
+  "about": {
+    "label": "About",
+    "title": "自己紹介",
+    "text1": "診療放射線技師として4年間、整形外科クリニックで読影スキルを磨いてきました。仕事で身につけた知識をブログで発信したり、職場のホームページをリニューアルするなど、ITに関わる機会が増えたことがきっかけでプログラミングに興味を持ちました。",
+    "text2": "現在はバックエンド・クラウド開発を軸に、React / Three.js を使ったフロントエンドにも注力しています。",
+    "locationLabel": "Location",
+    "experienceLabel": "Experience"
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "制作物",
+    "desc": "個人開発・チーム開発で取り組んだプロダクトを紹介します。",
+    "viewProject": "View Project"
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "スキルセット",
+    "desc": "業務やプライベートで習得した技術スタックです。"
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "経歴",
+    "desc": "医療現場での業務経験を経て、業務の効率化やシステム化に関心を持ち、エンジニアへ転向しました。Web開発を中心に、設計・実装に取り組んでいます。"
+  },
+  "services": {
+    "label": "Services",
+    "title": "ご依頼について",
+    "desc": "Web制作・システム開発に関するご依頼を承っています。小規模なツールから企業サイトまで、幅広く対応しています。",
+    "items": {
+      "corporate": {
+        "title": "コーポレートサイト・ホームページ制作",
+        "price": "180,000円〜",
+        "desc": "企業・店舗・個人事業向けのホームページ制作",
+        "features": [
+          "オリジナルデザイン",
+          "レスポンシブ対応",
+          "お問い合わせフォーム",
+          "SEOを考慮した設計",
+          "モダンなUI",
+          "公開までサポート"
+        ]
+      },
+      "wordpress": {
+        "title": "WordPressサイト制作",
+        "price": "220,000円〜",
+        "desc": "更新しやすいWordPressサイトを構築します。",
+        "features": [
+          "ブログ・お知らせ機能",
+          "投稿管理",
+          "管理画面カスタマイズ",
+          "更新方法サポート"
+        ]
+      },
+      "lp": {
+        "title": "ランディングページ制作",
+        "price": "80,000円〜",
+        "desc": "サービス・商品紹介・採用・イベント向けLP制作",
+        "features": [
+          "コンバージョンを意識した設計",
+          "スマートフォン対応",
+          "高速表示",
+          "必要に応じたアニメーション"
+        ]
+      },
+      "infra": {
+        "title": "Webサイト公開・運用サポート",
+        "price": "個別お見積り",
+        "desc": "AWS を活用した高速で保守性の高い公開環境をご提案します。",
+        "features": [
+          "AWS 環境構築",
+          "ドメイン・SSL 設定",
+          "CloudFront 設定",
+          "将来を見据えた運用提案"
+        ]
+      },
+      "tools": {
+        "title": "業務効率化ツール制作",
+        "price": "50,000円〜",
+        "desc": "日々の業務を効率化する小規模ツール・アプリを制作します。",
+        "features": [
+          "Excel 作業の自動化",
+          "CSV 加工ツール",
+          "API 連携",
+          "社内向け Web アプリ",
+          "定型業務の自動化"
+        ]
+      }
+    },
+    "ctaTitle": "まずはお気軽にご相談ください",
+    "ctaText": "「こんなこともお願いできる？」「この予算で実現できる？」など、具体的な内容が決まっていない段階でもお気軽にご相談ください。ご要望やご予算をお伺いし、目的に合わせた最適な方法をご提案いたします。",
+    "ctaNote": "掲載している料金はあくまで目安です。制作内容や機能、ご要望に応じて個別にお見積りいたします。"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "お問い合わせ",
+    "desc": "プロジェクトのご相談やお仕事のご依頼など、お気軽にご連絡ください。",
+    "sendMessage": "Send a Message",
+    "formValue": "フォームよりご連絡ください。"
+  },
+  "footer": {
+    "copyright": "© {{year}} 佐藤 翔太. All rights reserved."
+  },
+  "settings": {
+    "language": "言語",
+    "theme": "テーマ",
+    "dark": "ダーク",
+    "light": "ライト"
+  },
+  "aboutPage": {
+    "label": "About",
+    "title": "Profile",
+    "name": "佐藤　翔太（サトウショウタ）",
+    "birthday": "生年月日 : 1996/07/29",
+    "p1": "診療放射線技師として整形外科クリニックに勤めて5年目になります。撮影した写真を見て異常の有無を評価する「読影」というものに力を入れており、「医師よりも読影が出来る技師」を目標に現在まで尽力して参りました。",
+    "p2": "仕事で身につけた知識をブログで発信したり、職場のホームページをリニューアルするなど、メインの業務以外でITに関わることが多くなったことがきっかけでプログラミングに興味をもち、現在独学歴は1年ほどとなります。",
+    "p3": "最近では、友人数名とチームを組んでLaravelとVue.jsを使ったWebサービスを開発しております。"
+  },
+  "projectData": {
+    "skillfarm": {
+      "description": "Laravel + Vue.js で構築したスキル共有Webサービス。チーム開発で設計から実装まで担当。"
+    },
+    "blog": {
+      "description": "専門知識を発信する技術ブログ。SEOを意識したWordPress構築とコンテンツ設計。"
+    },
+    "applicationManager": {
+      "description": "Three.js パーティクル背景を持つインタラクティブなポートフォリオサイト。"
+    }
+  },
+  "timeline": {
+    "0": {
+      "title": "System Engineer",
+      "description": "Webアプリケーションの設計・開発を担当。Backend / Cloudを中心にプロダクト開発を実施。"
+    },
+    "1": {
+      "title": "Engineering Start",
+      "description": "放射線技師をしながら開発学習を開始。自院のHP制作の提案から実装まで実施。自身のブログサイトやポートフォリオサイトの構築も経験。"
+    },
+    "2": {
+      "title": "Medical Background",
+      "description": "新卒で整形外科のクリニックに入職。診療放射線技師として医療現場での経験を積む。"
+    }
+  },
+  "skillfarm": {
+    "label": "Project",
+    "title": "Skillfarm",
+    "aboutTitle": "制作物について",
+    "aboutDesc": "プログラミングを学びたい方と語学（日本語・英語）を身につけたい方をマッチングさせるアプリです。CEFRを基にした独自のクラスを設けており、他国籍同士でもスムーズにやりとりが可能です。",
+    "devTitle": "開発活動",
+    "techTitle": "使用技術",
+    "techDesc": "Laravel 8 / Inertia.js / Vue.js / AWS (EC2) / Twilio / Pusher / SQLite / Git / Figma",
+    "roleTitle": "担当業務",
+    "roleDesc": "プロジェクトリーダーとして開発を進行。バックエンドとフロントエンドの Vue.js、技術記事をメインで担当。",
+    "timeline": {
+      "0": {
+        "flag": "SONICの誕生",
+        "desc": "IT未経験の友人2名に声を掛け2021/11/28より素人開発チームの誕生。フロントエンド、バックエンド（メインで担当）、マーケティングの3部門構成。"
+      },
+      "1": {
+        "flag": "メンバー加入",
+        "desc": "さらに新しいメンバーが2名加わり5人チームとなり、新しくインフラ部門を設置。"
+      },
+      "2": {
+        "flag": "メンバー脱退",
+        "desc": "マーケティング部長の本業が多忙となり脱退。Twitter運用を試るもうまくいかず、インプレッション数が相場の1/10と低めになっていたことが判明。"
+      },
+      "3": {
+        "flag": "インプレッション数の改善",
+        "desc": "改善策の一つであるハッシュタグの選定で飛躍的にインプレッションが上昇。"
+      },
+      "4": {
+        "flag": "ブログに技術記事の投稿を開始",
+        "desc": "漫画投稿と同時期に、滞っていたブログサイトに技術記事をあげることにした。"
+      },
+      "5": {
+        "flag": "アドセンス審査通過",
+        "desc": "5記事目の投稿にてアドセンスを通過することに成功。"
+      },
+      "6": {
+        "flag": "ローカル環境でアプリ完成",
+        "desc": "2022/04/14にローカル環境下でアプリが完成。"
+      },
+      "7": {
+        "flag": "現在",
+        "desc": "本番環境にデプロイ中。"
+      }
+    }
+  },
+  "blog": {
+    "label": "Project",
+    "title": "放射線技師ブログ",
+    "aboutTitle": "制作物について",
+    "aboutDesc": "撮影した画像を見て異常の有無を判断する「読影」という分野に絞って情報を発信しているサイトです。知識がほぼ0の状態から読影に力を入れて3年。主にネットに上がっている症例を実践的に読影。",
+    "devTitle": "開発活動",
+    "techTitle": "使用技術",
+    "techDesc": "WordPress / jQuery / JavaScript / HTML5 / SCSS / MySQL / mixhost",
+    "timeline": {
+      "0": {
+        "flag": "Web制作の勉強としてブログサイトを構築",
+        "desc": "ローカル環境から本番環境へのデプロイ、コンタクトフォームの設置などに苦戦しながらも完成。"
+      },
+      "1": {
+        "flag": "Amazonアソシエイト審査落選",
+        "desc": "記事の内容が薄かったこと、SEO対策ができていなかったこと、サブディレクトリに構築していたことが原因と考えられる。"
+      },
+      "2": {
+        "flag": "サイトをリニューアル",
+        "desc": "SEOを意識した設計とした上でサイトをお引越し。"
+      },
+      "3": {
+        "flag": "Google Adsense審査通過",
+        "desc": "Google Adsenseの審査に提出したのち通過。"
+      },
+      "4": {
+        "flag": "廃止",
+        "desc": "システムエンジニアへの転向に伴い、ブログを廃止。"
+      }
+    }
+  },
+  "appManager": {
+    "label": "Project",
+    "title": "Application Manager",
+    "overviewTitle": "概要",
+    "overviewDesc": "本プロジェクトは、応募者情報の登録・管理を行うサーバーレスWebアプリケーションです。ユーザーはアカウント登録後に案件へ応募でき、応募情報は管理者側で一元管理されます。また、応募発生時には管理者へ自動通知が送信される業務フローを実装しています。",
+    "processTitle": "開発プロセス",
+    "techTitle": "技術スタック",
+    "techDesc": "AWS Lambda / API Gateway / DynamoDB / Terraform / Python / JavaScript / Docker / SAM",
+    "timeline": {
+      "0": {
+        "flag": "要件整理・アーキテクチャ設計",
+        "desc": "応募管理システムとしてのユースケースを定義し、ユーザー・管理者双方の操作フローを設計。サーバーレス構成を前提に全体構造を整理。"
+      },
+      "1": {
+        "flag": "認証・ユーザー機能の実装",
+        "desc": "ユーザー登録・ログイン機能を中心に、認証状態管理やセッション設計を実装。DynamoDBを用いたデータ管理構成を構築。"
+      },
+      "2": {
+        "flag": "応募機能・管理画面の構築",
+        "desc": "ユーザーの応募機能および管理者向けの応募一覧・検索機能を実装。業務フローを意識した画面設計とAPI連携を構築。"
+      },
+      "3": {
+        "flag": "通知機能・バックエンド連携",
+        "desc": "応募時に管理者へメール通知を送信する仕組みを実装。サーバーレス環境（Lambda）でのイベント駆動処理を設計。"
+      },
+      "4": {
+        "flag": "インフラ構築・IaC化（Terraform / AWS）",
+        "desc": "AWS上のリソースをTerraformで管理し、再現性のあるインフラ構成を構築。デプロイから運用までを自動化可能な形に整理。"
+      }
+    }
+  }
+}

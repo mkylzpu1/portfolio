@@ -1,0 +1,151 @@
+.about {
+  color: white;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  margin: 100px 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.aboutInner {
+  max-width: 1000px;
+  padding: 40px 0;
+  background-color: rgba(24, 24, 24, 0.702);
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+  position: relative;
+}
+
+.aboutTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-60%);
+}
+
+.aboutTitle h1 {
+  font-size: 100px;
+  opacity: 0.5;
+  font-weight: 600;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.form {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.formItems {
+  display: flex;
+  gap: 15px;
+}
+
+.input {
+  width: 50%;
+  display: block;
+  line-height: 35px;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(79, 79, 79, 0.551);
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.546);
+  border-radius: 5px;
+  transition: 0.3s;
+  color: white;
+  font-family: inherit;
+}
+
+.input:focus {
+  box-shadow: 0 0px 10px rgb(255, 255, 255);
+  background-color: rgba(183, 183, 183, 0.551);
+}
+
+.textarea {
+  width: 100%;
+  margin: 20px 0 30px;
+  height: 250px;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  background-color: rgba(79, 79, 79, 0.551);
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.546);
+  border-radius: 5px;
+  transition: 0.3s;
+  color: white;
+  border: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.textarea:focus {
+  box-shadow: 0 0px 10px rgb(255, 255, 255);
+  background-color: rgba(183, 183, 183, 0.551);
+}
+
+.button {
+  width: 250px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0px 10px rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+  background-color: rgb(0, 68, 170);
+  display: block;
+  transition: 0.3s;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.button:hover {
+  box-shadow: 0 0px 10px rgb(255, 255, 255);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errors {
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.result {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .form {
+    width: 90%;
+    min-width: unset;
+  }
+  .formItems {
+    flex-direction: column;
+  }
+  .input {
+    width: 100%;
+  }
+  .aboutTitle h1 {
+    font-size: 50px;
+  }
+}

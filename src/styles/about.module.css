@@ -1,0 +1,240 @@
+.about {
+  color: white;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  margin: 100px 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.aboutInner {
+  max-width: 1000px;
+  padding: 40px 0;
+  background-color: rgba(24, 24, 24, 0.702);
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.374);
+  position: relative;
+}
+
+.aboutTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-60%);
+}
+
+.aboutTitle h1 {
+  font-size: 100px;
+  opacity: 0.5;
+  font-weight: 600;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.appeal h2,
+.born h2,
+.skill h2 {
+  padding: 5px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 10px rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 24px;
+  text-align: center;
+}
+
+.appeal p {
+  padding: 40px;
+  font-size: 18px;
+  color: white;
+}
+
+/* タイムライン */
+.timelineWrapper {
+  padding: 40px;
+}
+
+.cpTimeline03 {
+  position: relative;
+  margin: 3em auto;
+}
+
+.cpTimeline03::before {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  content: '';
+  background-color: white;
+  left: 30px;
+}
+
+.timelineGroup {
+  position: relative;
+  top: -10px;
+}
+
+.timelineGroup:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.timelineItem {
+  margin-bottom: 1em;
+  position: relative;
+  padding-left: 80px;
+}
+
+.timelineItem:not(:last-of-type) {
+  margin-bottom: 2em;
+}
+
+.timelineItem::before {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: '';
+  background-color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.time {
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  min-width: 65px;
+  min-height: 65px;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.58);
+  background-color: #1c93a3;
+  top: 50%;
+  margin-top: -33px;
+  border-radius: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeMonth {
+  font-size: 0.8em;
+  display: block;
+  text-transform: uppercase;
+}
+
+.desc {
+  padding: 0.5em 1em;
+  border-left: 3px solid #26C6DA;
+  border-radius: 2px;
+  box-shadow: 0 0px 10px white;
+  font-size: 0.9em;
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+.desc .flag {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.3em;
+}
+
+/* スキル */
+.skillBoxInner {
+  padding: 40px 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skillContents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillContent {
+  text-align: center;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.skillContentImg {
+  display: block;
+  max-width: 120px;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+
+.skillContentTitle {
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.skillContentTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 0.5px;
+  background-color: white;
+}
+
+.skillContentText {
+  margin: 0 auto;
+  width: 90%;
+  text-align: justify;
+  font-size: 14px;
+  color: white;
+}
+
+/* product */
+.productImg {
+  padding: 40px;
+}
+
+.productImg a {
+  transition: 0.3s;
+}
+
+.productImg img {
+  margin-bottom: 20px;
+}
+
+.productImg a:hover {
+  color: #26C6DA;
+}
+
+.productImg p {
+  color: white;
+  padding: 4px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .cpTimeline03::before { left: 0; }
+  .timelineGroup { padding-top: 40px; }
+  .timelineItem { padding-top: 60px; padding-left: 20px; }
+  .timelineItem::before { top: 90px; }
+  .time { top: 40px; border-radius: 0 20px 20px 0; min-height: 2em; }
+  .skillContent { width: 100%; }
+  .aboutTitle h1 { font-size: 50px; }
+}

@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "title": "Shota Sato",
+    "description": "Shota Sato's portfolio built with Three.js."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "loading": {
+    "eyebrow": "PORTFOLIO / 2026",
+    "name": "Shota Sato",
+    "tagline": "Systems, interfaces, and quiet motion for a sharper web experience.",
+    "audioLabel": "Audio",
+    "audioTitle": "Enter with sound?",
+    "audioDesc": "Select ON to play BGM, or OFF to browse in silence.",
+    "on": "ON",
+    "off": "OFF",
+    "welcome": "Welcome to my portfolio."
+  },
+  "home": {
+    "greeting": "Portfolio",
+    "name": "Shota Sato",
+    "role": "System Engineer · システムエンジニア",
+    "intro": "Transitioned from diagnostic radiographer to software engineer. Focused on backend systems and cloud infrastructure, delivering reliable solutions.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch",
+    "location": "Japan",
+    "experience": "4 years (Medical) · 3+ years (Engineering)"
+  },
+  "about": {
+    "label": "About",
+    "title": "Introduction",
+    "text1": "I spent 4 years as a diagnostic radiographer at an orthopedic clinic, honing my image interpretation skills. Sharing knowledge through a blog and redesigning my workplace website sparked my interest in programming.",
+    "text2": "I now focus on backend and cloud development, while also building frontend experiences with React and Three.js.",
+    "locationLabel": "Location",
+    "experienceLabel": "Experience"
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Projects",
+    "desc": "A selection of products I've built solo and with teams.",
+    "viewProject": "View Project"
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "Skill Set",
+    "desc": "Technologies I've acquired through professional work and personal projects."
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Career",
+    "desc": "After years in healthcare, I developed a passion for automation and systems — leading me to transition into software engineering with a focus on web development."
+  },
+  "services": {
+    "label": "Services",
+    "title": "Services",
+    "desc": "I accept commissions for web development and system engineering — from small tools to full company websites.",
+    "items": {
+      "corporate": {
+        "title": "Corporate Website / Homepage",
+        "price": "From ¥180,000",
+        "desc": "Homepage creation for businesses, shops, and sole proprietors.",
+        "features": [
+          "Original design",
+          "Responsive layout",
+          "Contact form",
+          "SEO-conscious structure",
+          "Modern UI",
+          "Support through launch"
+        ]
+      },
+      "wordpress": {
+        "title": "WordPress Site",
+        "price": "From ¥220,000",
+        "desc": "Build an easy-to-update WordPress site tailored to your needs.",
+        "features": [
+          "Blog / news functionality",
+          "Post management",
+          "Admin dashboard customization",
+          "Training on how to update"
+        ]
+      },
+      "lp": {
+        "title": "Landing Page",
+        "price": "From ¥80,000",
+        "desc": "LP creation for services, products, recruiting, and events.",
+        "features": [
+          "Conversion-focused design",
+          "Mobile-friendly",
+          "Fast loading",
+          "Animation as needed"
+        ]
+      },
+      "infra": {
+        "title": "Hosting & Operations Support",
+        "price": "Custom quote",
+        "desc": "Proposing fast, maintainable hosting environments leveraging AWS.",
+        "features": [
+          "AWS environment setup",
+          "Domain & SSL configuration",
+          "CloudFront setup",
+          "Long-term operations planning"
+        ]
+      },
+      "tools": {
+        "title": "Business Automation Tools",
+        "price": "From ¥50,000",
+        "desc": "Build small tools and apps to streamline daily operations.",
+        "features": [
+          "Excel task automation",
+          "CSV processing tools",
+          "API integration",
+          "Internal web apps",
+          "Routine task automation"
+        ]
+      }
+    },
+    "ctaTitle": "Feel free to reach out",
+    "ctaText": "Whether you have a specific request or just want to explore options — I'm happy to hear about your needs and budget, and propose the best approach.",
+    "ctaNote": "Prices listed are estimates. Final cost depends on scope, features, and requirements."
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Contact",
+    "desc": "Feel free to reach out for project inquiries or work requests.",
+    "sendMessage": "Send a Message",
+    "formValue": "Please contact me via the form."
+  },
+  "footer": {
+    "copyright": "© {{year}} Shota Sato. All rights reserved."
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "aboutPage": {
+    "label": "About",
+    "title": "Profile",
+    "name": "Shota Sato",
+    "birthday": "Date of Birth: July 29, 1996",
+    "p1": "I've been working at an orthopedic clinic as a diagnostic radiographer for 5 years. I've focused on image interpretation — aiming to be a technician whose readings surpass those of physicians.",
+    "p2": "Sharing expertise through a blog and redesigning my workplace website sparked my interest in programming. I've now been self-teaching for about a year.",
+    "p3": "Recently, I've been building a web service using Laravel and Vue.js with a small team of friends."
+  },
+  "projectData": {
+    "skillfarm": {
+      "description": "Skill-sharing web service built with Laravel + Vue.js. Led design and implementation as part of a team."
+    },
+    "blog": {
+      "description": "Technical blog sharing specialized medical imaging knowledge. Built on WordPress with SEO-focused structure."
+    },
+    "applicationManager": {
+      "description": "Interactive portfolio site featuring a Three.js particle background."
+    }
+  },
+  "timeline": {
+    "0": {
+      "title": "System Engineer",
+      "description": "Designing and developing web applications. Focused on backend and cloud infrastructure in product development."
+    },
+    "1": {
+      "title": "Engineering Start",
+      "description": "Started learning development while still working as a radiographer. Proposed and built the clinic's website, and created personal blog and portfolio sites."
+    },
+    "2": {
+      "title": "Medical Background",
+      "description": "Joined an orthopedic clinic as a new graduate. Built hands-on experience as a diagnostic radiographer in a clinical setting."
+    }
+  },
+  "skillfarm": {
+    "label": "Project",
+    "title": "Skillfarm",
+    "aboutTitle": "About",
+    "aboutDesc": "A matching app connecting people who want to learn programming with those studying Japanese or English. Features a custom CEFR-based proficiency system for smooth cross-language communication.",
+    "devTitle": "Development Activity",
+    "techTitle": "Tech Stack",
+    "techDesc": "Laravel 8 / Inertia.js / Vue.js / AWS (EC2) / Twilio / Pusher / SQLite / Git / Figma",
+    "roleTitle": "My Role",
+    "roleDesc": "Led the project as project manager. Primarily responsible for backend, Vue.js frontend, and technical articles.",
+    "timeline": {
+      "0": {
+        "flag": "Team Founded",
+        "desc": "Recruited 2 non-engineer friends on 2021/11/28 to form a grassroots dev team — frontend, backend (my main role), and marketing."
+      },
+      "1": {
+        "flag": "New Members Joined",
+        "desc": "2 more members joined, growing to a 5-person team with a new infrastructure division."
+      },
+      "2": {
+        "flag": "Member Left",
+        "desc": "Marketing lead left due to a busy day job. Twitter efforts underperformed — impressions were about 1/10 of average."
+      },
+      "3": {
+        "flag": "Impressions Improved",
+        "desc": "Switching hashtag strategy led to a dramatic jump in impressions."
+      },
+      "4": {
+        "flag": "Started Tech Blog Posts",
+        "desc": "Alongside comic uploads, began posting technical articles on the stalled blog."
+      },
+      "5": {
+        "flag": "AdSense Approved",
+        "desc": "Passed Google AdSense review on the 5th article."
+      },
+      "6": {
+        "flag": "App Completed Locally",
+        "desc": "App completed in local environment on 2022/04/14."
+      },
+      "7": {
+        "flag": "Present",
+        "desc": "Currently deploying to production."
+      }
+    }
+  },
+  "blog": {
+    "label": "Project",
+    "title": "Radiographer Blog",
+    "aboutTitle": "About",
+    "aboutDesc": "A site focused on image interpretation — analyzing medical images to detect abnormalities. Built from near-zero knowledge with 3 years of dedicated study, primarily interpreting real-world clinical cases found online.",
+    "devTitle": "Development Activity",
+    "techTitle": "Tech Stack",
+    "techDesc": "WordPress / jQuery / JavaScript / HTML5 / SCSS / MySQL / mixhost",
+    "timeline": {
+      "0": {
+        "flag": "Built Blog as Web Dev Practice",
+        "desc": "Struggled through local-to-production deployment and contact form setup, but completed the site."
+      },
+      "1": {
+        "flag": "Amazon Associates Rejected",
+        "desc": "Likely due to thin content, poor SEO, and being built on a subdirectory."
+      },
+      "2": {
+        "flag": "Site Redesigned",
+        "desc": "Migrated the site with an SEO-focused redesign."
+      },
+      "3": {
+        "flag": "Google AdSense Approved",
+        "desc": "Submitted and passed the Google AdSense review."
+      },
+      "4": {
+        "flag": "Discontinued",
+        "desc": "Shut down the blog after transitioning to software engineering."
+      }
+    }
+  },
+  "appManager": {
+    "label": "Project",
+    "title": "Application Manager",
+    "overviewTitle": "Overview",
+    "overviewDesc": "A serverless web application for registering and managing applicant information. Users can apply to listings after creating an account, with all submissions centrally managed by an admin. Automated email notifications are sent to admins upon new applications.",
+    "processTitle": "Development Process",
+    "techTitle": "Tech Stack",
+    "techDesc": "AWS Lambda / API Gateway / DynamoDB / Terraform / Python / JavaScript / Docker / SAM",
+    "timeline": {
+      "0": {
+        "flag": "Requirements & Architecture",
+        "desc": "Defined use cases for the application management system and designed operation flows for both users and admins. Structured the overall architecture around a serverless approach."
+      },
+      "1": {
+        "flag": "Auth & User Features",
+        "desc": "Built user registration and login with session management. Set up a DynamoDB-based data management layer."
+      },
+      "2": {
+        "flag": "Application & Admin Dashboard",
+        "desc": "Implemented user-facing application submission and admin-facing listing/search features. Designed screens and API integration around real business workflows."
+      },
+      "3": {
+        "flag": "Notifications & Backend Integration",
+        "desc": "Implemented admin email notifications on new applications. Designed event-driven processing in a serverless Lambda environment."
+      },
+      "4": {
+        "flag": "Infra Build & IaC (Terraform / AWS)",
+        "desc": "Managed all AWS resources with Terraform for reproducible infrastructure. Streamlined deployment and operations through automation."
+      }
+    }
+  }
+}
