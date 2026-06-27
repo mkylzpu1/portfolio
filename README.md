@@ -1,34 +1,42 @@
 # Portfolio
 
-Three.js パーティクルアニメーションを中心とした、React + TypeScript 製のポートフォリオサイトです。  
-10,000個の粒子が訪問者を迎え、スクロールに応じて形状が変化します。
+React + TypeScript + Vite を使用して開発したポートフォリオサイトです。
+
+自身のスキルや開発実績を紹介するために制作しました。Three.js を活用したパーティクル演出やスクロールアニメーションを取り入れ、デザイン性と操作性を両立したサイトを目指しています。
 
 ---
 
-## 使用技術
+## Website
 
-| カテゴリ | ライブラリ / ツール | バージョン |
-|----------|---------------------|-----------|
-| UI フレームワーク | React | 18.x |
-| 言語 | TypeScript | 5.x |
-| ビルドツール | Vite | 5.x |
-| 3D / WebGL | Three.js | 0.166.x |
-| アニメーション | GSAP + ScrollTrigger | 3.12.x |
-| ルーティング | React Router DOM | 6.x |
-| Lint | ESLint (flat config) | 8.x |
-| フォーマット | Prettier | 3.x |
-| コンテナ | Docker + Docker Compose | - |
-| パッケージマネージャー | npm | - |
-| Node.js | LTS (22.x) | - |
+ポートフォリオサイトはこちらからご覧いただけます。
+🔗 https://mkylzpu1.github.io/portfolio/
 
 ---
 
-## ディレクトリ構成
+## 技術スタック
+
+| Category             | Technology                   |
+| -------------------- | ---------------------------- |
+| Frontend             | React 18, TypeScript 5, Vite |
+| 3D Graphics          | Three.js                     |
+| Animation            | GSAP, ScrollTrigger          |
+| Routing              | React Router                 |
+| Styling              | CSS Modules                  |
+| Internationalization | i18next, react-i18next       |
+| Quality              | ESLint, Prettier             |
+| Development          | Docker, Docker Compose       |
+| CI/CD                | GitHub Actions               |
+| Hosting              | GitHub Pages                 |
+
+---
+
+## フォルダ構成
 
 ```
 portfolio/
 ├── public/
-│   └── models/          # .objファイル（パーティクルの形状）
+│   ├── image/
+│   └── music/
 ├── src/
 │   ├── assets/
 │   │   └── shaders/     # GLSL頂点・フラグメントシェーダー
@@ -63,82 +71,37 @@ portfolio/
 
 ## ローカル開発手順
 
-### Docker を使う場合（推奨）
+### Docker開発の場合
 
 ```bash
-# 1. リポジトリをクローン
 git clone <repository-url>
 cd portfolio
 
-# 2. 環境変数をコピー
-cp .env.example .env
-
-# 3. コンテナ起動（初回はイメージビルドが走ります）
 docker compose up
-
-# 4. ブラウザでアクセス
-open http://localhost:5173
 ```
 
-ホットリロード対応済みです。ファイルを保存すると即時ブラウザに反映されます。
+Application:
 
-### ローカル（Node.js）を使う場合
+```text
+http://localhost:5173
+```
+
+---
+
+### Node.js開発の場合
 
 ```bash
 npm install
-cp .env.example .env
 npm run dev
-# → http://localhost:5173
 ```
 
----
+Application:
 
-## 開発コマンド
-
-| コマンド | 説明 |
-|---------|------|
-| `npm run dev` | 開発サーバー起動 |
-| `npm run build` | 本番ビルド（`dist/` に出力） |
-| `npm run preview` | ビルド済みファイルをプレビュー |
-| `npm run lint` | ESLint 実行 |
-| `npm run lint:fix` | ESLint 自動修正 |
-| `npm run format` | Prettier 整形 |
-| `npm run format:check` | Prettier チェックのみ |
-
----
-
-## 環境変数
-
-`.env.example` をコピーして `.env` を作成し、値を設定してください。
-
-| 変数名 | 説明 | 必須 |
-|--------|------|------|
-| `VITE_CONTACT_API_URL` | お問い合わせフォームの送信先 API エンドポイント | 任意 |
-
----
-
-## OBJ モデルについて
-
-`public/models/` に以下のファイルを配置することでパーティクルの形状変形が動作します。
-
+```text
+http://localhost:5173
 ```
-public/models/
-├── fourth1.obj   # 初期形状
-├── desk.obj      # 第2形状
-└── post.obj      # 第3形状
-```
-
-モデルファイルがない場合はランダムな星空パーティクルのみが表示されます。
-
 ---
 
-## ライブラリ移行について
+## License
 
-| 旧ライブラリ | 移行先 | 理由 |
-|------------|--------|------|
-| Webpack + Babel | Vite | 高速な HMR・設定量の削減 |
-| `@barba/core` | React Router DOM | React のルーティングと統合。Barba は vanilla JS 向けで React では不要 |
-| `@babel/polyfill`（非推奨） | なし | モダンブラウザを対象とするため不要 |
-| `webpack-glsl-loader` | `vite-plugin-glsl` | Vite 対応の GLSL ローダー |
-| `raw-loader` | なし | Vite は標準で raw import をサポート |
-| `glslify-loader` | なし | シェーダーの複雑度が低いため不要 |
+This project is provided as a personal portfolio.
