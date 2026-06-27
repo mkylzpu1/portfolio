@@ -218,7 +218,7 @@ export function Home({ meshRef }: Props) {
             <div className={styles.timelineTrack}>
               <div className={styles.timelineLine} aria-hidden="true" />
               {timeline.map((item) => (
-                <article key={item.year + item.title} className={styles.timelineCard}>
+                <article key={item.year + item.titleKey} className={styles.timelineCard}>
                   <div className={styles.timelineDot} aria-hidden="true" />
                   <span className={styles.timelineYear}>{item.year}</span>
                   <h3 className={styles.timelineCardTitle}>{t(item.titleKey)}</h3>
