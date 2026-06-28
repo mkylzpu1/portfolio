@@ -7,7 +7,7 @@ import type { ThemeMode } from '@/utils/Stage';
 function getInitialTheme(): ThemeMode {
   const saved = localStorage.getItem('portfolio_theme') as ThemeMode | null;
   if (saved === 'dark' || saved === 'light') return saved;
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  return 'dark';
 }
 
 export function useThreeScene(canvasRef: React.RefObject<HTMLDivElement>) {
