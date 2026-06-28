@@ -28,10 +28,10 @@
     "name": "Shota Sato",
     "role": "システムエンジニア · System Engineer",
     "intro": "診療放射線技師からエンジニアへ転身。バックエンドやクラウドインフラの構築・運用を軸に、堅実なシステム開発に従事しています。",
-    "viewProjects": "View Projects",
-    "getInTouch": "Get in Touch",
-    "location": "Japan",
-    "experience": "4 years (Medical) · 3+ years (Engineering)"
+    "viewProjects": "制作物を見る",
+    "getInTouch": "お問い合わせ",
+    "location": "日本",
+    "experience": "4年 (放射線技師) · 3年 (エンジニア)"
   },
   "about": {
     "label": "About",
@@ -129,7 +129,7 @@
     "label": "Contact",
     "title": "お問い合わせ",
     "desc": "プロジェクトのご相談やお仕事のご依頼など、お気軽にご連絡ください。",
-    "sendMessage": "Send a Message",
+    "sendMessage": "メッセージ",
     "formValue": "フォームよりご連絡ください。"
   },
   "footer": {
@@ -163,15 +163,15 @@
   },
   "timeline": {
     "0": {
-      "title": "System Engineer",
+      "title": "システムエンジニア",
       "description": "Webアプリケーションの設計・開発を担当。Backend / Cloudを中心にプロダクト開発を実施。"
     },
     "1": {
-      "title": "Engineering Start",
+      "title": "開発学習開始",
       "description": "放射線技師をしながら開発学習を開始。自院のHP制作の提案から実装まで実施。自身のブログサイトやポートフォリオサイトの構築も経験。"
     },
     "2": {
-      "title": "Medical Background",
+      "title": "診療放射線技師",
       "description": "新卒で整形外科のクリニックに入職。診療放射線技師として医療現場での経験を積む。"
     }
   },
