@@ -53,7 +53,7 @@ function AppInner() {
         }}
         aria-hidden="true"
       />
-      <audio ref={audioRef} id="sound" src="/music/bgm.mp3" loop preload="auto" />
+      <audio ref={audioRef} id="sound" src={`${import.meta.env.BASE_URL}music/bgm.mp3`} loop preload="auto" />
       {!loaded
         ? <LoadingScreen
             onEnter={() => {
