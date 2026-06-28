@@ -163,7 +163,7 @@ export function Home({ meshRef }: Props) {
                   <img src={project.image} alt={project.title} loading="lazy" />
                 </div>
                 <div className={styles.projectBody}>
-                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <h3 className={styles.projectTitle}>{t(project.title)}</h3>
                   <p className={styles.projectDesc}>{t(project.descKey)}</p>
                   <div className={styles.projectTags}>
                     {project.tags.map((tag) => (

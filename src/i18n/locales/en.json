@@ -152,13 +152,20 @@
   },
   "projectData": {
     "skillfarm": {
+      "title": "Skillfarm",
       "description": "Skill-sharing web service built with Laravel + Vue.js. Led design and implementation as part of a team."
     },
     "blog": {
+      "title": "Radiographer Blog",
       "description": "Technical blog sharing specialized medical imaging knowledge. Built on WordPress with SEO-focused structure."
     },
     "applicationManager": {
+      "title": "Application Manager",
       "description": "Interactive portfolio site featuring a Three.js particle background."
+    },
+    "flightInsight": {
+      "title": "Flight Insight",
+      "description": "A flight analysis dashboard that visualizes price trends by country and month to find the best travel deals."
     }
   },
   "timeline": {
@@ -279,6 +286,29 @@
       "4": {
         "flag": "Infra Build & IaC (Terraform / AWS)",
         "desc": "Managed all AWS resources with Terraform for reproducible infrastructure. Streamlined deployment and operations through automation."
+      }
+    }
+  },
+  "flightInsight": {
+    "label": "Project",
+    "title": "Flight Insight",
+    "overviewTitle": "Overview",
+    "overviewDesc": "A travel decision-making tool designed to help you quickly identify the most affordable destinations. By consolidating fragmented price data into a unified dashboard, it allows you to visualize trends by country and month. It eliminates the friction of manual searching, helping users intuitively discover the most economical travel plans through a clean, minimalist UI.",
+    "processTitle": "Development Process",
+    "techTitle": "Tech Stack",
+    "techDesc": "React / Vite / Tailwind CSS / Lucide React / TypeScript",
+    "timeline": {
+      "0": {
+        "flag": "Problem Definition & UX Redesign",
+        "desc": "Addressed the difficulty of comparing prices across multiple countries and months. Defined a minimalist interface focused on comparison, eliminating distractions found in traditional sites."
+      },
+      "1": {
+        "flag": "SaaS-Style UI Implementation",
+        "desc": "Inspired by Linear and Stripe, I built a UI that prioritizes visual clarity and responsiveness, ensuring that complex travel data is easy to digest."
+      },
+      "2": {
+        "flag": "Data Visualization Engine",
+        "desc": "Implemented logic to aggregate and analyze flight price trends. Created a unified view that allows users to make quick, data-driven decisions on their travel budget."
       }
     }
   }

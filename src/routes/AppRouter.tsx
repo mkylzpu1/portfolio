@@ -5,6 +5,7 @@ import { About }               from '@/pages/About';
 import { Blog }                from '@/pages/Blog';
 import { Home }                from '@/pages/Home';
 import { ApplicationManager }  from '@/pages/ApplicationManager';
+import { FlightInsight }  from '@/pages/FlightInsight';
 import { Skillfarm }           from '@/pages/Skillfarm';
 import { useScrollRestore }    from '@/hooks/useScrollRestore';
 import type { ParticleMesh }   from '@/utils/ParticleMesh';
@@ -30,6 +31,7 @@ export function AppRouter({ meshRef }: Props) {
         <Route path="/skillfarm"           element={<Skillfarm />} />
         <Route path="/blog"               element={<Blog />} />
         <Route path="/application-manager" element={<ApplicationManager />} />
+        <Route path="/flight-insight"     element={<FlightInsight />} />
         <Route path="*"                    element={<Home meshRef={meshRef} />} />
       </Routes>
     </BrowserRouter>

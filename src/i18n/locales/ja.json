@@ -152,13 +152,20 @@
   },
   "projectData": {
     "skillfarm": {
+      "title": "Skillfarm",
       "description": "Laravel + Vue.js で構築したスキル共有Webサービス。チーム開発で設計から実装まで担当。"
     },
     "blog": {
+      "title": "放射線技師ブログ",
       "description": "専門知識を発信する技術ブログ。SEOを意識したWordPress構築とコンテンツ設計。"
     },
     "applicationManager": {
+      "title": "Application Manager",
       "description": "Three.js パーティクル背景を持つインタラクティブなポートフォリオサイト。"
+    },
+    "flightInsight": {
+      "title": "Flight Insight",
+      "description": "国別・月別のフライト価格を分析し、最適な旅行プランを可視化するダッシュボード。"
     }
   },
   "timeline": {
@@ -178,8 +185,8 @@
   "skillfarm": {
     "label": "Project",
     "title": "Skillfarm",
-    "aboutTitle": "制作物について",
-    "aboutDesc": "プログラミングを学びたい方と語学（日本語・英語）を身につけたい方をマッチングさせるアプリです。CEFRを基にした独自のクラスを設けており、他国籍同士でもスムーズにやりとりが可能です。",
+    "overviewTitle": "概要",
+    "overviewDesc": "プログラミングを学びたい方と語学（日本語・英語）を身につけたい方をマッチングさせるアプリです。CEFRを基にした独自のクラスを設けており、他国籍同士でもスムーズにやりとりが可能です。",
     "devTitle": "開発活動",
     "techTitle": "使用技術",
     "techDesc": "Laravel 8 / Inertia.js / Vue.js / AWS (EC2) / Twilio / Pusher / SQLite / Git / Figma",
@@ -223,8 +230,8 @@
   "blog": {
     "label": "Project",
     "title": "放射線技師ブログ",
-    "aboutTitle": "制作物について",
-    "aboutDesc": "撮影した画像を見て異常の有無を判断する「読影」という分野に絞って情報を発信しているサイトです。知識がほぼ0の状態から読影に力を入れて3年。主にネットに上がっている症例を実践的に読影。",
+    "overviewTitle": "概要",
+    "overviewDesc": "撮影した画像を見て異常の有無を判断する「読影」という分野に絞って情報を発信しているサイトです。知識がほぼ0の状態から読影に力を入れて3年。主にネットに上がっている症例を実践的に読影。",
     "devTitle": "開発活動",
     "techTitle": "使用技術",
     "techDesc": "WordPress / jQuery / JavaScript / HTML5 / SCSS / MySQL / mixhost",
@@ -279,6 +286,29 @@
       "4": {
         "flag": "インフラ構築・IaC化（Terraform / AWS）",
         "desc": "AWS上のリソースをTerraformで管理し、再現性のあるインフラ構成を構築。デプロイから運用までを自動化可能な形に整理。"
+      }
+    }
+  },
+  "flightInsight": {
+    "label": "Project",
+    "title": "Flight Insight",
+    "overviewTitle": "概要",
+    "overviewDesc": "「手頃に行ける国はどこか？」を瞬時に判断するための旅行先意思決定支援ツールです。既存の航空券購入サイトでは国ごとの比較や月単位の最安値把握が困難でしたが、バラバラな価格データを一元化し可視化することで、最も経済的な旅行プランを直感的に発見できるようにしました。分析に集中できるミニマルなUIを実現しています。",
+    "processTitle": "開発プロセス",
+    "techTitle": "技術スタック",
+    "techDesc": "React / Vite / Tailwind CSS / Lucide React / TypeScript",
+    "timeline": {
+      "0": {
+        "flag": "課題定義とUXの再設計",
+        "desc": "国ごとに検索する手間や、月ごとの最安値の分かりにくさを解消するため、比較に特化したUIを構想。分析体験を損なう広告や複雑さを排除しました。"
+      },
+      "1": {
+        "flag": "SaaSライクなUI構築",
+        "desc": "LinearやStripeのデザインを参考に、視認性と操作性を徹底。誰でも直感的に扱える、業務ツールのような洗練されたレイアウトを構築しました。"
+      },
+      "2": {
+        "flag": "データ可視化エンジンの実装",
+        "desc": "価格推移を国別・月別に集計・算出するロジックを実装。複雑なデータを整理し、ユーザーが「お得な旅行先」を即座に判断できる環境を実現しました。"
       }
     }
   }

@@ -40,7 +40,7 @@ const BASE = import.meta.env.BASE_URL;
 export const projects: Project[] = [
   {
     id: 'skillfarm',
-    title: 'Skillfarm',
+    title: 'projectData.skillfarm.title',
     descKey: 'projectData.skillfarm.description',
     image: `${BASE}image/skillfarm.jpg`,
     tags: ['Laravel', 'Vue.js', 'MySQL', 'Docker'],
@@ -48,7 +48,7 @@ export const projects: Project[] = [
   },
   {
     id: 'blog',
-    title: '放射線技師ブログ',
+    title: 'projectData.blog.title',
     descKey: 'projectData.blog.description',
     image: `${BASE}image/blog.jpg`,
     tags: ['WordPress', 'PHP', 'SEO'],
@@ -56,11 +56,19 @@ export const projects: Project[] = [
   },
   {
     id: 'application-manager',
-    title: 'Application Manager',
+    title: 'projectData.applicationManager.title',
     descKey: 'projectData.applicationManager.description',
     image: `${BASE}image/application-manager.png`,
     tags: ['React', 'Python', 'DynamoDB', 'AWS', 'Terraform'],
     url: '/application-manager',
+  },
+  {
+    id: 'flight-insight',
+    title: 'projectData.flightInsight.title',
+    descKey: 'projectData.flightInsight.description',
+    image: `${BASE}image/flight-insight.png`,
+    tags: ['React', 'Vite', 'Tailwind CSS'],
+    url: '/flight-insight',
   },
 ];
 
