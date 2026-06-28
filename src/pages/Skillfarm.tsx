@@ -5,7 +5,6 @@ export function Skillfarm() {
   const { t } = useTranslation();
 
   const timelineKeys = ['0','1','2','3','4','5','6','7'] as const;
-
   return (
     <main className={styles.page}>
       <div className={styles.inner}>
@@ -14,7 +13,7 @@ export function Skillfarm() {
 
         <div className={styles.hero}>
           <a href="http://54.199.118.157/" target="_blank" rel="noreferrer">
-            <img src="/image/skillfarm.jpg" alt="Skillfarm" />
+            <img src={`${import.meta.env.BASE_URL}image/skillfarm.jpg`} alt={t('skillfarm.title')} />
           </a>
         </div>
 

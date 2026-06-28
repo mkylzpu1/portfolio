@@ -14,7 +14,7 @@ export function Blog() {
 
         <div className={styles.hero}>
           <a href="https://diagnostic-image.com/" target="_blank" rel="noreferrer">
-            <img src="/image/blog.jpg" alt={t('blog.title')} />
+            <img src={`${import.meta.env.BASE_URL}image/blog.jpg`} alt={t('blog.title')} />
           </a>
         </div>
 

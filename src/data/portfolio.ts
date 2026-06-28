@@ -35,12 +35,14 @@ export const profile = {
   experience: '4 years (Medical) · 3+ years (Engineering)',
 };
 
+
+const BASE = import.meta.env.BASE_URL;
 export const projects: Project[] = [
   {
     id: 'skillfarm',
     title: 'Skillfarm',
     descKey: 'projectData.skillfarm.description',
-    image: '/image/skillfarm.jpg',
+    image: `${BASE}image/skillfarm.jpg`,
     tags: ['Laravel', 'Vue.js', 'MySQL', 'Docker'],
     url: '/skillfarm',
   },
@@ -48,7 +50,7 @@ export const projects: Project[] = [
     id: 'blog',
     title: '放射線技師ブログ',
     descKey: 'projectData.blog.description',
-    image: '/image/blog.jpg',
+    image: `${BASE}image/blog.jpg`,
     tags: ['WordPress', 'PHP', 'SEO'],
     url: '/blog',
   },
@@ -56,7 +58,7 @@ export const projects: Project[] = [
     id: 'application-manager',
     title: 'Application Manager',
     descKey: 'projectData.applicationManager.description',
-    image: '/image/application-manager.png',
+    image: `${BASE}image/application-manager.png`,
     tags: ['React', 'Python', 'DynamoDB', 'AWS', 'Terraform'],
     url: '/application-manager',
   },

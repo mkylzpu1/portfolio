@@ -13,7 +13,7 @@ export function ApplicationManager() {
         <h1 className={styles.title}>{t('appManager.title')}</h1>
 
         <div className={styles.hero}>
-          <img src="/image/application-manager.png" alt={t('appManager.title')} />
+          <img src={`${import.meta.env.BASE_URL}image/application-manager.png`} alt={t('appManager.title')} />
           <div className={styles.links}>
             <a href="https://d2bz0qcouukt2b.cloudfront.net/" target="_blank" rel="noreferrer" className={styles.link}>App</a>
             <a href="https://github.com/mkylzpu1/application-manager" target="_blank" rel="noreferrer" className={styles.link}>Repo</a>
