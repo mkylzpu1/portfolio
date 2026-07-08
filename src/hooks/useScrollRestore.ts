@@ -15,8 +15,8 @@ import { useLocation } from 'react-router-dom';
 const HEADER_OFFSET = 0;
 
 /** ハッシュ対象要素が描画されるのを待つ最大リトライ数 × インターバル */
-const HASH_RETRY_INTERVAL = 80;   // ms
-const HASH_RETRY_MAX      = 30;   // 最大 2.4 秒待つ
+const HASH_RETRY_INTERVAL = 80; // ms
+const HASH_RETRY_MAX = 30; // 最大 2.4 秒待つ
 
 export function useScrollRestore() {
   const { pathname, hash, key } = useLocation();
@@ -29,8 +29,8 @@ export function useScrollRestore() {
 
     if (hash) {
       // ─── ハッシュ付き遷移 ─────────────────────────────────────
-      const id      = hash.slice(1);
-      let   retries = 0;
+      const id = hash.slice(1);
+      let retries = 0;
 
       const tryScroll = () => {
         const el = document.getElementById(id);
@@ -50,6 +50,6 @@ export function useScrollRestore() {
       // ─── 通常遷移: 最上部へ ───────────────────────────────────
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
-  // pathname / hash / key いずれかが変わったら再実行
+    // pathname / hash / key いずれかが変わったら再実行
   }, [pathname, hash, key]);
 }

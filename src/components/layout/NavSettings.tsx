@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import { Sun, Moon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 import { useTheme } from '@/contexts/ThemeContext';
 import { setLanguage, LANGUAGES, type Language } from '@/i18n';

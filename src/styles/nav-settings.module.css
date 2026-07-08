@@ -39,7 +39,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: color 0.18s ease, background 0.18s ease;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease;
   line-height: 1;
 }
 
@@ -82,7 +84,9 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: color 0.18s ease, background 0.18s ease;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease;
 }
 
 .themeBtn:first-child {

@@ -57,10 +57,20 @@
 }
 
 @keyframes sdb {
-  0%   { transform: translate(0, 0); opacity: 0; }
-  40%  { opacity: 1; }
-  80%  { transform: translate(0, 20px); opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* type */
@@ -88,7 +98,9 @@
 }
 
 @keyframes blink {
-  100% { opacity: 0; }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* section固定レイアウト */
@@ -151,7 +163,7 @@
 }
 
 .sectionBox a:hover {
-  color: #26C6DA;
+  color: #26c6da;
 }
 
 /* works */

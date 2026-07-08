@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@/styles/loading.module.css';
@@ -10,7 +10,6 @@ interface Props {
 }
 
 type Phase = 'sound' | 'typing' | 'done';
-
 
 export function LoadingScreen({ onEnter, onSoundChoice }: Props) {
   const { t } = useTranslation();
@@ -103,10 +102,18 @@ export function LoadingScreen({ onEnter, onSoundChoice }: Props) {
           <h2>{t('loading.audioTitle')}</h2>
           <p>{t('loading.audioDesc')}</p>
           <div className={styles.btnGroup}>
-            <button type="button" className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => startTyping(true)}>
+            <button
+              type="button"
+              className={`${styles.btn} ${styles.btnPrimary}`}
+              onClick={() => startTyping(true)}
+            >
               {t('loading.on')}
             </button>
-            <button type="button" className={`${styles.btn} ${styles.btnSecondary}`} onClick={() => startTyping(false)}>
+            <button
+              type="button"
+              className={`${styles.btn} ${styles.btnSecondary}`}
+              onClick={() => startTyping(false)}
+            >
               {t('loading.off')}
             </button>
           </div>
@@ -119,8 +126,12 @@ export function LoadingScreen({ onEnter, onSoundChoice }: Props) {
         </div>
       )}
 
-      <div className={`${styles.loaderCover} ${styles.loaderCoverUp} ${coverAnime ? styles.loaderCoverAnime : ''}`} />
-      <div className={`${styles.loaderCover} ${styles.loaderCoverDown} ${coverAnime ? styles.loaderCoverAnime : ''}`} />
+      <div
+        className={`${styles.loaderCover} ${styles.loaderCoverUp} ${coverAnime ? styles.loaderCoverAnime : ''}`}
+      />
+      <div
+        className={`${styles.loaderCover} ${styles.loaderCoverDown} ${coverAnime ? styles.loaderCoverAnime : ''}`}
+      />
     </div>
   );
 }

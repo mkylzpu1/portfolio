@@ -6,7 +6,7 @@ export function FlightInsight() {
   return (
     <ProjectLayout
       i18nKey="flightInsight"
-      image={`${import.meta.env.BASE_URL}movie/flight-insight.gif`}
+      image={`${import.meta.env.BASE_URL}movie/Flight Insight.gif`}
       timelineKeys={timelineKeys}
     />
   );

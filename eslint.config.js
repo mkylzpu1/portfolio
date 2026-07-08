@@ -6,6 +6,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import importPlugin from 'eslint-plugin-import';
 import prettierConfig from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default [
   { ignores: ['dist', 'node_modules'] },
@@ -19,6 +20,10 @@ export default [
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
       },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
@@ -31,6 +36,7 @@ export default [
       ...tsPlugin.configs.recommended.rules,
       ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
+      'no-undef': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],

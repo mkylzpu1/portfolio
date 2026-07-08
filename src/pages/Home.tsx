@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   MapPin,
@@ -12,14 +10,10 @@ import {
   Cloud,
   Wrench,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import {
-  profile,
-  projects,
-  skillCategories,
-  timeline,
-  contactLinks,
-} from '@/data/portfolio';
+import { profile, projects, skillCategories, timeline, contactLinks } from '@/data/portfolio';
 import { useScrollParticle } from '@/hooks/useScrollParticle';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import styles from '@/styles/home.module.css';
@@ -81,7 +75,9 @@ export function Home({ meshRef }: Props) {
           <p className={styles.heroIntro}>{t('home.intro')}</p>
           <div className={styles.tagList}>
             {profile.tags.map((tag) => (
-              <span key={tag} className={styles.tag}>{tag}</span>
+              <span key={tag} className={styles.tag}>
+                {tag}
+              </span>
             ))}
           </div>
           <div className={styles.heroActions}>
@@ -125,14 +121,18 @@ export function Home({ meshRef }: Props) {
             </div>
             <div className={styles.profileCard} data-reveal>
               <div className={styles.profileItem}>
-                <div className={styles.profileIcon}><MapPin size={18} /></div>
+                <div className={styles.profileIcon}>
+                  <MapPin size={18} />
+                </div>
                 <div>
                   <p className={styles.profileLabel}>{t('about.locationLabel')}</p>
                   <p className={styles.profileValue}>{t('home.location')}</p>
                 </div>
               </div>
               <div className={styles.profileItem}>
-                <div className={styles.profileIcon}><Briefcase size={18} /></div>
+                <div className={styles.profileIcon}>
+                  <Briefcase size={18} />
+                </div>
                 <div>
                   <p className={styles.profileLabel}>{t('about.experienceLabel')}</p>
                   <p className={styles.profileValue}>{t('home.experience')}</p>
@@ -153,12 +153,7 @@ export function Home({ meshRef }: Props) {
           </div>
           <div className={styles.projectGrid}>
             {projects.map((project) => (
-              <Link
-                key={project.id}
-                to={project.url}
-                className={styles.projectCard}
-                data-reveal
-              >
+              <Link key={project.id} to={project.url} className={styles.projectCard} data-reveal>
                 <div className={styles.projectThumb}>
                   <img src={project.image} alt={project.title} loading="lazy" />
                 </div>
@@ -167,7 +162,9 @@ export function Home({ meshRef }: Props) {
                   <p className={styles.projectDesc}>{t(project.descKey)}</p>
                   <div className={styles.projectTags}>
                     {project.tags.map((tag) => (
-                      <span key={tag} className={styles.projectTag}>{tag}</span>
+                      <span key={tag} className={styles.projectTag}>
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -196,7 +193,9 @@ export function Home({ meshRef }: Props) {
                   </div>
                   <ul className={styles.skillList}>
                     {cat.items.map((item) => (
-                      <li key={item} className={styles.skillItem}>{item}</li>
+                      <li key={item} className={styles.skillItem}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -240,10 +239,11 @@ export function Home({ meshRef }: Props) {
           </div>
 
           <div className={styles.servicesGrid}>
-
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
-                <div className={styles.serviceIcon}><Globe size={22} strokeWidth={1.75} /></div>
+                <div className={styles.serviceIcon}>
+                  <Globe size={22} strokeWidth={1.75} />
+                </div>
                 <div>
                   <h3 className={styles.serviceTitle}>{t('services.items.corporate.title')}</h3>
                   <p className={styles.servicePrice}>{t('services.items.corporate.price')}</p>
@@ -251,15 +251,19 @@ export function Home({ meshRef }: Props) {
               </div>
               <p className={styles.serviceDesc}>{t('services.items.corporate.desc')}</p>
               <ul className={styles.serviceList}>
-                {(t('services.items.corporate.features', { returnObjects: true }) as string[]).map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
+                {(t('services.items.corporate.features', { returnObjects: true }) as string[]).map(
+                  (f) => (
+                    <li key={f}>{f}</li>
+                  ),
+                )}
               </ul>
             </div>
 
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
-                <div className={styles.serviceIcon}><Code2 size={22} strokeWidth={1.75} /></div>
+                <div className={styles.serviceIcon}>
+                  <Code2 size={22} strokeWidth={1.75} />
+                </div>
                 <div>
                   <h3 className={styles.serviceTitle}>{t('services.items.wordpress.title')}</h3>
                   <p className={styles.servicePrice}>{t('services.items.wordpress.price')}</p>
@@ -267,15 +271,19 @@ export function Home({ meshRef }: Props) {
               </div>
               <p className={styles.serviceDesc}>{t('services.items.wordpress.desc')}</p>
               <ul className={styles.serviceList}>
-                {(t('services.items.wordpress.features', { returnObjects: true }) as string[]).map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
+                {(t('services.items.wordpress.features', { returnObjects: true }) as string[]).map(
+                  (f) => (
+                    <li key={f}>{f}</li>
+                  ),
+                )}
               </ul>
             </div>
 
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
-                <div className={styles.serviceIcon}><FileText size={22} strokeWidth={1.75} /></div>
+                <div className={styles.serviceIcon}>
+                  <FileText size={22} strokeWidth={1.75} />
+                </div>
                 <div>
                   <h3 className={styles.serviceTitle}>{t('services.items.lp.title')}</h3>
                   <p className={styles.servicePrice}>{t('services.items.lp.price')}</p>
@@ -291,7 +299,9 @@ export function Home({ meshRef }: Props) {
 
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
-                <div className={styles.serviceIcon}><Cloud size={22} strokeWidth={1.75} /></div>
+                <div className={styles.serviceIcon}>
+                  <Cloud size={22} strokeWidth={1.75} />
+                </div>
                 <div>
                   <h3 className={styles.serviceTitle}>{t('services.items.infra.title')}</h3>
                   <p className={styles.servicePrice}>{t('services.items.infra.price')}</p>
@@ -299,15 +309,19 @@ export function Home({ meshRef }: Props) {
               </div>
               <p className={styles.serviceDesc}>{t('services.items.infra.desc')}</p>
               <ul className={styles.serviceList}>
-                {(t('services.items.infra.features', { returnObjects: true }) as string[]).map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
+                {(t('services.items.infra.features', { returnObjects: true }) as string[]).map(
+                  (f) => (
+                    <li key={f}>{f}</li>
+                  ),
+                )}
               </ul>
             </div>
 
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
-                <div className={styles.serviceIcon}><Wrench size={22} strokeWidth={1.75} /></div>
+                <div className={styles.serviceIcon}>
+                  <Wrench size={22} strokeWidth={1.75} />
+                </div>
                 <div>
                   <h3 className={styles.serviceTitle}>{t('services.items.tools.title')}</h3>
                   <p className={styles.servicePrice}>{t('services.items.tools.price')}</p>
@@ -315,12 +329,13 @@ export function Home({ meshRef }: Props) {
               </div>
               <p className={styles.serviceDesc}>{t('services.items.tools.desc')}</p>
               <ul className={styles.serviceList}>
-                {(t('services.items.tools.features', { returnObjects: true }) as string[]).map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
+                {(t('services.items.tools.features', { returnObjects: true }) as string[]).map(
+                  (f) => (
+                    <li key={f}>{f}</li>
+                  ),
+                )}
               </ul>
             </div>
-
           </div>
 
           <div className={styles.servicesCta} data-reveal>
@@ -353,7 +368,9 @@ export function Home({ meshRef }: Props) {
                   <ContactIcon icon={link.icon} />
                 </div>
                 <span className={styles.contactLabel}>{link.label}</span>
-                <span className={styles.contactValue}>{link.valueKey ? t(link.valueKey) : link.label}</span>
+                <span className={styles.contactValue}>
+                  {link.valueKey ? t(link.valueKey) : link.label}
+                </span>
               </a>
             ))}
           </div>

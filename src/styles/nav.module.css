@@ -11,7 +11,9 @@
   padding: 1.5rem 0;
   background: var(--nav-bg, rgba(9, 9, 11, 0.97));
   border-right: 1px solid var(--nav-border, var(--border));
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .logo {
@@ -28,7 +30,9 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .logo:hover {
@@ -53,7 +57,10 @@
   height: 44px;
   border-radius: 12px;
   color: var(--text-secondary);
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .navItem:hover {
@@ -90,7 +97,9 @@
   opacity: 0;
   pointer-events: none;
   transform: translateX(-4px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .navItem:hover .navLabel {
@@ -125,7 +134,9 @@
   height: 36px;
   border-radius: 10px;
   color: var(--text-secondary);
-  transition: color 0.2s ease, background 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .socialLink:hover {

@@ -82,7 +82,10 @@ export function useActiveSection(pathname: string) {
     const raf = requestAnimationFrame(init);
 
     const onScroll = () => compute();
-    const onResize = () => { calcTops(); compute(); };
+    const onResize = () => {
+      calcTops();
+      compute();
+    };
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize, { passive: true });

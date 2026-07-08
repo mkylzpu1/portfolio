@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 import { ParticleMesh } from '@/utils/ParticleMesh';
-import { Stage }        from '@/utils/Stage';
+import { Stage } from '@/utils/Stage';
 import type { ThemeMode } from '@/utils/Stage';
 
 function getInitialTheme(): ThemeMode {
@@ -12,8 +12,8 @@ function getInitialTheme(): ThemeMode {
 
 export function useThreeScene(canvasRef: React.RefObject<HTMLDivElement>) {
   const stageRef = useRef<Stage | null>(null);
-  const meshRef  = useRef<ParticleMesh | null>(null);
-  const rafRef   = useRef<number | null>(null);
+  const meshRef = useRef<ParticleMesh | null>(null);
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -22,9 +22,9 @@ export function useThreeScene(canvasRef: React.RefObject<HTMLDivElement>) {
     let cancelled = false;
 
     const stage = new Stage(canvas);
-    const mesh  = new ParticleMesh(stage);
+    const mesh = new ParticleMesh(stage);
     stageRef.current = stage;
-    meshRef.current  = mesh;
+    meshRef.current = mesh;
 
     // 初期テーマを即座に反映（フェードなし）
     const initialTheme = getInitialTheme();
@@ -68,7 +68,7 @@ export function useThreeScene(canvasRef: React.RefObject<HTMLDivElement>) {
         stage.dispose();
       }
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { stageRef, meshRef };

@@ -1,7 +1,7 @@
 export interface Project {
   id: string;
   title: string;
-  descKey: string;   // i18n key
+  descKey: string; // i18n key
   image: string;
   tags: string[];
   url: string;
@@ -9,7 +9,7 @@ export interface Project {
 
 export interface TimelineItem {
   year: string;
-  titleKey: string;       // i18n key
+  titleKey: string; // i18n key
   descriptionKey: string; // i18n key
 }
 
@@ -34,7 +34,6 @@ export const profile = {
   location: 'Japan',
   experience: '4 years (Medical) · 3+ years (Engineering)',
 };
-
 
 const BASE = import.meta.env.BASE_URL;
 export const projects: Project[] = [
@@ -125,13 +124,13 @@ export const contactLinks: ContactLink[] = [
 ];
 
 export const navItems = [
-  { id: 'home',       label: 'Home',       href: '/#home' },
-  { id: 'about',      label: 'About',      href: '/#about' },
-  { id: 'projects',   label: 'Projects',   href: '/#projects' },
-  { id: 'skills',     label: 'Skills',     href: '/#skills' },
+  { id: 'home', label: 'Home', href: '/#home' },
+  { id: 'about', label: 'About', href: '/#about' },
+  { id: 'projects', label: 'Projects', href: '/#projects' },
+  { id: 'skills', label: 'Skills', href: '/#skills' },
   { id: 'experience', label: 'Experience', href: '/#experience' },
-  { id: 'services',   label: 'Services',   href: '/#services' },
-  { id: 'contact',    label: 'Contact',    href: '/#contact' },
+  { id: 'services', label: 'Services', href: '/#services' },
+  { id: 'contact', label: 'Contact', href: '/#contact' },
 ] as const;
 
 export type NavSectionId = (typeof navItems)[number]['id'];

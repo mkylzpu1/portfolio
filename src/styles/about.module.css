@@ -10,7 +10,9 @@
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .aboutInner {
@@ -137,7 +139,7 @@
 
 .desc {
   padding: 0.5em 1em;
-  border-left: 3px solid #26C6DA;
+  border-left: 3px solid #26c6da;
   border-radius: 2px;
   box-shadow: 0 0px 10px white;
   font-size: 0.9em;
@@ -221,7 +223,7 @@
 }
 
 .productImg a:hover {
-  color: #26C6DA;
+  color: #26c6da;
 }
 
 .productImg p {
@@ -230,11 +232,28 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .cpTimeline03::before { left: 0; }
-  .timelineGroup { padding-top: 40px; }
-  .timelineItem { padding-top: 60px; padding-left: 20px; }
-  .timelineItem::before { top: 90px; }
-  .time { top: 40px; border-radius: 0 20px 20px 0; min-height: 2em; }
-  .skillContent { width: 100%; }
-  .aboutTitle h1 { font-size: 50px; }
+  .cpTimeline03::before {
+    left: 0;
+  }
+  .timelineGroup {
+    padding-top: 40px;
+  }
+  .timelineItem {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+  .timelineItem::before {
+    top: 90px;
+  }
+  .time {
+    top: 40px;
+    border-radius: 0 20px 20px 0;
+    min-height: 2em;
+  }
+  .skillContent {
+    width: 100%;
+  }
+  .aboutTitle h1 {
+    font-size: 50px;
+  }
 }

@@ -3,27 +3,27 @@ import * as THREE from 'three';
 // ─────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────
-const CAMERA_FOV  = 60;
+const CAMERA_FOV = 60;
 const CAMERA_NEAR = 0.1;
-const CAMERA_FAR  = 1000;
-const CAMERA_X    = 0;
-const CAMERA_Y    = 0.5;
-const CAMERA_Z    = 4;
+const CAMERA_FAR = 1000;
+const CAMERA_X = 0;
+const CAMERA_Y = 0.5;
+const CAMERA_Z = 4;
 
 /** テーマごとの背景色 */
 const CLEAR_COLORS = {
-  dark:  0x05070f,
+  dark: 0x05070f,
   light: 0xf2f4f8,
 } as const;
 
 export type ThemeMode = 'dark' | 'light';
 
 export class Stage {
-  scene:    THREE.Scene;
-  camera:   THREE.PerspectiveCamera;
+  scene: THREE.Scene;
+  camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;
 
-  targetCameraZ  = CAMERA_Z;
+  targetCameraZ = CAMERA_Z;
   currentCameraZ = CAMERA_Z;
 
   constructor(canvas: HTMLElement) {

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+
 import styles from '@/styles/project.module.css';
 
 interface Props {
@@ -23,12 +24,16 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
           {appUrl || repoUrl ? (
             <div className={styles.links}>
               {appUrl && (
-                <a href={appUrl} target="_blank" rel="noreferrer" className={styles.link}>App</a>
+                <a href={appUrl} target="_blank" rel="noreferrer" className={styles.link}>
+                  App
+                </a>
               )}
               {repoUrl && (
-              <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.link}>Repo</a>
-            )}
-          </div>
+                <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.link}>
+                  Repo
+                </a>
+              )}
+            </div>
           ) : null}
         </div>
 

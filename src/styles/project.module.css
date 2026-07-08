@@ -55,7 +55,9 @@
   color: var(--accent);
   font-size: 0.875rem;
   font-weight: 600;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .link:hover {

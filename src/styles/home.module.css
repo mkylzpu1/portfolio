@@ -121,7 +121,10 @@
   color: #fff;
   font-size: 0.9375rem;
   font-weight: 600;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btnPrimary:hover {
@@ -141,7 +144,10 @@
   color: var(--text-primary);
   font-size: 0.9375rem;
   font-weight: 600;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btnSecondary:hover {
@@ -173,7 +179,10 @@
   border-radius: var(--radius-card);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .profileCard:hover {
@@ -239,7 +248,10 @@
   border: 1px solid var(--border);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .projectCard:hover {
@@ -315,7 +327,10 @@
   border-radius: var(--radius-card);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .skillCard:hover {
@@ -388,7 +403,10 @@
   border-radius: var(--radius-card);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .timelineCard:hover {
@@ -446,7 +464,10 @@
   border-radius: var(--radius-card);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .contactCard:hover {
@@ -493,7 +514,10 @@
   border-radius: var(--radius-card);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .serviceCard:hover {

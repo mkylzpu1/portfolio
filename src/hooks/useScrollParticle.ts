@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect } from 'react';
 
 import type { ParticleMesh } from '@/utils/ParticleMesh';
 
@@ -18,8 +18,8 @@ export function useScrollParticle(meshRef: React.RefObject<ParticleMesh | null>)
       // onUpdate で progress を渡し、ParticleMesh 側の慣性に委ねる。
       trigger = ScrollTrigger.create({
         trigger: document.body,
-        start:   'top top',
-        end:     'bottom bottom',
+        start: 'top top',
+        end: 'bottom bottom',
         onUpdate: (self) => {
           mesh.setProgress(self.progress);
         },
@@ -37,7 +37,7 @@ export function useScrollParticle(meshRef: React.RefObject<ParticleMesh | null>)
       clearInterval(timer);
       trigger?.kill();
     };
-  // meshRef は ref オブジェクトなので安定
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // meshRef は ref オブジェクトなので安定
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 }

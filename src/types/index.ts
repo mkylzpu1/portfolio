@@ -1,10 +1,4 @@
-export type PageNamespace =
-  | 'index'
-  | 'about'
-  | 'skillfarm'
-  | 'blog'
-  | 'portfolio'
-  | 'contact';
+export type PageNamespace = 'index' | 'about' | 'skillfarm' | 'blog' | 'portfolio' | 'contact';
 
 export interface SectionScrollTarget {
   uniform: { value: number };

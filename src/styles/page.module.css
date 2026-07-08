@@ -115,7 +115,10 @@
   color: #fff;
   font-size: 0.9375rem;
   font-weight: 600;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btnPrimary:hover:not(:disabled) {

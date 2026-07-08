@@ -1,12 +1,16 @@
 import { useRef, useState, useEffect } from 'react';
 
 import { LoadingScreen } from '@/components/ui/LoadingScreen';
-import { AppRouter }     from '@/routes/AppRouter';
-import { useThreeScene } from '@/hooks/useThreeScene';
 import { ThemeProvider, useTheme } from '@/contexts/ThemeContext';
+import { useThreeScene } from '@/hooks/useThreeScene';
+import { AppRouter } from '@/routes/AppRouter';
 
 /** Three.js にテーマ変更を伝えるブリッジ */
-function ThemeBridge({ meshRef }: { meshRef: React.RefObject<import('@/utils/ParticleMesh').ParticleMesh | null> }) {
+function ThemeBridge({
+  meshRef,
+}: {
+  meshRef: React.RefObject<import('@/utils/ParticleMesh').ParticleMesh | null>;
+}) {
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -21,7 +25,7 @@ function AppInner() {
     return sessionStorage.getItem('loaded') === 'true';
   });
   const canvasRef = useRef<HTMLDivElement>(null);
-  const audioRef  = useRef<HTMLAudioElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const { meshRef } = useThreeScene(canvasRef);
 
   const handleSoundChoice = (enabled: boolean) => {
@@ -53,17 +57,24 @@ function AppInner() {
         }}
         aria-hidden="true"
       />
-      <audio ref={audioRef} id="sound" src={`${import.meta.env.BASE_URL}music/bgm.mp3`} loop preload="auto" />
-      {!loaded
-        ? <LoadingScreen
-            onEnter={() => {
-              sessionStorage.setItem('loaded', 'true');
-              setLoaded(true);
-            }}
-            onSoundChoice={handleSoundChoice}
-          />
-        : <AppRouter meshRef={meshRef} />
-      }
+      <audio
+        ref={audioRef}
+        id="sound"
+        src={`${import.meta.env.BASE_URL}music/bgm.mp3`}
+        loop
+        preload="auto"
+      />
+      {!loaded ? (
+        <LoadingScreen
+          onEnter={() => {
+            sessionStorage.setItem('loaded', 'true');
+            setLoaded(true);
+          }}
+          onSoundChoice={handleSoundChoice}
+        />
+      ) : (
+        <AppRouter meshRef={meshRef} />
+      )}
     </>
   );
 }
