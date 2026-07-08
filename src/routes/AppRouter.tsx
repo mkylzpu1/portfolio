@@ -4,6 +4,7 @@ import { Navigation } from '@/components/layout/Navigation';
 import { useScrollRestore } from '@/hooks/useScrollRestore';
 import { About } from '@/pages/About';
 import { ApplicationManager } from '@/pages/ApplicationManager';
+import { AutoLedgerAi } from '@/pages/AutoLedgerAi';
 import { Blog } from '@/pages/Blog';
 import { FlightInsight } from '@/pages/FlightInsight';
 import { Home } from '@/pages/Home';
@@ -32,6 +33,7 @@ export function AppRouter({ meshRef }: Props) {
         <Route path="/blog" element={<Blog />} />
         <Route path="/application-manager" element={<ApplicationManager />} />
         <Route path="/flight-insight" element={<FlightInsight />} />
+        <Route path="/auto-ledger-ai" element={<AutoLedgerAi />} />
         <Route path="*" element={<Home meshRef={meshRef} />} />
       </Routes>
     </BrowserRouter>

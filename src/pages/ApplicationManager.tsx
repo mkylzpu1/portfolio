@@ -5,7 +5,7 @@ export function ApplicationManager() {
 
   return (
     <ProjectLayout
-      i18nKey="appManager"
+      i18nKey="projectData.applicationManager"
       image={`${import.meta.env.BASE_URL}image/application-manager.png`}
       appUrl="https://d2bz0qcouukt2b.cloudfront.net/"
       repoUrl="https://github.com/mkylzpu1/application-manager"

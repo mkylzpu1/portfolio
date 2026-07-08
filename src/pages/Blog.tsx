@@ -5,7 +5,7 @@ export function Blog() {
 
   return (
     <ProjectLayout
-      i18nKey="blog"
+      i18nKey="projectData.blog"
       image={`${import.meta.env.BASE_URL}image/blog.jpg`}
       timelineKeys={timelineKeys}
     />

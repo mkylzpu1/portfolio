@@ -12,6 +12,8 @@ interface Props {
 
 export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }: Props) {
   const { t } = useTranslation();
+  const techTags = t(`${i18nKey}.tags`, { returnObjects: true }) as unknown;
+  const techDesc = Array.isArray(techTags) ? techTags.join(' / ') : t(`${i18nKey}.techDesc`);
 
   return (
     <main className={styles.page}>
@@ -57,7 +59,7 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
 
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t(`${i18nKey}.techTitle`)}</h2>
-          <p className={styles.body}>{t(`${i18nKey}.techDesc`)}</p>
+          <p className={styles.body}>{techDesc}</p>
         </div>
       </div>
     </main>

@@ -5,7 +5,7 @@ export function FlightInsight() {
   const timelineKeys = ['0', '1', '2'] as const;
   return (
     <ProjectLayout
-      i18nKey="flightInsight"
+      i18nKey="projectData.flightInsight"
       image={`${import.meta.env.BASE_URL}movie/Flight Insight.gif`}
       timelineKeys={timelineKeys}
     />

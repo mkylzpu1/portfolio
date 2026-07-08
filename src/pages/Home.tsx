@@ -161,11 +161,13 @@ export function Home({ meshRef }: Props) {
                   <h3 className={styles.projectTitle}>{t(project.title)}</h3>
                   <p className={styles.projectDesc}>{t(project.descKey)}</p>
                   <div className={styles.projectTags}>
-                    {project.tags.map((tag) => (
-                      <span key={tag} className={styles.projectTag}>
-                        {tag}
-                      </span>
-                    ))}
+                    {((t(project.tagsKey, { returnObjects: true }) as string[]) ?? []).map(
+                      (tag) => (
+                        <span key={tag} className={styles.projectTag}>
+                          {tag}
+                        </span>
+                      ),
+                    )}
                   </div>
                 </div>
               </Link>
