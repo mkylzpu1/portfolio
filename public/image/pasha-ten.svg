@@ -1,0 +1,37 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7CFA"/>
+      <stop offset="100%" stop-color="#3B5BDB"/>
+    </linearGradient>
+    <linearGradient id="stickGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EAEFFF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="240" height="240" rx="56" fill="url(#badgeGrad2)"/>
+
+  <!-- 点棒モチーフ -->
+  <g transform="translate(120,112) rotate(-18)">
+    <rect x="-78" y="-10" width="156" height="20" rx="10" fill="url(#stickGrad2)" opacity="0.5"/>
+  </g>
+  <g transform="translate(120,112) rotate(0)">
+    <rect x="-84" y="-12" width="168" height="24" rx="12" fill="url(#stickGrad2)" opacity="0.8"/>
+    <rect x="-60" y="-12" width="14" height="24" fill="#3B5BDB" opacity="0.35"/>
+    <rect x="46" y="-12" width="14" height="24" fill="#3B5BDB" opacity="0.35"/>
+  </g>
+  <g transform="translate(120,112) rotate(18)">
+    <rect x="-78" y="-10" width="156" height="20" rx="10" fill="#FFFFFF"/>
+    <rect x="-56" y="-10" width="12" height="20" fill="#22C55E"/>
+    <rect x="44" y="-10" width="12" height="20" fill="#22C55E"/>
+  </g>
+
+  <!-- シャッターのきらめき -->
+  <g fill="#FFFFFF" opacity="0.9">
+    <path d="M178 46 l6 15 l15 6 l-15 6 l-6 15 l-6 -15 l-15 -6 l15 -6 z"/>
+  </g>
+
+  <!-- 下部にロゴタイプ(小) -->
+  <text x="120" y="204" text-anchor="middle" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" letter-spacing="1">パシャテン</text>
+</svg>

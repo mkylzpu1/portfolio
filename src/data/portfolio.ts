@@ -1,10 +1,15 @@
 export interface Project {
   id: string;
+  i18nKey: string; // ← 追加: ProjectLayoutに渡すキー
   title: string;
-  descKey: string; // i18n key
-  tagsKey: string; // i18n key
+  descKey: string;
+  tagsKey: string;
   image: string;
+  detailImage?: string; // ← 追加: 詳細ページ用の画像
   url: string;
+  appUrl?: string; // ← 追加
+  repoUrl?: string; // ← 追加
+  timelineCount: number; // ← 追加: timelineKeysの代わりに件数だけ持つ
 }
 
 export interface TimelineItem {
@@ -39,43 +44,66 @@ const BASE = import.meta.env.BASE_URL;
 export const projects: Project[] = [
   {
     id: 'skillfarm',
+    i18nKey: 'projectData.skillfarm',
     title: 'projectData.skillfarm.title',
     descKey: 'projectData.skillfarm.description',
     tagsKey: 'projectData.skillfarm.tags',
     image: `${BASE}image/skillfarm.jpg`,
     url: '/skillfarm',
+    timelineCount: 8,
   },
   {
     id: 'blog',
+    i18nKey: 'projectData.blog',
     title: 'projectData.blog.title',
     descKey: 'projectData.blog.description',
     tagsKey: 'projectData.blog.tags',
     image: `${BASE}image/blog.jpg`,
     url: '/blog',
+    timelineCount: 5,
   },
   {
     id: 'application-manager',
+    i18nKey: 'projectData.applicationManager',
     title: 'projectData.applicationManager.title',
     descKey: 'projectData.applicationManager.description',
     tagsKey: 'projectData.applicationManager.tags',
     image: `${BASE}image/application-manager.png`,
     url: '/application-manager',
+    appUrl: 'https://d2bz0qcouukt2b.cloudfront.net/',
+    repoUrl: 'https://github.com/mkylzpu1/application-manager',
+    timelineCount: 5,
   },
   {
     id: 'flight-insight',
+    i18nKey: 'projectData.flightInsight',
     title: 'projectData.flightInsight.title',
     descKey: 'projectData.flightInsight.description',
     tagsKey: 'projectData.flightInsight.tags',
     image: `${BASE}image/flight-insight.png`,
+    detailImage: `${BASE}movie/Flight Insight.gif`, // 元コードもこのパスを参照していたので合わせています
     url: '/flight-insight',
+    timelineCount: 3,
   },
   {
     id: 'auto-ledger-ai',
+    i18nKey: 'projectData.autoLedgerAi',
     title: 'projectData.autoLedgerAi.title',
     descKey: 'projectData.autoLedgerAi.description',
     tagsKey: 'projectData.autoLedgerAi.tags',
     image: `${BASE}image/auto-ledger-ai.png`,
     url: '/auto-ledger-ai',
+    timelineCount: 3,
+  },
+  {
+    id: 'pasha-ten',
+    i18nKey: 'projectData.pashaTen',
+    title: 'projectData.pashaTen.title',
+    descKey: 'projectData.pashaTen.description',
+    tagsKey: 'projectData.pashaTen.tags',
+    image: `${BASE}image/pasha-ten.svg`,
+    url: '/pasha-ten',
+    timelineCount: 3, // ← pashaTenのtimeline件数がわからないので仮値。実際のi18nに合わせて調整してください
   },
 ];
 
