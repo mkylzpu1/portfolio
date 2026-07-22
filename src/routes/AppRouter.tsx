@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Navigation } from '@/components/layout/Navigation';
 import { useScrollRestore } from '@/hooks/useScrollRestore';
-import { About } from '@/pages/About';
 import { Home } from '@/pages/Home';
 import { ProjectDetail } from '@/pages/ProjectDetail';
 import type { ParticleMesh } from '@/utils/ParticleMesh';
@@ -24,7 +23,6 @@ export function AppRouter({ meshRef }: Props) {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home meshRef={meshRef} />} />
-        <Route path="/about" element={<About />} />
         <Route path="/:projectId" element={<ProjectDetail />} />
         <Route path="*" element={<Home meshRef={meshRef} />} />
       </Routes>

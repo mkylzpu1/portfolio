@@ -264,6 +264,7 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--surface);
+  position: relative;
 }
 
 .projectThumb img {
@@ -684,4 +685,45 @@
   .servicesCta {
     padding: 2rem 1.5rem;
   }
+}
+
+.categoryFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.categoryChip {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color, #444);
+  background: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.categoryChipActive {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-hover);
+  border-color: var(--accent-hover, #fff);
+}
+
+.projectCategoryBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(139, 92, 246, 0.85);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }

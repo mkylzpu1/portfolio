@@ -1,9 +1,11 @@
+import { ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import styles from '@/styles/project.module.css';
 
 interface Props {
-  i18nKey: string; // 翻訳キーのプレフィックス (例: 'flightInsight')
+  i18nKey: string;
   image: string;
   appUrl?: string;
   repoUrl?: string;
@@ -18,9 +20,13 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
   return (
     <main className={styles.page}>
       <div className={styles.inner}>
-        <span className={styles.label}>{t(`${i18nKey}.label`)}</span>
-        <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
+        <Link to="/#projects" className={styles.backLink}>
+          <ArrowLeft size={16} />
+          {t('projectData.back')}
+        </Link>
 
+        <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
+        {/* 以下は既存のまま */}
         <div className={styles.hero}>
           <img src={image} alt={t(`${i18nKey}.title`)} />
           {appUrl || repoUrl ? (
@@ -38,12 +44,10 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
             </div>
           ) : null}
         </div>
-
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t(`${i18nKey}.overviewTitle`)}</h2>
           <p className={styles.body}>{t(`${i18nKey}.overviewDesc`)}</p>
         </div>
-
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t(`${i18nKey}.processTitle`)}</h2>
           {timelineKeys.map((key, index) => (
@@ -56,7 +60,6 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
             </div>
           ))}
         </div>
-
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>{t(`${i18nKey}.techTitle`)}</h2>
           <p className={styles.body}>{techDesc}</p>

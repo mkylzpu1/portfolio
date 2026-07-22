@@ -10,19 +10,26 @@ import {
   Cloud,
   Wrench,
 } from 'lucide-react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-import { profile, projects, skillCategories, timeline, contactLinks } from '@/data/portfolio';
+import {
+  profile,
+  projects,
+  projectCategories,
+  skillCategories,
+  timeline,
+  contactLinks,
+} from '@/data/portfolio';
 import { useScrollParticle } from '@/hooks/useScrollParticle';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import styles from '@/styles/home.module.css';
 import type { ParticleMesh } from '@/utils/ParticleMesh';
-
 interface Props {
   meshRef: React.RefObject<ParticleMesh | null>;
 }
-
+const CATEGORY_STORAGE_KEY = 'activeProjectCategory';
 function ContactIcon({ icon }: { icon: string }) {
   switch (icon) {
     case 'mail':
@@ -51,19 +58,30 @@ function ContactIcon({ icon }: { icon: string }) {
       return null;
   }
 }
-
 const SKILL_ICONS = {
   Backend: Code2,
   Frontend: Globe,
   Infrastructure: Cloud,
   Tools: Wrench,
 };
-
 export function Home({ meshRef }: Props) {
   const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState<string>(() => {
+    return sessionStorage.getItem(CATEGORY_STORAGE_KEY) ?? 'all';
+  });
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    sessionStorage.setItem(CATEGORY_STORAGE_KEY, categoryId);
+  };
+  const filteredProjects =
+    activeCategory === 'all' ? projects : projects.filter((p) => p.category === activeCategory);
+
+  const categoryLabelMap = Object.fromEntries(
+    projectCategories.filter((c) => c.id !== 'all').map((c) => [c.id, c.labelKey]),
+  );
+
   useScrollParticle(meshRef);
   useScrollReveal();
-
   return (
     <div className={styles.page}>
       {/* Hero */}
@@ -92,6 +110,7 @@ export function Home({ meshRef }: Props) {
               {t('home.viewProjects')}
               <ArrowRight size={16} />
             </a>
+
             <a
               href="#contact"
               className={styles.btnSecondary}
@@ -106,7 +125,6 @@ export function Home({ meshRef }: Props) {
         </div>
         <div className={styles.heroVisual} aria-hidden="true" />
       </section>
-
       {/* About */}
       <section id="about" className={`${styles.section} s s-1`}>
         <div className={styles.sectionInner}>
@@ -142,7 +160,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       {/* Projects */}
       <section id="projects" className={`${styles.section} s s-2`}>
         <div className={styles.sectionInner}>
@@ -151,23 +168,36 @@ export function Home({ meshRef }: Props) {
             <h2 className={styles.sectionTitle}>{t('projects.title')}</h2>
             <p className={styles.sectionDesc}>{t('projects.desc')}</p>
           </div>
+          <div className={styles.categoryFilter} data-reveal>
+            {projectCategories.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                className={`${styles.categoryChip} ${activeCategory === cat.id ? styles.categoryChipActive : ''}`}
+                onClick={() => handleCategoryChange(cat.id)}
+              >
+                {t(cat.labelKey)}
+              </button>
+            ))}
+          </div>
           <div className={styles.projectGrid}>
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <Link key={project.id} to={project.url} className={styles.projectCard} data-reveal>
                 <div className={styles.projectThumb}>
                   <img src={project.image} alt={project.title} loading="lazy" />
+                  <span className={styles.projectCategoryBadge}>
+                    {t(categoryLabelMap[project.category])}
+                  </span>
                 </div>
                 <div className={styles.projectBody}>
                   <h3 className={styles.projectTitle}>{t(project.title)}</h3>
                   <p className={styles.projectDesc}>{t(project.descKey)}</p>
                   <div className={styles.projectTags}>
-                    {((t(project.tagsKey, { returnObjects: true }) as string[]) ?? []).map(
-                      (tag) => (
-                        <span key={tag} className={styles.projectTag}>
-                          {tag}
-                        </span>
-                      ),
-                    )}
+                    {((t(project.tagsKey, { returnObjects: true }) as string[]) ?? []).map((tag) => (
+                      <span key={tag} className={styles.projectTag}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </Link>
@@ -175,7 +205,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       {/* Skills */}
       <section id="skills" className={`${styles.section} s s-3`}>
         <div className={styles.sectionInner}>
@@ -206,7 +235,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       {/* Experience */}
       <section id="experience" className={`${styles.section} s s-4`}>
         <div className={styles.sectionInner}>
@@ -230,7 +258,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       {/* Services */}
       <section id="services" className={`${styles.section} s`}>
         <div className={styles.sectionInner}>
@@ -239,7 +266,6 @@ export function Home({ meshRef }: Props) {
             <h2 className={styles.sectionTitle}>{t('services.title')}</h2>
             <p className={styles.sectionDesc}>{t('services.desc')}</p>
           </div>
-
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
@@ -260,7 +286,6 @@ export function Home({ meshRef }: Props) {
                 )}
               </ul>
             </div>
-
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
                 <div className={styles.serviceIcon}>
@@ -280,7 +305,6 @@ export function Home({ meshRef }: Props) {
                 )}
               </ul>
             </div>
-
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
                 <div className={styles.serviceIcon}>
@@ -298,7 +322,6 @@ export function Home({ meshRef }: Props) {
                 ))}
               </ul>
             </div>
-
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
                 <div className={styles.serviceIcon}>
@@ -318,7 +341,6 @@ export function Home({ meshRef }: Props) {
                 )}
               </ul>
             </div>
-
             <div className={styles.serviceCard} data-reveal>
               <div className={styles.serviceHeader}>
                 <div className={styles.serviceIcon}>
@@ -339,7 +361,6 @@ export function Home({ meshRef }: Props) {
               </ul>
             </div>
           </div>
-
           <div className={styles.servicesCta} data-reveal>
             <h3 className={styles.servicesCtaTitle}>{t('services.ctaTitle')}</h3>
             <p className={styles.servicesCtaText}>{t('services.ctaText')}</p>
@@ -347,7 +368,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       {/* Contact */}
       <section id="contact" className={styles.section}>
         <div className={styles.sectionInner}>
@@ -388,7 +408,6 @@ export function Home({ meshRef }: Props) {
           </div>
         </div>
       </section>
-
       <footer className={styles.footer}>
         <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
       </footer>

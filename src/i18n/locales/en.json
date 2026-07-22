@@ -45,7 +45,13 @@
     "label": "Projects",
     "title": "Projects",
     "desc": "A selection of products I've built solo and with teams.",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "categories": {
+      "all": "All",
+      "app": "Apps",
+      "tool": "Productivity Tools",
+      "hp": "HP / Blogs"
+    }
   },
   "skills": {
     "label": "Skills",
@@ -141,16 +147,8 @@
     "dark": "Dark",
     "light": "Light"
   },
-  "aboutPage": {
-    "label": "About",
-    "title": "Profile",
-    "name": "Shota Sato",
-    "birthday": "Date of Birth: July 29, 1996",
-    "p1": "I've been working at an orthopedic clinic as a diagnostic radiographer for 5 years. I've focused on image interpretation — aiming to be a technician whose readings surpass those of physicians.",
-    "p2": "Sharing expertise through a blog and redesigning my workplace website sparked my interest in programming. I've now been self-teaching for about a year.",
-    "p3": "Recently, I've been building a web service using Laravel and Vue.js with a small team of friends."
-  },
   "projectData": {
+    "back": "Back to Projects",
     "skillfarm": {
       "title": "Skillfarm",
       "description": "Skill-sharing web service built with Laravel + Vue.js. Led design and implementation as part of a team.",
@@ -311,6 +309,38 @@
         "2": {
           "flag": "CI/CD and Security Hardening",
           "desc": "Built an esbuild pipeline for GAS output and automated deployment via GitHub Actions and clasp. Conducted a security review and fixed risks around credential handling, webhook token validation, and PII exposure in logs."
+        }
+      }
+    },
+    "pashaTen": {
+      "title": "Score Stick Scanner \"pasha-ten\"",
+      "description": "Just snap a photo of the mahjong score sticks and AI counts them automatically. No more manual counting mistakes — easily record and share game results with friends and family.",
+      "tags": ["TypeScript", "AWS SAM (Lambda)", "DynamoDB", "Terraform", "Docker"],
+      "label": "Project",
+      "overviewTitle": "Overview",
+      "overviewDesc": "When everyone counts the score sticks by hand after a game, the totals often don't match up. To fix this small but frustrating problem, I built an app that reads the sticks straight from a photo using AI and tallies the score automatically. Friends and family can record and share scores together in a shared group (room), and each person can also see their overall results across every group they've played in.",
+      "processTitle": "Development Process",
+      "techTitle": "Tech Stack",
+      "timeline": {
+        "0": {
+          "flag": "The Idea",
+          "desc": "The project started from an everyday frustration: counting score sticks by hand often led to mismatched totals. I set out to build something that could read the score from a simple photo."
+        },
+        "1": {
+          "flag": "Building My Own AI Model",
+          "desc": "Using photos I collected myself, I built my own AI model (an ONNX file) that reads the number and value of score sticks from a photo. The model runs right in the user's browser instead of on a server, which keeps running costs down while still returning results instantly."
+        },
+        "2": {
+          "flag": "Group & Player Management",
+          "desc": "Built a way to organize friends and family into groups, so it's clear who played together in each session."
+        },
+        "3": {
+          "flag": "Game History & Overall Scores",
+          "desc": "Game results are recorded automatically, and each player can check not just a single session's result but their running total across every game they've taken part in."
+        },
+        "4": {
+          "flag": "Cleaning Up the Code",
+          "desc": "Reorganized the code by responsibility so it stays easy to read and easy to update going forward."
         }
       }
     }
