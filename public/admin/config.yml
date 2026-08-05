@@ -6,6 +6,7 @@ backend:
 
 media_folder: "public/image"
 public_folder: "/image"
+site_url: 'https://mkylzpu1.github.io/portfolio/'
 
 locale: ja
 i18n:
