@@ -13,7 +13,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import type { NavSectionId } from '@/data/portfolio';
+import type { NavSectionId } from '@/data/profile';
 
 const SECTION_IDS: NavSectionId[] = [
   'home',
