@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { projects, projectCategories } from '@/data/projects';
 import styles from '@/styles/home.module.css';
+import { withBaseUrl } from '@/utils/asset';
 
 const CATEGORY_STORAGE_KEY = 'activeProjectCategory';
 
@@ -49,7 +50,11 @@ export function ProjectsSection() {
           {filteredProjects.map((project) => (
             <Link key={project.id} to={project.url} className={styles.projectCard} data-reveal>
               <div className={styles.projectThumb}>
-                <img src={project.image} alt={t(`${project.i18nKey}.title`)} loading="lazy" />
+                <img
+                  src={withBaseUrl(project.image)}
+                  alt={t(`${project.i18nKey}.title`)}
+                  loading="lazy"
+                />
                 <span className={styles.projectCategoryBadge}>
                   {t(categoryLabelMap[project.category])}
                 </span>
