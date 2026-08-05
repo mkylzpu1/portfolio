@@ -126,22 +126,83 @@
   }
 }
 
+/* ── breadcrumb ── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
 .backLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 1.5rem;
-  padding: 0.4rem 0.75rem 0.4rem 0.5rem;
-  border-radius: 10px;
+  gap: 0.35rem;
   color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
+
 .backLink:hover {
-  background: rgba(139, 92, 246, 0.1);
   color: var(--accent);
+}
+
+.breadcrumbSep {
+  opacity: 0.4;
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary);
+  font-weight: 500;
+  /* 長いタイトルは省略 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+/* ── hero：ボーダーを外してオーバーレイ方式に ── */
+.hero {
+  position: relative; /* ← border: 1px を削除 */
+  margin-bottom: 2.5rem;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.hero img {
+  width: 100%;
+  object-fit: cover;
+  display: block; /* ← img下の謎の余白を消す */
+}
+
+/* ボタンを画像の右下にオーバーレイ */
+.heroActions {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  /* background: rgba(0, 0, 0, 0.55); */
+  background: rgb(117, 61, 248);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s ease;
+}
+
+.actionBtn:hover {
+  background: rgba(139, 92, 246, 1);
 }

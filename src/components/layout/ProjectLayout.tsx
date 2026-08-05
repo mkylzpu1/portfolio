@@ -1,5 +1,6 @@
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import styles from '@/styles/project.module.css';
@@ -20,28 +21,34 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
   return (
     <main className={styles.page}>
       <div className={styles.inner}>
-        <Link to="/#projects" className={styles.backLink}>
-          <ArrowLeft size={16} />
-          {t('projectData.back')}
-        </Link>
+        <nav className={styles.breadcrumb}>
+          <Link to="/#projects" className={styles.backLink}>
+            <ArrowLeft size={14} strokeWidth={2} />
+            Projects
+          </Link>
+          <span className={styles.breadcrumbSep}>/</span>
+          <span className={styles.breadcrumbCurrent}>{t(`${i18nKey}.title`)}</span>
+        </nav>
 
         <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
         <div className={styles.hero}>
           <img src={image} alt={t(`${i18nKey}.title`)} />
-          {appUrl || repoUrl ? (
-            <div className={styles.links}>
+          {(appUrl || repoUrl) && (
+            <div className={styles.heroActions}>
               {appUrl && (
-                <a href={appUrl} target="_blank" rel="noreferrer" className={styles.link}>
-                  App
+                <a href={appUrl} target="_blank" rel="noreferrer" className={styles.actionBtn}>
+                  <ExternalLink size={14} strokeWidth={2} />
+                  Live App
                 </a>
               )}
               {repoUrl && (
-                <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.link}>
-                  Repo
+                <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.actionBtn}>
+                  <FaGithub className="w-5 h-5" />
+                  Repository
                 </a>
               )}
             </div>
-          ) : null}
+          )}
         </div>
 
         {/* 「概要」「開発プロセス」「使用技術」の見出しは全プロジェクト共通のラベルなので
