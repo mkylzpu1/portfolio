@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import { useMeshRef } from '@/contexts/MeshContext';
 import {
   profile,
   projects,
@@ -25,10 +26,7 @@ import {
 import { useScrollParticle } from '@/hooks/useScrollParticle';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import styles from '@/styles/home.module.css';
-import type { ParticleMesh } from '@/utils/ParticleMesh';
-interface Props {
-  meshRef: React.RefObject<ParticleMesh | null>;
-}
+
 const CATEGORY_STORAGE_KEY = 'activeProjectCategory';
 function ContactIcon({ icon }: { icon: string }) {
   switch (icon) {
@@ -64,7 +62,8 @@ const SKILL_ICONS = {
   Infrastructure: Cloud,
   Tools: Wrench,
 };
-export function Home({ meshRef }: Props) {
+export function Home() {
+  const meshRef = useMeshRef();
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string>(() => {
     return sessionStorage.getItem(CATEGORY_STORAGE_KEY) ?? 'all';
