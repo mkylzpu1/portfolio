@@ -15,7 +15,7 @@ interface Props {
 export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }: Props) {
   const { t } = useTranslation();
   const techTags = t(`${i18nKey}.tags`, { returnObjects: true }) as unknown;
-  const techDesc = Array.isArray(techTags) ? techTags.join(' / ') : t(`${i18nKey}.techDesc`);
+  const techDesc = Array.isArray(techTags) ? techTags.join(' / ') : '';
 
   return (
     <main className={styles.page}>
@@ -26,7 +26,6 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
         </Link>
 
         <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
-        {/* 以下は既存のまま */}
         <div className={styles.hero}>
           <img src={image} alt={t(`${i18nKey}.title`)} />
           {appUrl || repoUrl ? (
@@ -44,12 +43,15 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
             </div>
           ) : null}
         </div>
+
+        {/* 「概要」「開発プロセス」「使用技術」の見出しは全プロジェクト共通のラベルなので
+            projectData.common から取得する（プロジェクト固有の i18nKey 配下ではない） */}
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t(`${i18nKey}.overviewTitle`)}</h2>
+          <h2 className={styles.sectionTitle}>{t('projectData.common.overviewTitle')}</h2>
           <p className={styles.body}>{t(`${i18nKey}.overviewDesc`)}</p>
         </div>
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t(`${i18nKey}.processTitle`)}</h2>
+          <h2 className={styles.sectionTitle}>{t('projectData.common.processTitle')}</h2>
           {timelineKeys.map((key, index) => (
             <div key={key} className={styles.timelineItem}>
               <span className={styles.timelineMonth}>{index + 1}</span>
@@ -61,7 +63,7 @@ export function ProjectLayout({ i18nKey, image, appUrl, repoUrl, timelineKeys }:
           ))}
         </div>
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t(`${i18nKey}.techTitle`)}</h2>
+          <h2 className={styles.sectionTitle}>{t('projectData.common.techTitle')}</h2>
           <p className={styles.body}>{techDesc}</p>
         </div>
       </div>

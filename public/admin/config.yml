@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: mkylzpu1/portfolio # ← 実際のリポジトリ名に置き換えてください
+  repo: mkylzpu1/portfolio
   branch: main
   base_url: https://sveltia-cms-auth.mkylzpu123.workers.dev
 
@@ -29,13 +29,13 @@ collections:
       - label: "ID (URLスラッグ)"
         name: id
         widget: string
-        i18n: true # multiple_folders では全フィールドを各言語ファイルに複製するため true にする
+        i18n: duplicate
         hint: "半角英数とハイフンのみ。例: pasha-ten（日英で同じ値にする）"
 
       - label: "カテゴリ"
         name: category
         widget: select
-        i18n: true
+        i18n: duplicate
         options:
           - { label: "アプリ", value: app }
           - { label: "効率化ツール", value: tool }
@@ -44,30 +44,30 @@ collections:
       - label: "サムネイル画像"
         name: image
         widget: image
-        i18n: true
+        i18n: duplicate
 
       - label: "詳細ページ用画像（任意）"
         name: detailImage
         widget: image
         required: false
-        i18n: true
+        i18n: duplicate
 
       - label: "URL (/xxx)"
         name: url
         widget: string
-        i18n: true
+        i18n: duplicate
 
       - label: "アプリURL（任意）"
         name: appUrl
         widget: string
         required: false
-        i18n: true
+        i18n: duplicate
 
       - label: "リポジトリURL（任意）"
         name: repoUrl
         widget: string
         required: false
-        i18n: true
+        i18n: duplicate
 
       - label: "タイトル"
         name: title

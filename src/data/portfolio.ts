@@ -51,7 +51,10 @@ export interface RawProjectContent {
   url: string;
   appUrl?: string;
   repoUrl?: string;
-  content: Record<Locale, Pick<ProjectLocaleContent, 'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline'>>;
+  content: Record<
+    Locale,
+    Pick<ProjectLocaleContent, 'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline'>
+  >;
 }
 
 const allIds = Array.from(new Set([...jaById.keys(), ...enById.keys()])).sort();
@@ -62,7 +65,9 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
 
   if (!ja || !en) {
     // 翻訳が片方の言語しかない場合はビルド時に気づけるよう警告し、対象からは除外
-    console.warn(`[portfolio] project "${id}" is missing a translation (ja: ${!!ja}, en: ${!!en}). Skipped.`);
+    console.warn(
+      `[portfolio] project "${id}" is missing a translation (ja: ${!!ja}, en: ${!!en}). Skipped.`,
+    );
     return [];
   }
 
