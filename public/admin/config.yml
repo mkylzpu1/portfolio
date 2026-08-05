@@ -1,0 +1,98 @@
+backend:
+  name: github
+  repo: mkylzpu1/portfolio # ← 実際のリポジトリ名に置き換えてください
+  branch: main
+  base_url: https://sveltia-cms-auth.mkylzpu123.workers.dev
+
+media_folder: "public/image"
+public_folder: "/image"
+
+locale: ja
+i18n:
+  structure: multiple_folders
+  locales: [ja, en]
+  default_locale: ja
+
+collections:
+  - name: projects
+    label: "制作物 (Projects)"
+    label_singular: "制作物"
+    folder: "src/content/projects"
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    identifier_field: id
+    extension: json
+    format: json
+    i18n: true
+    fields:
+      - label: "ID (URLスラッグ)"
+        name: id
+        widget: string
+        i18n: true # multiple_folders では全フィールドを各言語ファイルに複製するため true にする
+        hint: "半角英数とハイフンのみ。例: pasha-ten（日英で同じ値にする）"
+
+      - label: "カテゴリ"
+        name: category
+        widget: select
+        i18n: true
+        options:
+          - { label: "アプリ", value: app }
+          - { label: "効率化ツール", value: tool }
+          - { label: "HP / ブログ", value: hp }
+
+      - label: "サムネイル画像"
+        name: image
+        widget: image
+        i18n: true
+
+      - label: "詳細ページ用画像（任意）"
+        name: detailImage
+        widget: image
+        required: false
+        i18n: true
+
+      - label: "URL (/xxx)"
+        name: url
+        widget: string
+        i18n: true
+
+      - label: "アプリURL（任意）"
+        name: appUrl
+        widget: string
+        required: false
+        i18n: true
+
+      - label: "リポジトリURL（任意）"
+        name: repoUrl
+        widget: string
+        required: false
+        i18n: true
+
+      - label: "タイトル"
+        name: title
+        widget: string
+        i18n: true
+
+      - label: "説明（一覧カード用）"
+        name: description
+        widget: text
+        i18n: true
+
+      - label: "タグ / 使用技術"
+        name: tags
+        widget: list
+        i18n: true
+
+      - label: "概要（詳細ページ）"
+        name: overviewDesc
+        widget: text
+        i18n: true
+
+      - label: "開発プロセス（タイムライン）"
+        name: timeline
+        widget: list
+        i18n: true
+        fields:
+          - { label: "見出し", name: flag, widget: string }
+          - { label: "詳細", name: desc, widget: text }

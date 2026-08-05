@@ -1,0 +1,23 @@
+{
+  "id": "skillfarm",
+  "category": "app",
+  "image": "/image/skillfarm.jpg",
+  "detailImage": "",
+  "url": "/skillfarm",
+  "appUrl": "",
+  "repoUrl": "",
+  "title": "Skillfarm",
+  "description": "Skill-sharing web service built with Laravel + Vue.js. Led design and implementation as part of a team.",
+  "tags": ["Laravel", "Vue.js", "MySQL", "Docker"],
+  "overviewDesc": "A matching app connecting people who want to learn programming with those studying Japanese or English. Features a custom CEFR-based proficiency system for smooth cross-language communication.",
+  "timeline": [
+    { "flag": "Team Founded", "desc": "Recruited 2 non-engineer friends on 2021/11/28 to form a grassroots dev team - frontend, backend (my main role), and marketing." },
+    { "flag": "New Members Joined", "desc": "2 more members joined, growing to a 5-person team with a new infrastructure division." },
+    { "flag": "Member Left", "desc": "Marketing lead left due to a busy day job. Twitter efforts underperformed - impressions were about 1/10 of average." },
+    { "flag": "Impressions Improved", "desc": "Switching hashtag strategy led to a dramatic jump in impressions." },
+    { "flag": "Started Tech Blog Posts", "desc": "Alongside comic uploads, began posting technical articles on the stalled blog." },
+    { "flag": "AdSense Approved", "desc": "Passed Google AdSense review on the 5th article." },
+    { "flag": "App Completed Locally", "desc": "App completed in local environment on 2022/04/14." },
+    { "flag": "Present", "desc": "Currently deploying to production." }
+  ]
+}

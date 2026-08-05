@@ -1,0 +1,20 @@
+{
+  "id": "application-manager",
+  "category": "app",
+  "image": "/image/application-manager.png",
+  "detailImage": "",
+  "url": "/application-manager",
+  "appUrl": "https://d2bz0qcouukt2b.cloudfront.net/",
+  "repoUrl": "https://github.com/mkylzpu1/application-manager",
+  "title": "Application Manager",
+  "description": "応募者情報の登録・管理を行うサーバーレスWebアプリケーション。",
+  "tags": ["React + JavaScript", "Lambda（Python）", "DynamoDB", "AWS（複数サービス）", "Terraform"],
+  "overviewDesc": "本プロジェクトは、応募者情報の登録・管理を行うサーバーレスWebアプリケーションです。ユーザーはアカウント登録後に案件へ応募でき、応募情報は管理者側で一元管理されます。また、応募発生時には管理者へ自動通知が送信される業務フローを実装しています。",
+  "timeline": [
+    { "flag": "要件整理・アーキテクチャ設計", "desc": "応募管理システムとしてのユースケースを定義し、ユーザー・管理者双方の操作フローを設計。サーバーレス構成を前提に全体構造を整理。" },
+    { "flag": "認証・ユーザー機能の実装", "desc": "ユーザー登録・ログイン機能を中心に、認証状態管理やセッション設計を実装。DynamoDBを用いたデータ管理構成を構築。" },
+    { "flag": "応募機能・管理画面の構築", "desc": "ユーザーの応募機能および管理者向けの応募一覧・検索機能を実装。業務フローを意識した画面設計とAPI連携を構築。" },
+    { "flag": "通知機能・バックエンド連携", "desc": "応募時に管理者へメール通知を送信する仕組みを実装。サーバーレス環境（Lambda）でのイベント駆動処理を設計。" },
+    { "flag": "インフラ構築・IaC化（Terraform / AWS）", "desc": "AWS上のリソースをTerraformで管理し、再現性のあるインフラ構成を構築。デプロイから運用までを自動化可能な形に整理。" }
+  ]
+}

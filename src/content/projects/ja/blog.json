@@ -1,0 +1,20 @@
+{
+  "id": "blog",
+  "category": "hp",
+  "image": "/image/blog.jpg",
+  "detailImage": "",
+  "url": "/blog",
+  "appUrl": "",
+  "repoUrl": "",
+  "title": "放射線技師ブログ",
+  "description": "専門知識を発信する技術ブログ。SEOを意識したWordPress構築とコンテンツ設計。",
+  "tags": ["WordPress", "JavaScript", "MySQL", "Mixhost（レンタルサーバー）"],
+  "overviewDesc": "撮影した画像を見て異常の有無を判断する「読影」という分野に絞って情報を発信しているサイトです。知識がほぼ0の状態から読影に力を入れて3年。主にネットに上がっている症例を実践的に読影。",
+  "timeline": [
+    { "flag": "Web制作の勉強としてブログサイトを構築", "desc": "ローカル環境から本番環境へのデプロイ、コンタクトフォームの設置などに苦戦しながらも完成。" },
+    { "flag": "Amazonアソシエイト審査落選", "desc": "記事の内容が薄かったこと、SEO対策ができていなかったこと、サブディレクトリに構築していたことが原因と考えられる。" },
+    { "flag": "サイトをリニューアル", "desc": "SEOを意識した設計とした上でサイトをお引越し。" },
+    { "flag": "Google Adsense審査通過", "desc": "Google Adsenseの審査に提出したのち通過。" },
+    { "flag": "廃止", "desc": "システムエンジニアへの転向に伴い、ブログを廃止。" }
+  ]
+}

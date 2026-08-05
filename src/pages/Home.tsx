@@ -184,16 +184,22 @@ export function Home({ meshRef }: Props) {
             {filteredProjects.map((project) => (
               <Link key={project.id} to={project.url} className={styles.projectCard} data-reveal>
                 <div className={styles.projectThumb}>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img
+  src={project.image}
+  alt={t(`${project.i18nKey}.title`)}
+  loading="lazy"
+/>
                   <span className={styles.projectCategoryBadge}>
                     {t(categoryLabelMap[project.category])}
                   </span>
                 </div>
                 <div className={styles.projectBody}>
-                  <h3 className={styles.projectTitle}>{t(project.title)}</h3>
-                  <p className={styles.projectDesc}>{t(project.descKey)}</p>
+<h3 className={styles.projectTitle}>{t(`${project.i18nKey}.title`)}</h3>
+<p className={styles.projectDesc}>{t(`${project.i18nKey}.description`)}</p>
                   <div className={styles.projectTags}>
-                    {((t(project.tagsKey, { returnObjects: true }) as string[]) ?? []).map(
+{(
+  (t(`${project.i18nKey}.tags`, { returnObjects: true }) as string[]) ?? []
+).map(
                       (tag) => (
                         <span key={tag} className={styles.projectTag}>
                           {tag}

@@ -1,0 +1,20 @@
+{
+  "id": "blog",
+  "category": "hp",
+  "image": "/image/blog.jpg",
+  "detailImage": "",
+  "url": "/blog",
+  "appUrl": "",
+  "repoUrl": "",
+  "title": "Radiographer Blog",
+  "description": "Technical blog sharing specialized medical imaging knowledge. Built on WordPress with SEO-focused structure.",
+  "tags": ["WordPress", "PHP", "SEO"],
+  "overviewDesc": "A site focused on image interpretation - analyzing medical images to detect abnormalities. Built from near-zero knowledge with 3 years of dedicated study, primarily interpreting real-world clinical cases found online.",
+  "timeline": [
+    { "flag": "Built Blog as Web Dev Practice", "desc": "Struggled through local-to-production deployment and contact form setup, but completed the site." },
+    { "flag": "Amazon Associates Rejected", "desc": "Likely due to thin content, poor SEO, and being built on a subdirectory." },
+    { "flag": "Site Redesigned", "desc": "Migrated the site with an SEO-focused redesign." },
+    { "flag": "Google AdSense Approved", "desc": "Submitted and passed the Google AdSense review." },
+    { "flag": "Discontinued", "desc": "Shut down the blog after transitioning to software engineering." }
+  ]
+}

@@ -1,18 +1,127 @@
+// ─────────────────────────────────────────────────────────
+// CMS (Sveltia) content loading
+// i18n structure: multiple_folders
+//   src/content/projects/ja/<id>.json
+//   src/content/projects/en/<id>.json
+// ─────────────────────────────────────────────────────────
+interface ProjectLocaleContent {
+  id: string;
+  category: 'app' | 'tool' | 'hp';
+  image: string;
+  detailImage?: string;
+  url: string;
+  appUrl?: string;
+  repoUrl?: string;
+  title: string;
+  description: string;
+  tags: string[];
+  overviewDesc: string;
+  timeline: { flag: string; desc: string }[];
+}
+
+type Locale = 'ja' | 'en';
+
+/** 各ロケールフォルダ内のjsonをすべて読み込む */
+const jaModules = import.meta.glob<ProjectLocaleContent>('/src/content/projects/ja/*.json', {
+  eager: true,
+  import: 'default',
+});
+const enModules = import.meta.glob<ProjectLocaleContent>('/src/content/projects/en/*.json', {
+  eager: true,
+  import: 'default',
+});
+
+function toIdMap(modules: Record<string, ProjectLocaleContent>): Map<string, ProjectLocaleContent> {
+  const map = new Map<string, ProjectLocaleContent>();
+  for (const content of Object.values(modules)) {
+    map.set(content.id, content);
+  }
+  return map;
+}
+
+const jaById = toIdMap(jaModules);
+const enById = toIdMap(enModules);
+
+/** id -> ロケールごとのコンテンツ にまとめた中間表現（i18n/index.ts が利用） */
+export interface RawProjectContent {
+  id: string;
+  category: 'app' | 'tool' | 'hp';
+  image: string;
+  detailImage?: string;
+  url: string;
+  appUrl?: string;
+  repoUrl?: string;
+  content: Record<Locale, Pick<ProjectLocaleContent, 'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline'>>;
+}
+
+const allIds = Array.from(new Set([...jaById.keys(), ...enById.keys()])).sort();
+
+export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
+  const ja = jaById.get(id);
+  const en = enById.get(id);
+
+  if (!ja || !en) {
+    // 翻訳が片方の言語しかない場合はビルド時に気づけるよう警告し、対象からは除外
+    console.warn(`[portfolio] project "${id}" is missing a translation (ja: ${!!ja}, en: ${!!en}). Skipped.`);
+    return [];
+  }
+
+  return [
+    {
+      id: ja.id,
+      category: ja.category,
+      image: ja.image,
+      detailImage: ja.detailImage || undefined,
+      url: ja.url,
+      appUrl: ja.appUrl || undefined,
+      repoUrl: ja.repoUrl || undefined,
+      content: {
+        ja: {
+          title: ja.title,
+          description: ja.description,
+          tags: ja.tags,
+          overviewDesc: ja.overviewDesc,
+          timeline: ja.timeline,
+        },
+        en: {
+          title: en.title,
+          description: en.description,
+          tags: en.tags,
+          overviewDesc: en.overviewDesc,
+          timeline: en.timeline,
+        },
+      },
+    },
+  ];
+});
+
 export interface Project {
   id: string;
-  i18nKey: string; // ← 追加: ProjectLayoutに渡すキー
-  title: string;
-  descKey: string;
-  tagsKey: string;
+  i18nKey: string;
   image: string;
-  detailImage?: string; // ← 追加: 詳細ページ用の画像
+  detailImage?: string;
   url: string;
-  appUrl?: string; // ← 追加
-  repoUrl?: string; // ← 追加
-  timelineCount: number; // ← 追加: timelineKeysの代わりに件数だけ持つ
+  appUrl?: string;
+  repoUrl?: string;
+  timelineCount: number;
   category: 'app' | 'tool' | 'hp';
 }
 
+export const projects: Project[] = rawProjectContent.map((p) => ({
+  id: p.id,
+  i18nKey: `projectData.${p.id}`,
+  image: p.image,
+  detailImage: p.detailImage,
+  url: p.url,
+  appUrl: p.appUrl,
+  repoUrl: p.repoUrl,
+  timelineCount: p.content.ja.timeline.length,
+  category: p.category,
+}));
+
+// ─────────────────────────────────────────────────────────
+// 以下、既存のまま（プロジェクト以外のデータ）
+// ─────────────────────────────────────────────────────────
 export interface TimelineItem {
   year: string;
   titleKey: string; // i18n key
@@ -40,81 +149,6 @@ export const profile = {
   location: 'Japan',
   experience: '4 years (Medical) · 3+ years (Engineering)',
 };
-
-const BASE = import.meta.env.BASE_URL;
-export const projects: Project[] = [
-  {
-    id: 'pasha-ten',
-    i18nKey: 'projectData.pashaTen',
-    title: 'projectData.pashaTen.title',
-    descKey: 'projectData.pashaTen.description',
-    category: 'app',
-    tagsKey: 'projectData.pashaTen.tags',
-    image: `${BASE}image/pasha-ten.svg`,
-    url: '/pasha-ten',
-    appUrl: 'https://d3e460c51ps9vo.cloudfront.net/guide',
-    timelineCount: 5,
-  },
-  {
-    id: 'auto-ledger-ai',
-    i18nKey: 'projectData.autoLedgerAi',
-    title: 'projectData.autoLedgerAi.title',
-    descKey: 'projectData.autoLedgerAi.description',
-    category: 'tool',
-    tagsKey: 'projectData.autoLedgerAi.tags',
-    image: `${BASE}image/auto-ledger-ai.png`,
-    url: '/auto-ledger-ai',
-    appUrl: 'https://mkylzpu1.github.io/auto-ledger-ai-lp/',
-    timelineCount: 3,
-  },
-  {
-    id: 'flight-insight',
-    i18nKey: 'projectData.flightInsight',
-    title: 'projectData.flightInsight.title',
-    descKey: 'projectData.flightInsight.description',
-    category: 'app',
-    tagsKey: 'projectData.flightInsight.tags',
-    image: `${BASE}image/flight-insight.png`,
-    detailImage: `${BASE}movie/Flight Insight.gif`,
-    url: '/flight-insight',
-    timelineCount: 3,
-  },
-  {
-    id: 'application-manager',
-    i18nKey: 'projectData.applicationManager',
-    title: 'projectData.applicationManager.title',
-    descKey: 'projectData.applicationManager.description',
-    category: 'app',
-    tagsKey: 'projectData.applicationManager.tags',
-    image: `${BASE}image/application-manager.png`,
-    url: '/application-manager',
-    appUrl: 'https://d2bz0qcouukt2b.cloudfront.net/',
-    repoUrl: 'https://github.com/mkylzpu1/application-manager',
-    timelineCount: 5,
-  },
-  {
-    id: 'skillfarm',
-    i18nKey: 'projectData.skillfarm',
-    title: 'projectData.skillfarm.title',
-    descKey: 'projectData.skillfarm.description',
-    category: 'app',
-    tagsKey: 'projectData.skillfarm.tags',
-    image: `${BASE}image/skillfarm.jpg`,
-    url: '/skillfarm',
-    timelineCount: 8,
-  },
-  {
-    id: 'blog',
-    i18nKey: 'projectData.blog',
-    title: 'projectData.blog.title',
-    descKey: 'projectData.blog.description',
-    category: 'hp',
-    tagsKey: 'projectData.blog.tags',
-    image: `${BASE}image/blog.jpg`,
-    url: '/blog',
-    timelineCount: 5,
-  },
-];
 
 export const projectCategories = [
   { id: 'all', labelKey: 'projects.categories.all' },

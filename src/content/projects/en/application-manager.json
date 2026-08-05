@@ -1,0 +1,20 @@
+{
+  "id": "application-manager",
+  "category": "app",
+  "image": "/image/application-manager.png",
+  "detailImage": "",
+  "url": "/application-manager",
+  "appUrl": "https://d2bz0qcouukt2b.cloudfront.net/",
+  "repoUrl": "https://github.com/mkylzpu1/application-manager",
+  "title": "Application Manager",
+  "description": "A serverless web application for registering and managing applicant information.",
+  "tags": ["React + JavaScript", "Lambda (Python)", "DynamoDB", "AWS", "Terraform"],
+  "overviewDesc": "A serverless web application for registering and managing applicant information. Users can apply to listings after creating an account, with all submissions centrally managed by an admin. Automated email notifications are sent to admins upon new applications.",
+  "timeline": [
+    { "flag": "Requirements & Architecture", "desc": "Defined use cases for the application management system and designed operation flows for both users and admins. Structured the overall architecture around a serverless approach." },
+    { "flag": "Auth & User Features", "desc": "Built user registration and login with session management. Set up a DynamoDB-based data management layer." },
+    { "flag": "Application & Admin Dashboard", "desc": "Implemented user-facing application submission and admin-facing listing/search features. Designed screens and API integration around real business workflows." },
+    { "flag": "Notifications & Backend Integration", "desc": "Implemented admin email notifications on new applications. Designed event-driven processing in a serverless Lambda environment." },
+    { "flag": "Infra Build & IaC (Terraform / AWS)", "desc": "Managed all AWS resources with Terraform for reproducible infrastructure. Streamlined deployment and operations through automation." }
+  ]
+}

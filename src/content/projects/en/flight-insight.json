@@ -1,0 +1,18 @@
+{
+  "id": "flight-insight",
+  "category": "app",
+  "image": "/image/flight-insight.png",
+  "detailImage": "/movie/Flight Insight.gif",
+  "url": "/flight-insight",
+  "appUrl": "",
+  "repoUrl": "",
+  "title": "Flight Insight",
+  "description": "A flight analysis dashboard that visualizes price trends by country and month to find the best travel deals.",
+  "tags": ["React + TypeScript", "Tailwind CSS"],
+  "overviewDesc": "A travel decision-making tool designed to help you quickly identify the most affordable destinations. By consolidating fragmented price data into a unified dashboard, it allows you to visualize trends by country and month. It eliminates the friction of manual searching, helping users intuitively discover the most economical travel plans through a clean, minimalist UI.",
+  "timeline": [
+    { "flag": "Problem Definition & UX Redesign", "desc": "Addressed the difficulty of comparing prices across multiple countries and months. Defined a minimalist interface focused on comparison, eliminating distractions found in traditional sites." },
+    { "flag": "SaaS-Style UI Implementation", "desc": "Inspired by Linear and Stripe, I built a UI that prioritizes visual clarity and responsiveness, ensuring that complex travel data is easy to digest." },
+    { "flag": "Data Visualization Engine", "desc": "Implemented logic to aggregate and analyze flight price trends. Created a unified view that allows users to make quick, data-driven decisions on their travel budget." }
+  ]
+}

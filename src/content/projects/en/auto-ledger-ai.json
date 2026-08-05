@@ -1,0 +1,18 @@
+{
+  "id": "auto-ledger-ai",
+  "category": "tool",
+  "image": "/image/auto-ledger-ai.png",
+  "detailImage": "",
+  "url": "/auto-ledger-ai",
+  "appUrl": "https://mkylzpu1.github.io/auto-ledger-ai-lp/",
+  "repoUrl": "",
+  "title": "Auto Ledger AI",
+  "description": "A LINE bot that automatically records household expenses from text and receipt photos.",
+  "tags": ["TypeScript", "Google Apps Script", "LINE Messaging API", "Groq API", "Google Sheets", "GitHub Actions"],
+  "overviewDesc": "A LINE-based bot for family expense tracking. Just post a message like \"500 yen at Seven\" or send a receipt image in your LINE group, and AI extracts amount, store, and payer to log it into Google Sheets automatically. No dedicated app installation or manual input is required.",
+  "timeline": [
+    { "flag": "Requirements and System Design", "desc": "Adopted a design centered on LINE group posts for easy family expense sharing. Built the end-to-end data flow from AI text/image parsing to Google Sheets persistence with GAS as the bot runtime." },
+    { "flag": "LINE Bot and AI Parser Implementation", "desc": "Implemented extraction of payer, amount, and merchant from natural language messages and receipt images via Groq API triggered by LINE Webhooks. Added retry handling and automatic sender name resolution from LINE user IDs." },
+    { "flag": "CI/CD and Security Hardening", "desc": "Built an esbuild pipeline for GAS output and automated deployment via GitHub Actions and clasp. Conducted a security review and fixed risks around credential handling, webhook token validation, and PII exposure in logs." }
+  ]
+}
