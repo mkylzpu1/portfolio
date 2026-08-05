@@ -1,0 +1,58 @@
+{
+  "id": "hotel-site",
+  "category": "hp",
+  "image": "/image/hotel-site.png",
+  "detailImage": "",
+  "url": "/hotel-site",
+  "appUrl": "https://mkylzpu1.github.io/hotel-grand-toya/en/",
+  "title": "Hotel Website (Sample)",
+  "description": "A sample hotel website supporting Japanese, English, Chinese, and Korean to accommodate inbound travelers. Built with Astro for fast performance and multilingual SEO, while also providing a multilingual CMS, automated translation, and multilingual search to simplify day-to-day operations.",
+  "tags": [
+    "Astro",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Sveltia CMS",
+    "GitHub Actions",
+    "i18n"
+  ],
+  "overviewDesc": "This sample hotel website was created with international visitors in mind, supporting four languages. Hotel staff can update website content and announcements through an easy-to-use CMS, while translation and deployment are automated to minimize maintenance work and keep operating costs close to zero.",
+  "timeline": [
+    {
+      "flag": "Website Planning & Design",
+      "desc": "The site was designed to help guests quickly find the information they need when considering a stay. Pages such as rooms, hot springs, dining, and access were organized from the visitor's perspective with a clear navigation structure. A responsive design was implemented to provide a comfortable experience across desktop and mobile devices."
+    },
+    {
+      "flag": "Multilingual Support",
+      "desc": "To meet the needs of international travelers, the website supports Japanese, English, Chinese, and Korean. Every page is available in all four languages, allowing visitors to switch languages without losing context. This ensures that overseas guests can easily access hotel information."
+    },
+    {
+      "flag": "Multilingual SEO",
+      "desc": "For international marketing, it is essential that each language version can be discovered through search engines. Astro generates static pages for every language, improving both loading speed and search engine visibility. This helps the website reach users searching in their native language."
+    },
+    {
+      "flag": "Content Management System",
+      "desc": "A CMS was implemented so hotel staff can update website text and publish announcements without technical knowledge. Routine updates can be completed directly from the browser. This reduces the need to rely on developers for everyday maintenance."
+    },
+    {
+      "flag": "Automated Translation",
+      "desc": "Maintaining a multilingual website usually requires updating every language individually. To solve this, changes made in Japanese are automatically translated and applied to the other language versions. This significantly reduces maintenance effort while keeping information consistent."
+    },
+    {
+      "flag": "Manual Translation Editing",
+      "desc": "Automatic translation is not always sufficient for hotel-specific expressions or subtle nuances. Therefore, each language version can also be edited manually after translation. This combines the efficiency of automation with the quality of human review."
+    },
+    {
+      "flag": "Multilingual Search",
+      "desc": "A multilingual search function was implemented to help visitors quickly find the information they need. Guests can search rooms, facilities, and announcements in any of the four supported languages. This provides a smooth browsing experience regardless of language."
+    },
+    {
+      "flag": "Near-Zero Operating Cost",
+      "desc": "Long-term operating costs are an important consideration for hotel websites. By combining free cloud services and open-source tools, the website can be maintained with almost no ongoing infrastructure or CMS costs. This makes the solution practical even for small hotels and independent businesses."
+    },
+    {
+      "flag": "Automated Deployment",
+      "desc": "Publishing website updates manually can be time-consuming and prone to mistakes. An automated deployment workflow was built so that approved content is published automatically. As a result, hotel staff only need to focus on updating content rather than managing the release process."
+    }
+  ]
+}
