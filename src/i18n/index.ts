@@ -1,48 +1,28 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { buildProjectResources } from './buildProjectResources';
 import en from './locales/en.json';
 import ja from './locales/ja.json';
-
-import { rawProjectContent } from '@/data/portfolio';
 
 const STORAGE_KEY = 'portfolio_language';
 
 const savedLanguage = localStorage.getItem(STORAGE_KEY);
 const defaultLanguage = savedLanguage ?? 'ja';
 
-/**
- * CMS (src/content/projects/{ja,en}/*.json) の内容を
- * i18next の projectData 名前空間にマージする。
- * 見出し等の共通文言（overviewTitle, processTitle, techTitle, back）は
- * ja.json / en.json 側の projectData 直下に残したまま利用する。
- */
-function buildProjectData(locale: 'ja' | 'en'): Record<string, unknown> {
-  const out: Record<string, unknown> = {};
-  for (const p of rawProjectContent) {
-    const c = p.content[locale];
-    out[p.id] = {
-      title: c.title,
-      description: c.description,
-      tags: c.tags,
-      overviewDesc: c.overviewDesc,
-      timeline: Object.fromEntries(c.timeline.map((t, i) => [String(i), t])),
-    };
-  }
-  return out;
-}
-
+// 静的UI文言（locales/*.json）と、CMSから動的生成したプロジェクト文言をマージする。
+// 構造の詳細は i18n/README.md を参照。
 export const resources = {
   ja: {
     translation: {
       ...ja,
-      projectData: { ...ja.projectData, ...buildProjectData('ja') },
+      projectData: { ...ja.projectData, ...buildProjectResources('ja') },
     },
   },
   en: {
     translation: {
       ...en,
-      projectData: { ...en.projectData, ...buildProjectData('en') },
+      projectData: { ...en.projectData, ...buildProjectResources('en') },
     },
   },
 } as const;

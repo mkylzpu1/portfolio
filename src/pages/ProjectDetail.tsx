@@ -2,7 +2,7 @@
 import { Navigate, useParams } from 'react-router-dom';
 
 import { ProjectLayout } from '@/components/layout/ProjectLayout';
-import { projects } from '@/data/portfolio';
+import { projects } from '@/data/projects';
 
 export function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>();

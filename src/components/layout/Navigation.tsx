@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { NavSettings } from './NavSettings';
 
-import { navItems } from '@/data/portfolio';
+import { navItems } from '@/data/profile';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import styles from '@/styles/nav.module.css';
 
