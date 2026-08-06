@@ -90,10 +90,39 @@ collections:
         widget: text
         i18n: true
 
-      - label: "開発プロセス（タイムライン）"
+      # ── 新設：アピールポイント（任意・目安3つ） ──────────────────
+      # highlights がない場合はセクション自体が非表示になります
+      - label: "アピールポイント（任意）"
+        name: highlights
+        widget: list
+        required: false
+        i18n: true
+        hint: "特にアピールしたい点を3つ程度。未入力の場合はセクションを非表示。"
+        fields:
+          - { label: "見出し", name: title, widget: string }
+          - { label: "詳細", name: desc, widget: text }
+
+      # ── 既存：開発プロセス（タイムライン）任意に変更 ─────────────
+      # timeline がない場合はセクション自体が非表示になります
+      - label: "開発プロセス（タイムライン・任意）"
         name: timeline
         widget: list
+        required: false
         i18n: true
+        hint: "開発の流れをステップで記載。未入力の場合はセクションを非表示。"
         fields:
           - { label: "見出し", name: flag, widget: string }
           - { label: "詳細", name: desc, widget: text }
+
+      # ── 新設：スクリーンショット（任意・ロケール非依存） ────────
+      # 画像パスのみのため i18n: duplicate（ja 側の値を使用）
+      # screenshots がない場合はセクション自体が非表示になります
+      - label: "スクリーンショット（任意）"
+        name: screenshots
+        widget: list
+        required: false
+        i18n: duplicate
+        hint: "追加で見せたい画像。キャプションは任意。未入力の場合はセクションを非表示。"
+        fields:
+          - { label: "画像", name: image, widget: image }
+          - { label: "キャプション（任意）", name: caption, widget: string, required: false }
