@@ -18,14 +18,8 @@ interface Props {
   highlightCount: number;
   /** スクリーンショット（ロケール非依存）。undefined / 空配列のとき非表示 */
   screenshots?: Screenshot[];
-  category: string;
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  app: 'App',
-  tool: 'Tool',
-  hp: 'HP / Blog',
-};
 
 export function ProjectLayout({
   i18nKey,
@@ -35,7 +29,6 @@ export function ProjectLayout({
   timelineCount,
   highlightCount,
   screenshots,
-  category,
 }: Props) {
   const { t } = useTranslation();
 
@@ -70,21 +63,13 @@ export function ProjectLayout({
 
         {/* ── Header ── */}
         <header className={styles.header}>
-          <div className={styles.headerMeta}>
-            <span className={styles.categoryBadge}>
-              {CATEGORY_LABELS[category] ?? category}
-            </span>
-          </div>
           <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
-          <p className={styles.description}>{t(`${i18nKey}.description`)}</p>
+        </header>
 
-          <div className={styles.tags}>
-            {tagsArray.map((tag) => (
-              <span key={tag} className={styles.tag}>
-                {tag}
-              </span>
-            ))}
-          </div>
+        {/* ── Hero image ── */}
+        <div className={styles.heroImage}>
+          <img src={image} alt={t(`${i18nKey}.title`)} />
+        </div>
 
           {(appUrl || repoUrl) && (
             <div className={styles.actions}>
@@ -102,21 +87,6 @@ export function ProjectLayout({
               )}
             </div>
           )}
-        </header>
-
-        {/* ── Hero image ── */}
-        <div className={styles.heroImage}>
-          <img src={image} alt={t(`${i18nKey}.title`)} />
-        </div>
-
-        {/* ── SP: Tech tags（モバイルのみ表示） ── */}
-        <div className={styles.spTechWrap}>
-          {tagsArray.map((tag) => (
-            <span key={tag} className={styles.spTechTag}>
-              {tag}
-            </span>
-          ))}
-        </div>
 
         {/* ── 2カラム ── */}
         <div className={styles.contentGrid}>
@@ -267,37 +237,6 @@ export function ProjectLayout({
                 </div>
               </div>
             )}
-
-            {/* Info */}
-            <div className={styles.sidebarCard}>
-              <p className={styles.sidebarTitle}>Info</p>
-              <div>
-                <div className={styles.sidebarInfoRow}>
-                  <span className={styles.sidebarInfoLabel}>Category</span>
-                  <span className={styles.sidebarInfoValue}>
-                    {CATEGORY_LABELS[category] ?? category}
-                  </span>
-                </div>
-                {highlightKeys.length > 0 && (
-                  <div className={styles.sidebarInfoRow}>
-                    <span className={styles.sidebarInfoLabel}>Highlights</span>
-                    <span className={styles.sidebarInfoValue}>{highlightKeys.length}</span>
-                  </div>
-                )}
-                {timelineKeys.length > 0 && (
-                  <div className={styles.sidebarInfoRow}>
-                    <span className={styles.sidebarInfoLabel}>Process steps</span>
-                    <span className={styles.sidebarInfoValue}>{timelineKeys.length}</span>
-                  </div>
-                )}
-                {hasScreenshots && (
-                  <div className={styles.sidebarInfoRow}>
-                    <span className={styles.sidebarInfoLabel}>Screenshots</span>
-                    <span className={styles.sidebarInfoValue}>{screenshots!.length}</span>
-                  </div>
-                )}
-              </div>
-            </div>
 
           </aside>
         </div>

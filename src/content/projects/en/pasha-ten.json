@@ -10,6 +10,20 @@
   "description": "Just snap a photo of the mahjong score sticks and AI counts them automatically. No more manual counting mistakes — easily record and share game results with friends and family.",
   "tags": ["TypeScript", "AWS SAM (Lambda)", "DynamoDB", "Terraform", "Docker"],
   "overviewDesc": "When everyone counts the score sticks by hand after a game, the totals often don't match up. To fix this small but frustrating problem, I built an app that reads the sticks straight from a photo using AI and tallies the score automatically. Friends and family can record and share scores together in a shared group (room), and each person can also see their overall results across every group they've played in.",
+  "highlights": [
+    {
+      "title": "Custom AI Model Running in the Browser",
+      "desc": "Built a custom AI model (ONNX) trained on photos I collected myself to read stick counts and scores. The model runs entirely in the user's browser — no server inference — keeping operating costs at zero while returning results instantly."
+    },
+    {
+      "title": "Room-Based Score Sharing × Running Totals",
+      "desc": "Organize friends and family into rooms to share game results. Players can view not just a single session's result but their cumulative score across every room they've participated in."
+    },
+    {
+      "title": "Serverless × IaC for Low-Cost Operations",
+      "desc": "Infrastructure managed with AWS SAM (Lambda) + DynamoDB + Terraform. Achieves a scalable, serverless setup that minimizes ongoing maintenance costs."
+    }
+  ],
   "timeline": [
     { "flag": "The Idea", "desc": "The project started from an everyday frustration: counting score sticks by hand often led to mismatched totals. I set out to build something that could read the score from a simple photo." },
     { "flag": "Building My Own AI Model", "desc": "Using photos I collected myself, I built my own AI model (an ONNX file) that reads the number and value of score sticks from a photo. The model runs right in the user's browser instead of on a server, which keeps running costs down while still returning results instantly." },

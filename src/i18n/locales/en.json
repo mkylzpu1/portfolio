@@ -152,6 +152,7 @@
     "common": {
       "overviewTitle": "Overview",
       "processTitle": "Development Process",
+      "highlightsTitle": "Highlights",
       "techTitle": "Tech Stack"
     }
   },

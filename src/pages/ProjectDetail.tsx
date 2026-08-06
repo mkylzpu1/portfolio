@@ -21,7 +21,6 @@ export function ProjectDetail() {
       timelineCount={project.timelineCount}
       highlightCount={project.highlightCount}
       screenshots={project.screenshots}
-      category={project.category}
     />
   );
 }

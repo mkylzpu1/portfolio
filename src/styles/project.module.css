@@ -86,7 +86,6 @@
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.75;
-  max-width: 600px;
   margin-bottom: 1rem;
 }
 
@@ -111,6 +110,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  margin-bottom: 2.5rem;
 }
 
 .btnPrimary {
@@ -159,7 +159,7 @@
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .heroImage img {

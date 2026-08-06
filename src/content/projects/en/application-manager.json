@@ -10,6 +10,20 @@
   "description": "A serverless web application for registering and managing applicant information.",
   "tags": ["React + JavaScript", "Lambda (Python)", "DynamoDB", "AWS", "Terraform"],
   "overviewDesc": "A serverless web application for registering and managing applicant information. Users can apply to listings after creating an account, with all submissions centrally managed by an admin. Automated email notifications are sent to admins upon new applications.",
+  "highlights": [
+    {
+      "title": "Full Serverless Architecture",
+      "desc": "Built on AWS Lambda + DynamoDB with no server management required. Achieves automatic scaling based on traffic and cost optimization."
+    },
+    {
+      "title": "Infrastructure as Code with Terraform",
+      "desc": "All AWS resources are managed with Terraform, ensuring reproducibility and maintainability. Deployment and operations are fully automatable."
+    },
+    {
+      "title": "Event-Driven Automated Notification Flow",
+      "desc": "Implemented event-driven processing that sends admin email notifications the moment a new application is submitted, eliminating manual work."
+    }
+  ],
   "timeline": [
     { "flag": "Requirements & Architecture", "desc": "Defined use cases for the application management system and designed operation flows for both users and admins. Structured the overall architecture around a serverless approach." },
     { "flag": "Auth & User Features", "desc": "Built user registration and login with session management. Set up a DynamoDB-based data management layer." },

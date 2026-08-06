@@ -17,42 +17,40 @@
     "i18n"
   ],
   "overviewDesc": "This sample hotel website was created with international visitors in mind, supporting four languages. Hotel staff can update website content and announcements through an easy-to-use CMS, while translation and deployment are automated to minimize maintenance work and keep operating costs close to zero.",
+  "highlights": [
+    {
+      "title": "4-Language Support × Multilingual SEO",
+      "desc": "Supports Japanese, English, Chinese, and Korean. Astro's static site generation creates independent pages per language, achieving both fast load times and strong search engine visibility across all four languages."
+    },
+    {
+      "title": "Auto-Translation + Manual Override",
+      "desc": "Updates made in Japanese are automatically translated and applied to all other language versions. Each language can also be manually edited afterward, combining the efficiency of automation with the quality of human review."
+    },
+    {
+      "title": "Near-Zero Cost × Automated Deployment",
+      "desc": "Infrastructure and CMS costs are kept close to zero by combining free services and open-source tools. Content approved in the CMS is automatically published via GitHub Actions — no manual deployment needed."
+    }
+  ],
   "timeline": [
     {
       "flag": "Website Planning & Design",
-      "desc": "The site was designed to help guests quickly find the information they need when considering a stay. Pages such as rooms, hot springs, dining, and access were organized from the visitor's perspective with a clear navigation structure. A responsive design was implemented to provide a comfortable experience across desktop and mobile devices."
+      "desc": "Organized pages around what visitors actually need — rooms, hot springs, dining, and access — with a clear, responsive layout that conveys the natural scenery of Lake Toya."
     },
     {
-      "flag": "Multilingual Support",
-      "desc": "To meet the needs of international travelers, the website supports Japanese, English, Chinese, and Korean. Every page is available in all four languages, allowing visitors to switch languages without losing context. This ensures that overseas guests can easily access hotel information."
+      "flag": "4-Language Support & Multilingual SEO",
+      "desc": "Used Astro's static generation to create independent pages for each of the four languages. Visitors can switch languages without losing context, and all versions are indexed by search engines."
     },
     {
-      "flag": "Multilingual SEO",
-      "desc": "For international marketing, it is essential that each language version can be discovered through search engines. Astro generates static pages for every language, improving both loading speed and search engine visibility. This helps the website reach users searching in their native language."
+      "flag": "CMS Setup & Auto-Translation Pipeline",
+      "desc": "Integrated Sveltia CMS so staff can update content without technical knowledge. Built a GitHub Actions pipeline that automatically translates Japanese updates into the other three languages."
     },
     {
-      "flag": "Content Management System",
-      "desc": "A CMS was implemented so hotel staff can update website text and publish announcements without technical knowledge. Routine updates can be completed directly from the browser. This reduces the need to rely on developers for everyday maintenance."
+      "flag": "Multilingual Search Implementation",
+      "desc": "Added site-wide search covering rooms, facilities, and announcements in all four languages, giving visitors a smooth browsing experience regardless of their language."
     },
     {
-      "flag": "Automated Translation",
-      "desc": "Maintaining a multilingual website usually requires updating every language individually. To solve this, changes made in Japanese are automatically translated and applied to the other language versions. This significantly reduces maintenance effort while keeping information consistent."
-    },
-    {
-      "flag": "Manual Translation Editing",
-      "desc": "Automatic translation is not always sufficient for hotel-specific expressions or subtle nuances. Therefore, each language version can also be edited manually after translation. This combines the efficiency of automation with the quality of human review."
-    },
-    {
-      "flag": "Multilingual Search",
-      "desc": "A multilingual search function was implemented to help visitors quickly find the information they need. Guests can search rooms, facilities, and announcements in any of the four supported languages. This provides a smooth browsing experience regardless of language."
-    },
-    {
-      "flag": "Near-Zero Operating Cost",
-      "desc": "Long-term operating costs are an important consideration for hotel websites. By combining free cloud services and open-source tools, the website can be maintained with almost no ongoing infrastructure or CMS costs. This makes the solution practical even for small hotels and independent businesses."
-    },
-    {
-      "flag": "Automated Deployment",
-      "desc": "Publishing website updates manually can be time-consuming and prone to mistakes. An automated deployment workflow was built so that approved content is published automatically. As a result, hotel staff only need to focus on updating content rather than managing the release process."
+      "flag": "Automated Deployment & Zero-Cost Operations",
+      "desc": "Fully automated publishing via GitHub Actions. Combined free-tier services to keep infrastructure and CMS running costs at virtually zero — practical for small hotels and independent businesses."
     }
   ]
 }
