@@ -1,4 +1,3 @@
-// pages/ProjectDetail.tsx
 import { Navigate, useParams } from 'react-router-dom';
 
 import { ProjectLayout } from '@/components/layout/ProjectLayout';
@@ -13,17 +12,16 @@ export function ProjectDetail() {
     return <Navigate to="/" replace />;
   }
 
-  const timelineKeys = Array.from({ length: project.timelineCount }, (_, i) =>
-    String(i),
-  ) as readonly string[];
-
   return (
     <ProjectLayout
       i18nKey={project.i18nKey}
       image={withBaseUrl(project.detailImage ?? project.image)}
       appUrl={project.appUrl != null ? withBaseUrl(project.appUrl) : undefined}
       repoUrl={project.repoUrl}
-      timelineKeys={timelineKeys}
+      timelineCount={project.timelineCount}
+      highlightCount={project.highlightCount}
+      screenshots={project.screenshots}
+      category={project.category}
     />
   );
 }

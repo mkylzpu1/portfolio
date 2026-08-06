@@ -8,6 +8,18 @@
 // プロフィールやスキルなど、CMSと無関係な静的データは data/profile.ts を参照。
 // ─────────────────────────────────────────────────────────
 
+/** アピールポイント（任意） */
+export interface Highlight {
+  title: string;
+  desc: string;
+}
+
+/** スクリーンショット（任意） */
+export interface Screenshot {
+  image: string;
+  caption?: string;
+}
+
 interface ProjectLocaleContent {
   id: string;
   category: 'app' | 'tool' | 'hp';
@@ -20,7 +32,12 @@ interface ProjectLocaleContent {
   description: string;
   tags: string[];
   overviewDesc: string;
-  timeline: { flag: string; desc: string }[];
+  /** 任意：開発プロセスのタイムライン */
+  timeline?: { flag: string; desc: string }[];
+  /** 任意：アピールポイント（目安3つ） */
+  highlights?: Highlight[];
+  /** 任意：スクリーンショット */
+  screenshots?: Screenshot[];
 }
 
 type Locale = 'ja' | 'en';
@@ -55,9 +72,14 @@ export interface RawProjectContent {
   url: string;
   appUrl?: string;
   repoUrl?: string;
+  /** スクリーンショットはロケール非依存（画像パスのみ） */
+  screenshots?: Screenshot[];
   content: Record<
     Locale,
-    Pick<ProjectLocaleContent, 'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline'>
+    Pick<
+      ProjectLocaleContent,
+      'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline' | 'highlights'
+    >
   >;
 }
 
@@ -68,7 +90,6 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
   const en = enById.get(id);
 
   if (!ja || !en) {
-    // 翻訳が片方の言語しかない場合はビルド時に気づけるよう警告し、対象からは除外
     console.warn(
       `[portfolio] project "${id}" is missing a translation (ja: ${!!ja}, en: ${!!en}). Skipped.`,
     );
@@ -84,6 +105,8 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
       url: ja.url,
       appUrl: ja.appUrl || undefined,
       repoUrl: ja.repoUrl || undefined,
+      // screenshots は ja 側から読む（ロケール非依存）
+      screenshots: ja.screenshots?.length ? ja.screenshots : undefined,
       content: {
         ja: {
           title: ja.title,
@@ -91,6 +114,7 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
           tags: ja.tags,
           overviewDesc: ja.overviewDesc,
           timeline: ja.timeline,
+          highlights: ja.highlights,
         },
         en: {
           title: en.title,
@@ -98,6 +122,7 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
           tags: en.tags,
           overviewDesc: en.overviewDesc,
           timeline: en.timeline,
+          highlights: en.highlights,
         },
       },
     },
@@ -112,7 +137,12 @@ export interface Project {
   url: string;
   appUrl?: string;
   repoUrl?: string;
+  /** タイムラインのステップ数（0 = タイムラインなし） */
   timelineCount: number;
+  /** アピールポイントの数（0 = セクションなし） */
+  highlightCount: number;
+  /** スクリーンショット（ロケール非依存） */
+  screenshots?: Screenshot[];
   category: 'app' | 'tool' | 'hp';
 }
 
@@ -124,7 +154,9 @@ export const projects: Project[] = rawProjectContent.map((p) => ({
   url: p.url,
   appUrl: p.appUrl,
   repoUrl: p.repoUrl,
-  timelineCount: p.content.ja.timeline.length,
+  timelineCount: p.content.ja.timeline?.length ?? 0,
+  highlightCount: p.content.ja.highlights?.length ?? 0,
+  screenshots: p.screenshots,
   category: p.category,
 }));
 
