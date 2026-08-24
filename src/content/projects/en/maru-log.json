@@ -1,0 +1,59 @@
+{
+  "id": "maru-log",
+  "category": "app",
+  "image": "/image/maru-log.png",
+  "detailImage": "",
+  "url": "/maru-log",
+  "appUrl": "https://d2cxmsk5uqce9y.cloudfront.net/",
+  "title": "Maru-log",
+  "description": "A learning management app designed to make personal growth visible. It records mock test results, study time, learning streaks, and other learning activities, helping users visualize their progress and look back on how far they have come.",
+  "tags": [
+    "React",
+    "TypeScript",
+    "Supabase",
+    "AWS Lambda",
+    "Terraform",
+    "Vitest"
+  ],
+  "overviewDesc": "When studying for a qualification or language exam, it can be difficult to remember how much you have improved or how much effort you have put in over time. Maru-log was created to make that progress visible and tangible. The app records mock test results, study time, learning history, study streaks, and other learning activities in one place. By visualizing changes in scores, accuracy, and study habits, users can look back on their journey and see how their daily efforts have translated into growth.",
+  "highlights": [
+    {
+      "title": "Visualize Your Growth",
+      "desc": "Track changes in mock test scores, accuracy, study time, and other learning metrics to visualize progress over time. Seeing measurable improvements helps turn the feeling of \"I'm getting better\" into something tangible and motivates users to keep learning."
+    },
+    {
+      "title": "Keep All Your Learning Data in One Place",
+      "desc": "Manage mock test results, exam history, study time, learning calendars, vocabulary, and other learning activities in one place. The app records not only outcomes, but also the effort behind them, making it easier to look back on the entire learning journey."
+    },
+    {
+      "title": "Scalable Architecture with Supabase & AWS",
+      "desc": "Built with React, Supabase, and AWS Lambda for authentication, data management, and backend processing. AWS infrastructure is managed with Terraform, providing a maintainable architecture that can be continuously extended as new learning features are added."
+    }
+  ],
+  "timeline": [
+    {
+      "flag": "The Idea: Make Growth Visible",
+      "desc": "While studying for qualification exams, I wanted more than just a place to check test scores. I wanted to preserve my efforts and be able to look back and see how much I had grown over time. This idea became the starting point for Maru-log."
+    },
+    {
+      "flag": "Mock Test Scoring & Exam History",
+      "desc": "Implemented a system for registering question sets and correct answers, automatically scoring completed mock tests, and saving the results. Users can review their past performance and compare it with previous attempts."
+    },
+    {
+      "flag": "Learning Data Visualization",
+      "desc": "Expanded the app beyond test results by recording accuracy, study time, learning activity, and study calendars. This makes it possible to see how daily learning efforts accumulate over time."
+    },
+    {
+      "flag": "Expanding Learning Support Features",
+      "desc": "Added features such as vocabulary management and AI-powered learning support, evolving Maru-log from a simple scoring tool into a platform for recording and supporting everyday learning."
+    },
+    {
+      "flag": "Migration to Supabase",
+      "desc": "Migrated the database to Supabase to manage learning data more flexibly. Questions, exam history, learning records, vocabulary, and related data are managed using a relational data model."
+    },
+    {
+      "flag": "Code Quality, Testing & Infrastructure as Code",
+      "desc": "Improved the codebase by organizing responsibilities by feature and introducing unit tests with Vitest. AWS infrastructure is managed with Terraform, making the application easier to maintain and continuously improve."
+    }
+  ]
+}

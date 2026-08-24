@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "佐藤 翔太",
-    "description": "Three.jsを使った佐藤 翔太のポートフォリオです。"
+    "title": "齊藤 昂也",
+    "description": "Three.jsを使った齊藤 昂也のポートフォリオです。"
   },
   "nav": {
     "home": "Home",
@@ -14,7 +14,7 @@
   },
   "loading": {
     "eyebrow": "PORTFOLIO / 2026",
-    "name": "Shota Sato",
+    "name": "Takaya Saito",
     "tagline": "Systems, interfaces, and quiet motion for a sharper web experience.",
     "audioLabel": "Audio",
     "audioTitle": "Enter with sound?",
@@ -25,7 +25,7 @@
   },
   "home": {
     "greeting": "Portfolio",
-    "name": "Shota Sato",
+    "name": "Takaya Saito",
     "role": "システムエンジニア · System Engineer",
     "intro": "診療放射線技師からエンジニアへ転身。バックエンドやクラウドインフラの構築・運用を軸に、堅実なシステム開発に従事しています。",
     "viewProjects": "制作物を見る",
@@ -139,7 +139,7 @@
     "formValue": "フォームよりご連絡ください。"
   },
   "footer": {
-    "copyright": "© {{year}} 佐藤 翔太. All rights reserved."
+    "copyright": "© {{year}} 齊藤 昂也. All rights reserved."
   },
   "settings": {
     "language": "言語",

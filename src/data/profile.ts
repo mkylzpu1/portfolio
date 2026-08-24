@@ -22,8 +22,8 @@ export interface ContactLink {
 }
 
 export const profile = {
-  name: 'Shota Sato',
-  nameJa: '佐藤 翔太',
+  name: 'Takaya Saito',
+  nameJa: '齊藤 昂也',
   role: 'System Engineer',
   roleJa: 'システムエンジニア',
   tags: ['JavaScript', 'Python', 'Java', 'Ruby', 'PHP', 'AWS', 'Terraform', 'Docker'],

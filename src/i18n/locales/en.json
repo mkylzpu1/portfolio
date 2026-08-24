@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Shota Sato",
-    "description": "Shota Sato's portfolio built with Three.js."
+    "title": "Takaya Saito",
+    "description": "Takaya Saito's portfolio built with Three.js."
   },
   "nav": {
     "home": "Home",
@@ -14,7 +14,7 @@
   },
   "loading": {
     "eyebrow": "PORTFOLIO / 2026",
-    "name": "Shota Sato",
+    "name": "Takaya Saito",
     "tagline": "Systems, interfaces, and quiet motion for a sharper web experience.",
     "audioLabel": "Audio",
     "audioTitle": "Enter with sound?",
@@ -25,7 +25,7 @@
   },
   "home": {
     "greeting": "Portfolio",
-    "name": "Shota Sato",
+    "name": "Takaya Saito",
     "role": "System Engineer · システムエンジニア",
     "intro": "Transitioned from diagnostic radiographer to software engineer. Focused on backend systems and cloud infrastructure, delivering reliable solutions.",
     "viewProjects": "View Projects",
@@ -139,7 +139,7 @@
     "formValue": "Please contact me via the form."
   },
   "footer": {
-    "copyright": "© {{year}} Shota Sato. All rights reserved."
+    "copyright": "© {{year}} Takaya Saito. All rights reserved."
   },
   "settings": {
     "language": "Language",
