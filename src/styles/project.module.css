@@ -49,9 +49,18 @@
   max-width: 320px;
 }
 
+/* ── Hero (PC: 2カラム) ── */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
+
 /* ── Header block ── */
 .header {
-  padding: 1.75rem 0 1.5rem;
+  padding: 0;
 }
 
 .headerMeta {
@@ -110,7 +119,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .btnPrimary {
@@ -159,7 +168,7 @@
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
-  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 60px -20px var(--glow);
 }
 
 .heroImage img {
@@ -452,12 +461,23 @@
     padding: 0 1.25rem;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem 0 2rem;
+  }
+
+  .heroImage {
+    order: -1;
+  }
+
   .contentGrid {
     grid-template-columns: 1fr;
   }
 
   .sidebar {
     order: -1;
+    position: static;
   }
 
   /* SP: サイドバーカードを横並びタグ形式に */

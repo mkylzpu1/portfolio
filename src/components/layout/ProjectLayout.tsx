@@ -61,32 +61,34 @@ export function ProjectLayout({
           <span className={styles.breadcrumbCurrent}>{t(`${i18nKey}.title`)}</span>
         </nav>
 
-        {/* ── Header ── */}
-        <header className={styles.header}>
-          <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
-        </header>
+        {/* ── Hero: PCは左テキスト＋右画像、SPは縦積み ── */}
+        <section className={styles.hero}>
+          <header className={styles.header}>
+            <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
+            <p className={styles.description}>{t(`${i18nKey}.description`)}</p>
 
-        {/* ── Hero image ── */}
-        <div className={styles.heroImage}>
-          <img src={image} alt={t(`${i18nKey}.title`)} />
-        </div>
+            {(appUrl || repoUrl) && (
+              <div className={styles.actions}>
+                {appUrl && (
+                  <a href={appUrl} target="_blank" rel="noreferrer" className={styles.btnPrimary}>
+                    <ExternalLink size={13} strokeWidth={2} />
+                    Live App
+                  </a>
+                )}
+                {repoUrl && (
+                  <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.btnSecondary}>
+                    <FaGithub size={14} />
+                    GitHub
+                  </a>
+                )}
+              </div>
+            )}
+          </header>
 
-          {(appUrl || repoUrl) && (
-            <div className={styles.actions}>
-              {appUrl && (
-                <a href={appUrl} target="_blank" rel="noreferrer" className={styles.btnPrimary}>
-                  <ExternalLink size={13} strokeWidth={2} />
-                  Live App
-                </a>
-              )}
-              {repoUrl && (
-                <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.btnSecondary}>
-                  <FaGithub size={14} />
-                  GitHub
-                </a>
-              )}
-            </div>
-          )}
+          <div className={styles.heroImage}>
+            <img src={image} alt={t(`${i18nKey}.title`)} />
+          </div>
+        </section>
 
         {/* ── 2カラム ── */}
         <div className={styles.contentGrid}>
