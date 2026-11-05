@@ -338,14 +338,46 @@
 }
 
 .galleryItem {
+  position: relative;
   width: 100%;
+  padding: 0;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
   aspect-ratio: 16 / 9;
   display: block;
+  cursor: zoom-in;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.galleryItem:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 拡大できることを示すアイコン（右下） */
+.galleryZoom {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(9, 9, 11, 0.7);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  pointer-events: none;
+}
+
+.galleryItem:hover .galleryZoom {
+  opacity: 1;
+  background: var(--accent);
 }
 
 .galleryItem:hover {

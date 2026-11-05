@@ -1,8 +1,10 @@
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Maximize2 } from 'lucide-react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import { ImageLightbox } from '@/components/ui/ImageLightbox';
 import type { Screenshot } from '@/data/projects';
 import styles from '@/styles/project.module.css';
 import { withBaseUrl } from '@/utils/asset';
@@ -41,6 +43,17 @@ export function ProjectLayout({
     highlightCount > 0 ? Array.from({ length: highlightCount }, (_, i) => String(i)) : [];
 
   const hasScreenshots = Array.isArray(screenshots) && screenshots.length > 0;
+
+  // 画面紹介の拡大表示（null = 閉じている）
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const lightboxItems = hasScreenshots
+    ? screenshots.map((sc, idx) => ({
+        src: withBaseUrl(sc.image),
+        title: t(`${i18nKey}.screenshots.${idx}.title`, { defaultValue: '' }),
+        caption: t(`${i18nKey}.screenshots.${idx}.caption`, { defaultValue: '' }),
+      }))
+    : [];
 
   return (
     <main className={styles.page}>
@@ -99,46 +112,46 @@ export function ProjectLayout({
               <p className={styles.bodyText}>{t(`${i18nKey}.overviewDesc`)}</p>
             </div>
 
-            <hr className={styles.divider} />
-
             {/* Screenshots（任意）: 概要の直後に配置し、サイトの中身を先に伝える */}
             {hasScreenshots && (
-              <div className={styles.section}>
-                <span className={styles.sectionLabel}>
-                  {t('projectData.common.screenshotsTitle')}
-                </span>
-                <div className={styles.galleryGrid}>
-                  {screenshots!.map((sc, idx) => {
-                    const title = t(`${i18nKey}.screenshots.${idx}.title`, { defaultValue: '' });
-                    const caption = t(`${i18nKey}.screenshots.${idx}.caption`, {
-                      defaultValue: '',
-                    });
-                    return (
+              <>
+                <hr className={styles.divider} />
+                <div className={styles.section}>
+                  <span className={styles.sectionLabel}>
+                    {t('projectData.common.screenshotsTitle')}
+                  </span>
+                  <div className={styles.galleryGrid}>
+                    {lightboxItems.map((item, idx) => (
                       <figure key={idx} className={styles.galleryItemWrap}>
-                        <a
-                          href={withBaseUrl(sc.image)}
-                          target="_blank"
-                          rel="noreferrer"
+                        <button
+                          type="button"
                           className={styles.galleryItem}
+                          onClick={() => setLightboxIndex(idx)}
+                          aria-label={item.title || `Screenshot ${idx + 1}`}
                         >
                           <img
-                            src={withBaseUrl(sc.image)}
-                            alt={title || `Screenshot ${idx + 1}`}
+                            src={item.src}
+                            alt={item.title || `Screenshot ${idx + 1}`}
                             loading="lazy"
                           />
-                        </a>
-                        {(title || caption) && (
+                          <span className={styles.galleryZoom} aria-hidden="true">
+                            <Maximize2 size={14} strokeWidth={2} />
+                          </span>
+                        </button>
+                        {(item.title || item.caption) && (
                           <figcaption className={styles.galleryCaption}>
-                            {title && <strong className={styles.galleryTitle}>{title}</strong>}
-                            {caption && <span>{caption}</span>}
+                            {item.title && (
+                              <strong className={styles.galleryTitle}>{item.title}</strong>
+                            )}
+                            {item.caption && <span>{item.caption}</span>}
                           </figcaption>
                         )}
                       </figure>
-                    );
-                  })}
+                    ))}
+                  </div>
+                  <p className={styles.galleryNote}>{t('projectData.common.screenshotsNote')}</p>
                 </div>
-                <p className={styles.galleryNote}>{t('projectData.common.screenshotsNote')}</p>
-              </div>
+              </>
             )}
 
             {/* Highlights（任意） */}
@@ -247,6 +260,15 @@ export function ProjectLayout({
           </aside>
         </div>
       </div>
+
+      {hasScreenshots && (
+        <ImageLightbox
+          items={lightboxItems}
+          index={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onChange={setLightboxIndex}
+        />
+      )}
     </main>
   );
 }
