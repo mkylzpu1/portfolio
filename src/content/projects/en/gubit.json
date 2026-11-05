@@ -1,0 +1,58 @@
+{
+  "id": "gubit",
+  "category": "app",
+  "image": "/image/gubit.png",
+  "detailImage": "",
+  "url": "/gubit",
+  "appUrl": "",
+  "repoUrl": "",
+  "title": "Gubit",
+  "description": "A drink-rating app for groups of friends: record and rate what you drink with photos and star ratings (aroma, taste, value). Records stay inside the group, with AI that fills in details from photos and suggests drinks to match your taste.",
+  "tags": [
+    "React",
+    "TypeScript",
+    "AWS Lambda",
+    "PostgreSQL (Supabase)",
+    "Cloudflare R2",
+    "Terraform",
+    "Gemini API",
+    "PWA"
+  ],
+  "overviewDesc": "At get-togethers with friends, we often found ourselves asking, \"What was that great drink we had?\" So I'm building Gubit, where you save what you drink with a photo and star ratings (aroma, taste, value) and rate it together with friends. Records live in a closed space per group and are invisible to non-members. Rankings and a \"Want to drink again\" list let you look back on your tastes, and AI can fill in drink details from a photo or suggest recommendations based on the group's records. It works on both phones and desktops, and can be added to the home screen as a PWA.",
+  "highlights": [
+    {
+      "title": "Closed groups with role-based permissions",
+      "desc": "Gather friends with invite links or codes and assign one of four roles: owner, admin, member or view-only. All permission checks run on the backend and the existence of a group is hidden from non-members, so it stays safe to use among friends."
+    },
+    {
+      "title": "AI for easier input and discovery",
+      "desc": "Pick a photo and AI fills in only the blank fields such as brand and type. \"Search with AI\" on the home screen takes a free-form description of your taste, suggests drinks from the group's records and introduces similar unrecorded ones with source links."
+    },
+    {
+      "title": "Low-cost, secure serverless architecture",
+      "desc": "Built on AWS Lambda, Supabase and Cloudflare R2. Photos are resized and compressed in the browser, then uploaded directly via signed URLs. Infrastructure is managed with Terraform and GitHub Actions, and findings from a security audit have been addressed step by step."
+    }
+  ],
+  "timeline": [
+    {
+      "flag": "Concept: keep the drinks we love, together",
+      "desc": "Tired of forgetting great drinks from our get-togethers, I decided to build an app to record and rate them with friends. I prepared designs for all 50 screens and an implementation brief for AI, then started from a project template."
+    },
+    {
+      "flag": "Built groups, invitations and permissions",
+      "desc": "Implemented invite links and codes, join approval, member management, role changes and ownership transfer. Permission checks are centralized on the backend and verified with tests."
+    },
+    {
+      "flag": "Built drink records, ratings and photos",
+      "desc": "Added creating and editing drinks, star ratings, rankings, a \"Want to drink again\" list, plus filtering by type and tags and search. Photos are compressed on the client and uploaded directly through signed URLs."
+    },
+    {
+      "flag": "Added AI features and a landing page",
+      "desc": "Added photo-based auto-fill and \"Search with AI\". Also built a colorful landing page with floating bottles and stars in three.js and set up link-preview cards (OGP) for sharing on LINE and other apps."
+    },
+    {
+      "flag": "Operations setup and PWA push notifications",
+      "desc": "Set up deployments to staging and production with Terraform and GitHub Actions and fixed issues found in a security audit. Also implemented PWA push notifications with subscription, delivery and tap-to-navigate."
+    }
+  ]
+}
