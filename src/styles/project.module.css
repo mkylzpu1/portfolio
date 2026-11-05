@@ -8,7 +8,7 @@
 }
 
 .inner {
-  max-width: 860px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 var(--content-padding);
 }
@@ -171,9 +171,15 @@
 /* ── 2-column layout ── */
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 256px;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 3rem;
   align-items: start;
+}
+
+/* サイドバーはスクロールに追従 */
+.sidebar {
+  position: sticky;
+  top: 1.5rem;
 }
 
 /* ── Section common ── */
@@ -350,8 +356,6 @@
 }
 
 /* ── Sidebar ── */
-.sidebar {}
-
 .sidebarCard {
   background: var(--surface);
   border: 1px solid var(--border);
