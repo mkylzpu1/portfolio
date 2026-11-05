@@ -10,9 +10,19 @@ function ScrollManager() {
   return null;
 }
 
+/**
+ * GitHub Pages ではリポジトリ名配下 (/portfolio/) で配信されるため、
+ * ビルド時の base (import.meta.env.BASE_URL) をルーターの basename に渡す。
+ * 末尾スラッシュは除去する（"/" の場合は "/" のまま）。
+ */
+const ROUTER_BASENAME = import.meta.env.BASE_URL.replace(/\/+$/, '') || '/';
+
 export function AppRouter() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter
+      basename={ROUTER_BASENAME}
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <ScrollManager />
       <Navigation />
       <Routes>
