@@ -52,5 +52,27 @@
       "flag": "Custom domain and the arrival of \"Toku\"",
       "desc": "Set up a custom domain to prepare for launch and added an animated Toku who blinks and sighs on the top page. Also set up semi-automated posting to X and an instruction sheet for daily comments, so publishing and sharing run as one flow."
     }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/fx-blog/home.jpg",
+      "title": "Top page",
+      "caption": "A hero that says \"I'll write about the days I can't win, too,\" plus challenge progress, cumulative P&L and win rate. Toku, the harsh critic, adds a quick comment."
+    },
+    {
+      "image": "/image/fx-blog/challenge.jpg",
+      "title": "100-day challenge",
+      "caption": "A dashboard of cumulative P&L, balance, distance to the goal, days elapsed, a win-rate ring and overall wins and losses, all computed automatically from daily data."
+    },
+    {
+      "image": "/image/fx-blog/week.jpg",
+      "title": "Weekly article",
+      "caption": "Each article opens with the week's P&L, win/loss record and win rate alongside the challenge-wide totals, followed by a conclusion-first \"key points of the week\" section."
+    },
+    {
+      "image": "/image/fx-blog/trade.jpg",
+      "title": "Trade record",
+      "caption": "Numbers and commentary side by side for each trade, with a chart you can switch between 1-minute, 15-minute and 1-hour bars, overlaid with entry, exit, SL and TP."
+    }
   ]
 }
