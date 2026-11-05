@@ -1,14 +1,20 @@
 {
   "id": "pasha-ten",
   "category": "app",
-  "image": "/image/pasha-ten.svg",
-  "detailImage": "",
+  "image": "/image/pasha-ten/hero.jpg",
+  "detailImage": "/image/pasha-ten/hero.jpg",
   "url": "/pasha-ten",
   "appUrl": "https://d3e460c51ps9vo.cloudfront.net/guide",
   "repoUrl": "",
   "title": "Score Stick Scanner \"pasha-ten\"",
   "description": "Just snap a photo of the mahjong score sticks and AI counts them automatically. No more manual counting mistakes — easily record and share game results with friends and family.",
-  "tags": ["TypeScript", "AWS SAM (Lambda)", "DynamoDB", "Terraform", "Docker"],
+  "tags": [
+    "TypeScript",
+    "AWS SAM (Lambda)",
+    "DynamoDB",
+    "Terraform",
+    "Docker"
+  ],
   "overviewDesc": "When everyone counts the score sticks by hand after a game, the totals often don't match up. To fix this small but frustrating problem, I built an app that reads the sticks straight from a photo using AI and tallies the score automatically. Friends and family can record and share scores together in a shared group (room), and each person can also see their overall results across every group they've played in.",
   "highlights": [
     {
@@ -25,10 +31,47 @@
     }
   ],
   "timeline": [
-    { "flag": "The Idea", "desc": "The project started from an everyday frustration: counting score sticks by hand often led to mismatched totals. I set out to build something that could read the score from a simple photo." },
-    { "flag": "Building My Own AI Model", "desc": "Using photos I collected myself, I built my own AI model (an ONNX file) that reads the number and value of score sticks from a photo. The model runs right in the user's browser instead of on a server, which keeps running costs down while still returning results instantly." },
-    { "flag": "Group & Player Management", "desc": "Built a way to organize friends and family into groups, so it's clear who played together in each session." },
-    { "flag": "Game History & Overall Scores", "desc": "Game results are recorded automatically, and each player can check not just a single session's result but their running total across every game they've taken part in." },
-    { "flag": "Cleaning Up the Code", "desc": "Reorganized the code by responsibility so it stays easy to read and easy to update going forward." }
+    {
+      "flag": "The Idea",
+      "desc": "The project started from an everyday frustration: counting score sticks by hand often led to mismatched totals. I set out to build something that could read the score from a simple photo."
+    },
+    {
+      "flag": "Building My Own AI Model",
+      "desc": "Using photos I collected myself, I built my own AI model (an ONNX file) that reads the number and value of score sticks from a photo. The model runs right in the user's browser instead of on a server, which keeps running costs down while still returning results instantly."
+    },
+    {
+      "flag": "Group & Player Management",
+      "desc": "Built a way to organize friends and family into groups, so it's clear who played together in each session."
+    },
+    {
+      "flag": "Game History & Overall Scores",
+      "desc": "Game results are recorded automatically, and each player can check not just a single session's result but their running total across every game they've taken part in."
+    },
+    {
+      "flag": "Cleaning Up the Code",
+      "desc": "Reorganized the code by responsibility so it stays easy to read and easy to update going forward."
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/pasha-ten/value.jpg",
+      "title": "Why Pashaten",
+      "caption": "The hassle of counting sticks, cross-checking totals and writing them down is replaced by a photo and automatic calculation, shown as a before/after."
+    },
+    {
+      "image": "/image/pasha-ten/flow.jpg",
+      "title": "How it works",
+      "caption": "Five steps from joining a community to creating a room, entering scores, confirming and reviewing history."
+    },
+    {
+      "image": "/image/pasha-ten/features.jpg",
+      "title": "Features",
+      "caption": "Camera-based stick analysis, manual correction, confirmation only when totals match, QR invites, stats and history, and add-to-home-screen (PWA)."
+    },
+    {
+      "image": "/image/pasha-ten/scenes.jpg",
+      "title": "Use cases",
+      "caption": "Entering scores right after a game, running several tables at once, and looking back later."
+    }
   ]
 }
