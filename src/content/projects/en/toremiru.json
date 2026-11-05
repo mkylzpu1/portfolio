@@ -4,7 +4,7 @@
   "image": "/image/toremiru/hero.jpg",
   "detailImage": "/image/toremiru/hero.jpg",
   "url": "/toremiru",
-  "appUrl": "",
+  "appUrl": "https://mkylzpu1.github.io/fx-review/lp/",
   "repoUrl": "https://github.com/mkylzpu1/fx-review",
   "title": "Toremiru",
   "description": "A trade-review and learning web service for FX traders. Record stop-loss, take-profit, reasoning and rule adherence, spot your habits with entry-time charts and stats, and export everything for AI analysis in one click.",
@@ -56,9 +56,19 @@
   ],
   "screenshots": [
     {
-      "image": "/image/toremiru/hero.jpg",
+      "image": "/image/toremiru/trade-detail.jpg",
       "title": "Trade detail",
       "caption": "Entry-time bars from 1-minute to daily with EMAs overlaid, TP, exit and entry lines and post-entry movement, plus maximum favorable and adverse excursion."
+    },
+    {
+      "image": "/image/toremiru/share.jpg",
+      "title": "Side-by-side timeframes",
+      "caption": "View 1-minute and 1-hour bars together, with the plan (entry, SL, TP, RR) and reasoning notes overlaid on the chart."
+    },
+    {
+      "image": "/image/toremiru/rules.jpg",
+      "title": "Rule check",
+      "caption": "Check your rules before placing a trade, and compare average R when you followed them versus when you broke them."
     },
     {
       "image": "/image/toremiru/stats.jpg",
@@ -66,9 +76,9 @@
       "caption": "Key metrics such as win rate, PF, average R and max losing streak, plus daily growth and cumulative R with a max-drawdown band, by period."
     },
     {
-      "image": "/image/toremiru/share.jpg",
-      "title": "Side-by-side timeframes",
-      "caption": "View 1-minute and 1-hour bars together, with the plan (entry, SL, TP, RR) and reasoning notes overlaid on the chart."
+      "image": "/image/toremiru/weekly.jpg",
+      "title": "Weekly review",
+      "caption": "See the week's daily R, rule adherence and emotion tags, and how much plan-following exits would have changed the result."
     }
   ]
 }

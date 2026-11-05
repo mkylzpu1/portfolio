@@ -4,7 +4,7 @@
   "image": "/image/toremiru/hero.jpg",
   "detailImage": "/image/toremiru/hero.jpg",
   "url": "/toremiru",
-  "appUrl": "",
+  "appUrl": "https://mkylzpu1.github.io/fx-review/lp/",
   "repoUrl": "https://github.com/mkylzpu1/fx-review",
   "title": "とれみる",
   "description": "FXトレードの振り返り・学習Webサービス。損切り・利確・根拠・ルール遵守を記録し、エントリー時点のチャートと統計で自分のクセを見つけ、AIに分析してもらう材料までワンクリックで書き出せます。",
@@ -56,9 +56,19 @@
   ],
   "screenshots": [
     {
-      "image": "/image/toremiru/hero.jpg",
+      "image": "/image/toremiru/trade-detail.jpg",
       "title": "トレード詳細",
       "caption": "エントリー時点の1分足〜日足にEMAを重ね、TP・決済・エントリーの線とエントリー後の値動きを表示。最大含み益・含み損も確認できます。"
+    },
+    {
+      "image": "/image/toremiru/share.jpg",
+      "title": "時間足の並列表示",
+      "caption": "1分足と1時間足などを並べて表示。計画（エントリー・SL・TP・RR）と根拠メモをチャートに重ねて見比べられます。"
+    },
+    {
+      "image": "/image/toremiru/rules.jpg",
+      "title": "ルールとの照合",
+      "caption": "発注前チェックで決めたルールを確認し、守った時と破った時で平均Rがどれだけ違うかを比べられます。"
     },
     {
       "image": "/image/toremiru/stats.jpg",
@@ -66,9 +76,9 @@
       "caption": "勝率・PF・平均R・最大連敗などの主要指標と、日々の成長・累積R（最大ドローダウンの帯つき）を期間ごとに確認できます。"
     },
     {
-      "image": "/image/toremiru/share.jpg",
-      "title": "時間足の並列表示",
-      "caption": "1分足と1時間足などを並べて表示。計画（エントリー・SL・TP・RR）と根拠メモをチャートに重ねて見比べられます。"
+      "image": "/image/toremiru/weekly.jpg",
+      "title": "週次レビュー",
+      "caption": "日別のRとルールを守れた割合、感情タグを1週間分まとめて確認。計画どおりに決済していた場合との差も見られます。"
     }
   ]
 }
