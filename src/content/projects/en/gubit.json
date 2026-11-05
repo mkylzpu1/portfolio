@@ -57,11 +57,6 @@
   ],
   "screenshots": [
     {
-      "image": "/image/gubit/lp.jpg",
-      "title": "Landing page",
-      "caption": "The first page shown to signed-out visitors. A tagline about sharing \"what tastes great\" with friends and a mock phone screen explain how the app works."
-    },
-    {
       "image": "/image/gubit/home.jpg",
       "title": "Drink list",
       "caption": "Drinks recorded by the group appear as cards. Search by brand or maker, filter by type, sort, and switch between card and list views; a \"Search with AI\" button suggests drinks that match your taste."
