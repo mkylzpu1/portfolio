@@ -4,7 +4,7 @@
   "image": "/image/gubit/lp.jpg",
   "detailImage": "/image/gubit/lp.jpg",
   "url": "/gubit",
-  "appUrl": "https://d3cx21hu30uyki.cloudfront.net/login",
+  "appUrl": "https://d3cx21hu30uyki.cloudfront.net/welcome",
   "repoUrl": "",
   "title": "グビット",
   "description": "仲間内のグループで飲んだお酒を、写真と星（香り・味・コスパ）で記録・評価し合うお酒評価アプリ。記録はグループの中だけで共有され、AIによる写真からの入力補完や、好みに合わせたお酒探しにも対応しています。",
