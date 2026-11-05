@@ -2,7 +2,7 @@
   "id": "fx-blog",
   "category": "hp",
   "image": "/image/fx-blog.png",
-  "detailImage": "",
+  "detailImage": "/image/fx-blog/home.jpg",
   "url": "/fx-blog",
   "appUrl": "https://fx-trader-diary.com",
   "repoUrl": "",
