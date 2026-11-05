@@ -1,0 +1,56 @@
+{
+  "id": "fx-blog",
+  "category": "hp",
+  "image": "/image/fx-blog.png",
+  "detailImage": "",
+  "url": "/fx-blog",
+  "appUrl": "https://fx-trader-diary.com",
+  "repoUrl": "",
+  "title": "FX Trader Growth Diary",
+  "description": "A review blog for a 100-day FX challenge: turn ¥100,000 into +¥50,000. Numbers and charts are generated from data and AI writes only the text, so each weekly article ships just by merging a PR.",
+  "tags": [
+    "Astro",
+    "TypeScript",
+    "Cloudflare Pages",
+    "GitHub Actions",
+    "Terraform",
+    "Zod"
+  ],
+  "overviewDesc": "Win or lose, write down every decision and lesson - that is the \"100-day challenge\" this FX trading review blog was built to sustain. Importing a zip exported from my own trade-review app, \"Tremiru\", automatically displays all trade figures, P&L and chart images straight from the data, while AI writes only a week's worth of prose. A harsh-but-funny critic character, \"Toku of the Stop-Out\", appears in the articles and on the top page, turning losses into laughs so the diary stays fun to follow.",
+  "highlights": [
+    {
+      "title": "Data for numbers, AI only for words",
+      "desc": "Trade figures, P&L and charts are imported mechanically from the zip, and AI is limited to writing text. Zod-based contract checks and a validation script make CI reject banned phrases, leftover TODOs and invented reasons for entries that have no notes."
+    },
+    {
+      "title": "Merge a PR, and it's published",
+      "desc": "Each week's article JSON becomes a branch and a PR; once the preview looks right and the PR is merged, GitHub Actions builds and deploys to Cloudflare Pages. The infrastructure is managed as code with Terraform to keep upkeep minimal."
+    },
+    {
+      "title": "Built for SEO, GEO and AEO",
+      "desc": "Beyond regular SEO such as structured data and a sitemap, it auto-generates robots.txt and llms.txt for AI crawlers and adds weekly key-point and FAQ structured data, so the site can be found by both search engines and AI search."
+    }
+  ],
+  "timeline": [
+    {
+      "flag": "Concept: \"data for numbers, AI only for words\"",
+      "desc": "Keeping a daily FX record meant cutting the writing burden without losing numeric accuracy. I set the rule that numbers and images come from data and AI writes only the text, and started building with Astro, Cloudflare Pages and GitHub Actions."
+    },
+    {
+      "flag": "Built the import and article validation pipeline",
+      "desc": "Wrote scripts to import the Tremiru zip, convert PNGs to WebP and scaffold the weekly article JSON. Added CI checks that protect article quality, including the Sunday-to-Saturday week rule (split at month end) and detection of banned phrases and invented content."
+    },
+    {
+      "flag": "Designed the challenge pages and cumulative stats",
+      "desc": "Created a dark theme and a reader-focused top page. Weekly result cards and cumulative P&L, balance and a gauge toward the goal are now computed automatically from daily data, with the mobile layout polished."
+    },
+    {
+      "flag": "Polished SEO, GEO, AEO and privacy pages",
+      "desc": "Implemented structured data, AI-crawler permissions, llms.txt, FAQPage markup and deferred GA4 loading, plus the privacy policy, disclaimer and contact pages."
+    },
+    {
+      "flag": "Custom domain and the arrival of \"Toku\"",
+      "desc": "Set up a custom domain to prepare for launch and added an animated Toku who blinks and sighs on the top page. Also set up semi-automated posting to X and an instruction sheet for daily comments, so publishing and sharing run as one flow."
+    }
+  ]
+}
