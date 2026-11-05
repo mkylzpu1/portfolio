@@ -4,7 +4,7 @@
   "image": "/image/pasha-ten/hero.jpg",
   "detailImage": "/image/pasha-ten/hero.jpg",
   "url": "/pasha-ten",
-  "appUrl": "https://d3e460c51ps9vo.cloudfront.net/guide",
+  "appUrl": "https://d3e460c51ps9vo.cloudfront.net/welcome",
   "repoUrl": "",
   "title": "パシャテン",
   "description": "麻雀の点棒をカメラで撮影するだけで、AIが自動で本数を数えて点数を集計。手作業での数え間違いをなくし、友人や家族との対局結果をかんたんに記録・共有できるスコア管理アプリ。",
