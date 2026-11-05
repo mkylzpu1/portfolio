@@ -55,5 +55,27 @@
       "flag": "コードの整理・テスト・IaCを整備",
       "desc": "機能ごとの責務を整理し、Vitestによるテストを導入。Terraformによるインフラ管理も行い、継続的に機能追加や改善を行える構成へと整備しています。"
     }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/maru-log/dashboard.jpg",
+      "title": "ダッシュボード",
+      "caption": "連続学習日数、今日・今週の学習量、正答率、受験回数をひと目で確認。直近30日の学習量は棒グラフで振り返れます。"
+    },
+    {
+      "image": "/image/maru-log/question-sets.jpg",
+      "title": "マークシート一覧",
+      "caption": "TOEIC・英検・資格試験など、試験の種類ごとに問題セットを整理。平均・最高・最新のスコアを並べて比較できます。"
+    },
+    {
+      "image": "/image/maru-log/attempt.jpg",
+      "title": "回答入力",
+      "caption": "本番のマークシートのように選択肢を塗って回答。迷った問題には「あとで」フラグを付けられ、回答は自動で保存されます。"
+    },
+    {
+      "image": "/image/maru-log/result.jpg",
+      "title": "採点結果",
+      "caption": "正答数と正答率に加え、Listening / Reading やパート別の正答率を表示。苦手な分野がすぐに分かります。"
+    }
   ]
 }

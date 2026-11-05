@@ -55,5 +55,27 @@
       "flag": "Code Quality, Testing & Infrastructure as Code",
       "desc": "Improved the codebase by organizing responsibilities by feature and introducing unit tests with Vitest. AWS infrastructure is managed with Terraform, making the application easier to maintain and continuously improve."
     }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/maru-log/dashboard.jpg",
+      "title": "Dashboard",
+      "caption": "See your study streak, today's and this week's volume, accuracy and attempt count at a glance, plus a 30-day activity chart."
+    },
+    {
+      "image": "/image/maru-log/question-sets.jpg",
+      "title": "Mark sheets",
+      "caption": "Question sets are organized by exam type (TOEIC, Eiken, certifications…), with average, best and latest scores side by side."
+    },
+    {
+      "image": "/image/maru-log/attempt.jpg",
+      "title": "Answer entry",
+      "caption": "Fill in answers like a real mark sheet. Flag tricky questions with “Later”; progress is saved automatically."
+    },
+    {
+      "image": "/image/maru-log/result.jpg",
+      "title": "Results",
+      "caption": "Shows score and accuracy, broken down by Listening / Reading and by part, so weak areas stand out immediately."
+    }
   ]
 }
