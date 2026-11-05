@@ -54,24 +54,19 @@
   ],
   "screenshots": [
     {
-      "image": "/image/pasha-ten/value.jpg",
-      "title": "Why Pashaten",
-      "caption": "The hassle of counting sticks, cross-checking totals and writing them down is replaced by a photo and automatic calculation, shown as a before/after."
+      "image": "/image/pasha-ten/app-1.jpg",
+      "title": "Communities and rooms",
+      "caption": "The community list, a community's room list, and room creation (starting points and rate). Shown with sample data."
     },
     {
-      "image": "/image/pasha-ten/flow.jpg",
-      "title": "How it works",
-      "caption": "Five steps from joining a community to creating a room, entering scores, confirming and reviewing history."
+      "image": "/image/pasha-ten/app-2.jpg",
+      "title": "Score entry and confirmation",
+      "caption": "Enter stick counts to register a score, check that every player has entered and the total matches, then confirm. Rules can be changed here too. Shown with sample data."
     },
     {
-      "image": "/image/pasha-ten/features.jpg",
-      "title": "Features",
-      "caption": "Camera-based stick analysis, manual correction, confirmation only when totals match, QR invites, stats and history, and add-to-home-screen (PWA)."
-    },
-    {
-      "image": "/image/pasha-ten/scenes.jpg",
-      "title": "Use cases",
-      "caption": "Entering scores right after a game, running several tables at once, and looking back later."
+      "image": "/image/pasha-ten/app-3.jpg",
+      "title": "Stats and history",
+      "caption": "Per-member results for a chosen period, game history, and your own results across all communities. Shown with sample data."
     }
   ]
 }

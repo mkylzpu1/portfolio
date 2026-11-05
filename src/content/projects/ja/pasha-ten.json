@@ -54,24 +54,19 @@
   ],
   "screenshots": [
     {
-      "image": "/image/pasha-ten/value.jpg",
-      "title": "サービスの価値",
-      "caption": "点棒を数えて合計を突き合わせ、書き留める手間を、撮影と自動計算でまとめる。これまでとパシャテンの違いをBefore/Afterで紹介しています。"
+      "image": "/image/pasha-ten/app-1.jpg",
+      "title": "コミュニティとルーム作成",
+      "caption": "参加中のコミュニティ一覧、コミュニティのルーム一覧、ルーム作成（持ち点・倍率の設定）の画面です。表示はサンプルデータです。"
     },
     {
-      "image": "/image/pasha-ten/flow.jpg",
-      "title": "ご利用の流れ",
-      "caption": "コミュニティへの参加からルール作成、点数入力、確定、履歴の確認までの5ステップ。"
+      "image": "/image/pasha-ten/app-2.jpg",
+      "title": "点数入力と確定",
+      "caption": "点棒の本数を入力して点数を登録し、全員分の入力と合計点の一致を確認して確定します。ルールの変更もここから。表示はサンプルデータです。"
     },
     {
-      "image": "/image/pasha-ten/features.jpg",
-      "title": "できること",
-      "caption": "カメラでの点棒解析、手入力での修正、合計点が合ってからの確定、QRでの招待、集計と履歴、ホーム画面への追加（PWA）。"
-    },
-    {
-      "image": "/image/pasha-ten/scenes.jpg",
-      "title": "利用シーン",
-      "caption": "半荘が終わったその場での入力、複数卓の同時管理、あとからの振り返りといった使い方を紹介しています。"
+      "image": "/image/pasha-ten/app-3.jpg",
+      "title": "集計と履歴",
+      "caption": "期間を指定してメンバーごとの収支を集計。対局履歴の確認と、全コミュニティをまたいだ自分の収支も見られます。表示はサンプルデータです。"
     }
   ]
 }
