@@ -153,6 +153,8 @@
       "overviewTitle": "Overview",
       "processTitle": "Development Process",
       "highlightsTitle": "Highlights",
+      "screenshotsTitle": "Screenshots",
+      "screenshotsNote": "* Screens show sample data.",
       "techTitle": "Tech Stack"
     }
   },

@@ -35,6 +35,16 @@ export function buildProjectResources(locale: Locale): Record<string, unknown> {
       entry.highlights = Object.fromEntries(c.highlights.map((h, i) => [String(i), h]));
     }
 
+    // screenshots（画面名・説明）は任意。画像パスはロケール非依存のため含めない
+    if (c.screenshots && c.screenshots.length > 0) {
+      entry.screenshots = Object.fromEntries(
+        c.screenshots.map((sc, i) => [
+          String(i),
+          { title: sc.title ?? '', caption: sc.caption ?? '' },
+        ]),
+      );
+    }
+
     out[p.id] = entry;
   }
   return out;

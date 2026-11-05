@@ -114,15 +114,16 @@ collections:
           - { label: "見出し", name: flag, widget: string }
           - { label: "詳細", name: desc, widget: text }
 
-      # ── 新設：スクリーンショット（任意・ロケール非依存） ────────
-      # 画像パスのみのため i18n: duplicate（ja 側の値を使用）
+      # ── スクリーンショット（任意） ────────
+      # 画像パスは ja 側を共通利用（i18n: duplicate）、画面名・説明は言語ごとに入力
       # screenshots がない場合はセクション自体が非表示になります
       - label: "スクリーンショット（任意）"
         name: screenshots
         widget: list
         required: false
-        i18n: duplicate
-        hint: "追加で見せたい画像。キャプションは任意。未入力の場合はセクションを非表示。"
+        i18n: true
+        hint: "画面紹介セクションに表示。画像は共通、画面名と説明は言語ごとに入力。未入力の場合はセクションを非表示。"
         fields:
-          - { label: "画像", name: image, widget: image }
-          - { label: "キャプション（任意）", name: caption, widget: string, required: false }
+          - { label: "画像", name: image, widget: image, i18n: duplicate }
+          - { label: "画面名", name: title, widget: string, required: false, i18n: true }
+          - { label: "簡単な説明", name: caption, widget: text, required: false, i18n: true }

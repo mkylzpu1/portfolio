@@ -17,6 +17,9 @@ export interface Highlight {
 /** スクリーンショット（任意） */
 export interface Screenshot {
   image: string;
+  /** 画面名（ロケールごと） */
+  title?: string;
+  /** 画面の簡単な説明（ロケールごと） */
   caption?: string;
 }
 
@@ -72,13 +75,13 @@ export interface RawProjectContent {
   url: string;
   appUrl?: string;
   repoUrl?: string;
-  /** スクリーンショットはロケール非依存（画像パスのみ） */
+  /** スクリーンショット画像（ロケール非依存。画像パスは ja 側を使用） */
   screenshots?: Screenshot[];
   content: Record<
     Locale,
     Pick<
       ProjectLocaleContent,
-      'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline' | 'highlights'
+      'title' | 'description' | 'tags' | 'overviewDesc' | 'timeline' | 'highlights' | 'screenshots'
     >
   >;
 }
@@ -115,6 +118,7 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
           overviewDesc: ja.overviewDesc,
           timeline: ja.timeline,
           highlights: ja.highlights,
+          screenshots: ja.screenshots,
         },
         en: {
           title: en.title,
@@ -123,6 +127,7 @@ export const rawProjectContent: RawProjectContent[] = allIds.flatMap((id) => {
           overviewDesc: en.overviewDesc,
           timeline: en.timeline,
           highlights: en.highlights,
+          screenshots: en.screenshots,
         },
       },
     },

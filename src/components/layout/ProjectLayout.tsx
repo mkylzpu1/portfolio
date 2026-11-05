@@ -20,7 +20,6 @@ interface Props {
   screenshots?: Screenshot[];
 }
 
-
 export function ProjectLayout({
   i18nKey,
   image,
@@ -36,21 +35,16 @@ export function ProjectLayout({
   const tagsArray: string[] = Array.isArray(techTags) ? techTags : [];
 
   const timelineKeys =
-    timelineCount > 0
-      ? Array.from({ length: timelineCount }, (_, i) => String(i))
-      : [];
+    timelineCount > 0 ? Array.from({ length: timelineCount }, (_, i) => String(i)) : [];
 
   const highlightKeys =
-    highlightCount > 0
-      ? Array.from({ length: highlightCount }, (_, i) => String(i))
-      : [];
+    highlightCount > 0 ? Array.from({ length: highlightCount }, (_, i) => String(i)) : [];
 
   const hasScreenshots = Array.isArray(screenshots) && screenshots.length > 0;
 
   return (
     <main className={styles.page}>
       <div className={styles.inner}>
-
         {/* ── Breadcrumb ── */}
         <nav className={styles.breadcrumb}>
           <Link to="/#projects" className={styles.backLink}>
@@ -76,7 +70,12 @@ export function ProjectLayout({
                   </a>
                 )}
                 {repoUrl && (
-                  <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.btnSecondary}>
+                  <a
+                    href={repoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.btnSecondary}
+                  >
                     <FaGithub size={14} />
                     GitHub
                   </a>
@@ -92,17 +91,55 @@ export function ProjectLayout({
 
         {/* ── 2カラム ── */}
         <div className={styles.contentGrid}>
-
           {/* ── Main column ── */}
           <div>
-
             {/* Overview */}
             <div className={styles.section}>
-              <span className={styles.sectionLabel}>
-                {t('projectData.common.overviewTitle')}
-              </span>
+              <span className={styles.sectionLabel}>{t('projectData.common.overviewTitle')}</span>
               <p className={styles.bodyText}>{t(`${i18nKey}.overviewDesc`)}</p>
             </div>
+
+            <hr className={styles.divider} />
+
+            {/* Screenshots（任意）: 概要の直後に配置し、サイトの中身を先に伝える */}
+            {hasScreenshots && (
+              <div className={styles.section}>
+                <span className={styles.sectionLabel}>
+                  {t('projectData.common.screenshotsTitle')}
+                </span>
+                <div className={styles.galleryGrid}>
+                  {screenshots!.map((sc, idx) => {
+                    const title = t(`${i18nKey}.screenshots.${idx}.title`, { defaultValue: '' });
+                    const caption = t(`${i18nKey}.screenshots.${idx}.caption`, {
+                      defaultValue: '',
+                    });
+                    return (
+                      <figure key={idx} className={styles.galleryItemWrap}>
+                        <a
+                          href={withBaseUrl(sc.image)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.galleryItem}
+                        >
+                          <img
+                            src={withBaseUrl(sc.image)}
+                            alt={title || `Screenshot ${idx + 1}`}
+                            loading="lazy"
+                          />
+                        </a>
+                        {(title || caption) && (
+                          <figcaption className={styles.galleryCaption}>
+                            {title && <strong className={styles.galleryTitle}>{title}</strong>}
+                            {caption && <span>{caption}</span>}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  })}
+                </div>
+                <p className={styles.galleryNote}>{t('projectData.common.screenshotsNote')}</p>
+              </div>
+            )}
 
             {/* Highlights（任意） */}
             {highlightKeys.length > 0 && (
@@ -160,45 +197,13 @@ export function ProjectLayout({
                 </div>
               </>
             )}
-
-            {/* Screenshots（任意） */}
-            {hasScreenshots && (
-              <>
-                <hr className={styles.divider} />
-                <div className={styles.section}>
-                  <span className={styles.sectionLabel}>
-                    Screenshots
-                    <span className={styles.optLabel}>optional</span>
-                  </span>
-                  <div className={styles.galleryGrid}>
-                    {screenshots!.map((sc, idx) => (
-                      <div key={idx} className={styles.galleryItemWrap}>
-                        <div className={styles.galleryItem}>
-                          <img
-                            src={withBaseUrl(sc.image)}
-                            alt={sc.caption ?? `Screenshot ${idx + 1}`}
-                          />
-                        </div>
-                        {sc.caption && (
-                          <p className={styles.galleryCaption}>{sc.caption}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
-
           </div>
 
           {/* ── Sidebar ── */}
           <aside className={styles.sidebar}>
-
             {/* Tech stack */}
             <div className={styles.sidebarCard}>
-              <p className={styles.sidebarTitle}>
-                {t('projectData.common.techTitle')}
-              </p>
+              <p className={styles.sidebarTitle}>{t('projectData.common.techTitle')}</p>
               <div className={styles.techList}>
                 {tagsArray.map((tag) => (
                   <div key={tag} className={styles.techItem}>
@@ -239,7 +244,6 @@ export function ProjectLayout({
                 </div>
               </div>
             )}
-
           </aside>
         </div>
       </div>

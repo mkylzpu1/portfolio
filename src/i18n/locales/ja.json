@@ -153,6 +153,8 @@
       "overviewTitle": "概要",
       "processTitle": "開発活動",
       "highlightsTitle": "アピールポイント",
+      "screenshotsTitle": "画面紹介",
+      "screenshotsNote": "※ 画面はサンプルデータで表示しています。",
       "techTitle": "使用技術"
     }
   },
