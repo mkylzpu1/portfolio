@@ -54,5 +54,32 @@
       "flag": "Operations setup and PWA push notifications",
       "desc": "Set up deployments to staging and production with Terraform and GitHub Actions and fixed issues found in a security audit. Also implemented PWA push notifications with subscription, delivery and tap-to-navigate."
     }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/gubit/lp.jpg",
+      "title": "Landing page",
+      "caption": "The first page shown to signed-out visitors. A tagline about sharing \"what tastes great\" with friends and a mock phone screen explain how the app works."
+    },
+    {
+      "image": "/image/gubit/home.jpg",
+      "title": "Drink list",
+      "caption": "Drinks recorded by the group appear as cards. Search by brand or maker, filter by type, sort, and switch between card and list views; a \"Search with AI\" button suggests drinks that match your taste."
+    },
+    {
+      "image": "/image/gubit/ranking.jpg",
+      "title": "Ranking",
+      "caption": "Rank the group's drinks by overall score, aroma, taste or value, with filters by type and tags. Drinks that haven't gathered enough ratings yet are set aside as \"awaiting ratings\"."
+    },
+    {
+      "image": "/image/gubit/detail.jpg",
+      "title": "Drink detail",
+      "caption": "Shows star ratings for aroma, taste and value, an overall score, taste tags and each member's comment. Editing your own record and adding the drink to \"Want to drink again\" are done here."
+    },
+    {
+      "image": "/image/gubit/members.jpg",
+      "title": "Member management",
+      "caption": "Change each member's role among owner, admin, member and view-only, and approve or decline join requests that arrive via invite links. What each role can do is spelled out on the screen."
+    }
   ]
 }
