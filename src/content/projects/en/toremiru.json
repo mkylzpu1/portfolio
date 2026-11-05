@@ -1,0 +1,74 @@
+{
+  "id": "toremiru",
+  "category": "app",
+  "image": "/image/toremiru/hero.jpg",
+  "detailImage": "/image/toremiru/hero.jpg",
+  "url": "/toremiru",
+  "appUrl": "",
+  "repoUrl": "https://github.com/mkylzpu1/fx-review",
+  "title": "Toremiru",
+  "description": "A trade-review and learning web service for FX traders. Record stop-loss, take-profit, reasoning and rule adherence, spot your habits with entry-time charts and stats, and export everything for AI analysis in one click.",
+  "tags": [
+    "React",
+    "TypeScript",
+    "AWS Lambda",
+    "PostgreSQL",
+    "Cloudflare Workers",
+    "Three.js",
+    "Vitest"
+  ],
+  "overviewDesc": "Even after many trades, \"why did I lose?\" and \"when do I actually win?\" blur when you rely on memory. So I'm building Toremiru, a service for recording and reviewing my own FX trades. By saving your entry reasoning, emotions and whether you followed your rules, you can see results in pips, yen and R-multiples, and revisit the situation with charts from 1-minute to daily bars with EMAs overlaid at the moment of entry. It is designed around a loop: paste all your data into AI for improvement ideas, turn them into rules, and verify their effect over ten trades.",
+  "highlights": [
+    {
+      "title": "Review with charts as of the entry",
+      "desc": "On the trade detail page, switch from 1-minute to daily bars and overlay EMAs plus TP, SL and entry lines. Post-entry price movement, maximum favorable/adverse excursion (MFE/MAE) and side-by-side timeframes let you re-examine your decision calmly."
+    },
+    {
+      "title": "Turn habits into numbers with stats and rule checks",
+      "desc": "Beyond win rate, profit factor, average R, cumulative R and max drawdown, it breaks results down by session, reasoning and weekday, plus rule-adherence rate. Small samples are flagged \"needs verification\", and results when you kept or broke a rule can be compared."
+    },
+    {
+      "title": "Export built for AI analysis and blogging",
+      "desc": "Export every trade in a form that is easy to paste into AI and manage the suggested improvements as rules. For blogging, it outputs a zip with chart images, connecting directly to my blog, \"FX Trader Growth Diary\"."
+    }
+  ],
+  "timeline": [
+    {
+      "flag": "Concept: make reviewing a system",
+      "desc": "After finding my post-trade reflection relied too much on gut feeling, I decided to build a service for recording, reviewing and improving. I prepared designs and an implementation brief for AI, then started from a project template."
+    },
+    {
+      "flag": "Built recording, auto-calculation and CSV import",
+      "desc": "Implemented trade entry and exit input, automatic pips/yen/R-multiple calculation and automatic rule-adherence checks. Also added bulk import of Rakuten FX execution-history CSVs (Shift_JIS, multiple files)."
+    },
+    {
+      "flag": "Set up charts and price data",
+      "desc": "Built an API that aggregates 1-minute bars into any timeframe, plus the chart components. Switched price data to CSVs exported from MT5 and dropped automatic scraping that was problematic under the terms of service."
+    },
+    {
+      "flag": "Built stats, rule verification and export",
+      "desc": "Added a stats page filterable by period, rule-adherence and effect verification, an export for AI analysis and a step-card user guide."
+    },
+    {
+      "flag": "Landing page, rename and blog integration",
+      "desc": "Created a landing page that flies through a three.js candlestick city and features real screenshots. Renamed the app \"Toremiru\" and implemented zip export for the blog (contract v1)."
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "/image/toremiru/hero.jpg",
+      "title": "Trade detail",
+      "caption": "Entry-time bars from 1-minute to daily with EMAs overlaid, TP, exit and entry lines and post-entry movement, plus maximum favorable and adverse excursion."
+    },
+    {
+      "image": "/image/toremiru/stats.jpg",
+      "title": "Stats",
+      "caption": "Key metrics such as win rate, PF, average R and max losing streak, plus daily growth and cumulative R with a max-drawdown band, by period."
+    },
+    {
+      "image": "/image/toremiru/share.jpg",
+      "title": "Side-by-side timeframes",
+      "caption": "View 1-minute and 1-hour bars together, with the plan (entry, SL, TP, RR) and reasoning notes overlaid on the chart."
+    }
+  ]
+}
