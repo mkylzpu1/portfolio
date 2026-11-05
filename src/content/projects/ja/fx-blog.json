@@ -4,7 +4,7 @@
   "image": "/image/fx-blog.png",
   "detailImage": "/image/fx-blog/home.jpg",
   "url": "/fx-blog",
-  "appUrl": "https://fx-trader-diary.com",
+  "appUrl": "https://fx-trader-diary.com/",
   "repoUrl": "",
   "title": "FXトレーダー成長日記",
   "description": "元手10万円で100日間にプラス5万円を目指すFXチャレンジの振り返りブログ。数字とチャートはデータから機械的に生成し、AIは文章だけを書く仕組みで、毎週の記事をPRのマージだけで公開できます。",
@@ -54,11 +54,6 @@
     }
   ],
   "screenshots": [
-    {
-      "image": "/image/fx-blog/home.jpg",
-      "title": "トップページ",
-      "caption": "「勝てない日も、隠さず書いていきます。」のヒーローと、100日チャレンジの進捗・累計損益・勝率。辛口講評の徳さんが一言コメントします。"
-    },
     {
       "image": "/image/fx-blog/challenge.jpg",
       "title": "100日チャレンジ",

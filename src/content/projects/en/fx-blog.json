@@ -4,7 +4,7 @@
   "image": "/image/fx-blog.png",
   "detailImage": "/image/fx-blog/home.jpg",
   "url": "/fx-blog",
-  "appUrl": "https://fx-trader-diary.com",
+  "appUrl": "https://fx-trader-diary.com/",
   "repoUrl": "",
   "title": "FX Trader Growth Diary",
   "description": "A review blog for a 100-day FX challenge: turn ¥100,000 into +¥50,000. Numbers and charts are generated from data and AI writes only the text, so each weekly article ships just by merging a PR.",
@@ -54,11 +54,6 @@
     }
   ],
   "screenshots": [
-    {
-      "image": "/image/fx-blog/home.jpg",
-      "title": "Top page",
-      "caption": "A hero that says \"I'll write about the days I can't win, too,\" plus challenge progress, cumulative P&L and win rate. Toku, the harsh critic, adds a quick comment."
-    },
     {
       "image": "/image/fx-blog/challenge.jpg",
       "title": "100-day challenge",
