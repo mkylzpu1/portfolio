@@ -83,12 +83,40 @@
   letter-spacing: 0.04em;
 }
 
-.title {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0 0 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.title {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.15;
-  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  margin-bottom: 0.875rem;
+}
+
+.titleBar {
+  width: 64px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  margin-bottom: 1.25rem;
 }
 
 .description {
@@ -454,6 +482,6 @@
   }
 
   .title {
-    font-size: 1.625rem;
+    font-size: 1.875rem;
   }
 }

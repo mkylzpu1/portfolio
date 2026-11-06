@@ -71,7 +71,9 @@ export function ProjectLayout({
         {/* ── Hero: PCは左テキスト＋右画像、SPは縦積み ── */}
         <section className={styles.hero}>
           <header className={styles.header}>
+            <p className={styles.eyebrow}>Project</p>
             <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
+            <div className={styles.titleBar} aria-hidden="true" />
             <p className={styles.description}>{t(`${i18nKey}.description`)}</p>
 
             {tagsArray.length > 0 && (
