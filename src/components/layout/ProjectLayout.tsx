@@ -74,6 +74,16 @@ export function ProjectLayout({
             <h1 className={styles.title}>{t(`${i18nKey}.title`)}</h1>
             <p className={styles.description}>{t(`${i18nKey}.description`)}</p>
 
+            {tagsArray.length > 0 && (
+              <ul className={styles.tags} aria-label={t('projectData.common.techTitle')}>
+                {tagsArray.map((tag) => (
+                  <li key={tag} className={styles.tag}>
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            )}
+
             {(appUrl || repoUrl) && (
               <div className={styles.actions}>
                 {appUrl && (
@@ -102,9 +112,8 @@ export function ProjectLayout({
           </div>
         </section>
 
-        {/* ── 2カラム ── */}
-        <div className={styles.contentGrid}>
-          {/* ── Main column ── */}
+        {/* ── 本文（全幅） ── */}
+        <div className={styles.content}>
           <div>
             {/* Overview */}
             <div className={styles.section}>
@@ -211,53 +220,6 @@ export function ProjectLayout({
               </>
             )}
           </div>
-
-          {/* ── Sidebar ── */}
-          <aside className={styles.sidebar}>
-            {/* Tech stack */}
-            <div className={styles.sidebarCard}>
-              <p className={styles.sidebarTitle}>{t('projectData.common.techTitle')}</p>
-              <div className={styles.techList}>
-                {tagsArray.map((tag) => (
-                  <div key={tag} className={styles.techItem}>
-                    <span className={styles.techDot} />
-                    {tag}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Links */}
-            {(appUrl || repoUrl) && (
-              <div className={styles.sidebarCard}>
-                <p className={styles.sidebarTitle}>Links</p>
-                <div className={styles.sidebarLinks}>
-                  {appUrl && (
-                    <a
-                      href={appUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.sidebarLink}
-                    >
-                      <span>Live App</span>
-                      <ExternalLink size={12} strokeWidth={2} />
-                    </a>
-                  )}
-                  {repoUrl && (
-                    <a
-                      href={repoUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={styles.sidebarLink}
-                    >
-                      <span>GitHub</span>
-                      <FaGithub size={12} />
-                    </a>
-                  )}
-                </div>
-              </div>
-            )}
-          </aside>
         </div>
       </div>
 
